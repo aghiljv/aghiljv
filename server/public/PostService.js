@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = '/api/posts/';
+const url = 'api/posts/';
 
 class PostService {
 	//Get posts
@@ -32,6 +32,11 @@ class PostService {
 	//Delete Posts
 	static deletePost(id) {
 		return axios.delete(`${url}${id}`);
+	}
+
+	static downloadResume() {
+		console.log('download');
+		return axios.get(`${url}downloadResume`);
 	}
 }
 

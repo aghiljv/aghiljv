@@ -14,6 +14,7 @@
 					buttonName="Download Resume"
 					buttonColor="rgba(44, 62, 80, 0.5)"
 					colorHover="rgba(44, 62, 80, 1)"
+					@click.native="downloadResume"
 				/>
 				<CustomButton
 					buttonName="Email"
@@ -84,10 +85,18 @@
 </style>
 
 <script>
+import PostService from '../static/PostService.js';
+
 import CustomButton from './CustomButton.vue';
+
 export default {
 	components: {
 		CustomButton,
+	},
+	methods: {
+		async downloadResume() {
+			await PostService.downloadResume();
+		},
 	},
 };
 </script>

@@ -1,12 +1,21 @@
 const express = require('express');
 const mongodb = require('mongodb');
+const path = require('path');
 
 const router = express.Router();
+
+const app = express();
 
 //Get Posts
 router.get('/', async (req, res) => {
 	const posts = await loadPostCollection();
 	res.send(await posts.find({}).toArray());
+});
+
+//Download
+router.get('/downloadResume', (req, res) => {
+	app.use(express.static(__dirname));
+	res.download(path.join(__dirname, '/ResumeFullStack.pdf'));
 });
 
 //Add Posts
