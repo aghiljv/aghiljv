@@ -1,0 +1,93 @@
+<template>
+	<div class="contentClass">
+		<div id="introContent" class="textContent">
+			A Software Engineer with experience in End-to-End Application Development and have worked with Accenture and
+			Nissan Digital. I specialize in building application to the needs of the business and clients in Agile
+			Environment. Experienced in Automotive visualization and virtual testing environment for Autonomous
+			vehicles. A team player with strong inter-personal skills, with the ability to collaborate with
+			multi-functional teams. Apart from these, I love football, travel, photography and reading.
+		</div>
+		<div class="introCard">
+			<div class="imageHolder"></div>
+			<div class="buttonsHolder">
+				<CustomButton
+					buttonName="Download Resume"
+					buttonColor="rgba(44, 62, 80, 0.5)"
+					colorHover="rgba(44, 62, 80, 1)"
+				/>
+				<CustomButton
+					buttonName="Email"
+					buttonColor="rgba(150, 40, 27, 0.5)"
+					colorHover="rgba(150, 40, 27, 1)"
+				/>
+			</div>
+		</div>
+	</div>
+</template>
+
+<style scoped>
+.contentClass {
+	width: 100%;
+	height: 90%;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	text-align: justify;
+}
+.textContent {
+	position: inherit;
+	left: 5%;
+	width: 50%;
+}
+.introCard {
+	position: fixed;
+	right: 5%;
+	top: 15%;
+	width: 35%;
+	height: 70%;
+	background: var(--intro-card-bg);
+	border-radius: 1%;
+	display: flex;
+	box-shadow: 0 4px 8px 0 var(--intro-card-shadow), 0 6px 20px 0 var(--intro-card-shadow);
+	justify-content: space-evenly;
+	flex-direction: column;
+	padding: 2%;
+	align-items: center;
+}
+.imageHolder {
+	border: 10px solid var(--intro-card-pic-border-color);
+	height: 50%;
+	width: 50%;
+	border-radius: 50%;
+	background-image: url('../assets/intro.png');
+	background-size: cover;
+}
+.buttonsHolder {
+	background: var(--intro-card-button-holder-color);
+	width: 100%;
+	height: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 1%;
+}
+@media only screen and (max-width: 600px) {
+	.contentClass {
+		width: 90%;
+		height: 100%;
+		position: absolute;
+		display: flex;
+		align-items: center;
+	}
+}
+</style>
+
+<script>
+import CustomButton from './CustomButton.vue';
+export default {
+	components: {
+		CustomButton,
+	},
+};
+</script>

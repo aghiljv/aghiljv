@@ -1,0 +1,87 @@
+<template>
+	<div class="phoneNavClass" id="phoneNavID" @click="toggleNav">
+		<nuxt-link class="indRoute" to="/" @click="toggleNav">HOME</nuxt-link>
+		<nuxt-link class="indRoute" to="/portfolio" @click="toggleNav">PORTFOLIO</nuxt-link>
+		<nuxt-link class="indRoute" to="/blog" @click="toggleNav">BLOG</nuxt-link>
+		<nuxt-link class="indRoute" to="/contact" @click="toggleNav">CONTACT</nuxt-link>
+		<div class="indRoute" @click="switchTheme">{{ themeName }}</div>
+	</div>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			themeName: 'Light Theme',
+		};
+	},
+	methods: {
+		toggleNav() {
+			console.log('toggleNav');
+			document.getElementById('phoneNavID').style.bottom = '-100%';
+			document.getElementById('nav-icon').classList.toggle('open');
+		},
+		switchTheme() {
+			let root = document.documentElement;
+			if (this.themeName == 'Light Theme') {
+				root.style.setProperty('--background-color-primary', 'white');
+				root.style.setProperty('--color-primary', 'black');
+				root.style.setProperty('--header-bg-color', 'rgba(0, 0, 0, 0.1)');
+				root.style.setProperty('--link-text-color', 'rgb(114, 114, 114)');
+				root.style.setProperty('--active-link-text-color', 'rgba(0,0,0,1)');
+				root.style.setProperty('--active-link-background-color', 'white');
+				root.style.setProperty('--main-bg-img', `url('/lightbg.jpg')`);
+				root.style.setProperty('--particle-bg-color', 'white');
+				this.$emit('changeBG', 'Light');
+				this.themeName = 'Dark Theme';
+			} else {
+				root.style.setProperty('--background-color-primary', 'black');
+				root.style.setProperty('--color-primary', 'white');
+				root.style.setProperty('--header-bg-color', ' rgba(0, 0, 0, 0.6)');
+				root.style.setProperty('--link-text-color', 'rgb(114, 114, 114)');
+				root.style.setProperty('--active-link-text-color', 'rgba(255, 255, 255, 1)');
+				root.style.setProperty('--active-link-background-color', 'white');
+				root.style.setProperty('--main-bg-img', `url('/darkbg.jpg')`);
+				root.style.setProperty('--particle-bg-color', 'black');
+				this.$emit('changeBG', 'Dark');
+				this.themeName = 'Light Theme';
+			}
+		},
+	},
+};
+</script>
+
+<style scoped>
+.phoneNavClass {
+	position: absolute;
+	bottom: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background: var(--background-color-primary);
+	transition: 0.5s;
+}
+.indRoute {
+	color: var(--link-text-color);
+	text-decoration: none;
+	margin: 1%;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nuxt-link-exact-active {
+	color: var(--active-link-text-color);
+	font-weight: bolder;
+}
+@media only screen and (min-width: 600px) {
+	.phoneNavClass {
+		display: none;
+	}
+}
+</style>

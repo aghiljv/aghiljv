@@ -1,0 +1,24 @@
+{
+	"name": "portfolionuxt",
+	"version": "1.0.0",
+	"description": "Aghil Jose&#39;s portfolio",
+	"author": "Aghil",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate"
+	},
+	"dependencies": {
+		"@nuxtjs/axios": "^5.3.6",
+		"axios": "^0.19.2",
+		"nuxt": "^2.11.0",
+		"particles.js": "2.0.0"
+	},
+	"devDependencies": {
+		"eslint-config-prettier": "^4.1.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"prettier": "^1.16.4"
+	}
+}
