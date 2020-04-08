@@ -1,1 +1,0 @@
-exports.ids=[2],exports.modules={63:function(t,e,n){"use strict";n.r(e);var r={components:{}},c=n(1);var component=Object(c.a)(r,(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"container"},[this._ssrNode("\n\tJust you wait\n")])}),[],!1,(function(t){}),"7eafc868","29a8f02c");e.default=component.exports}};

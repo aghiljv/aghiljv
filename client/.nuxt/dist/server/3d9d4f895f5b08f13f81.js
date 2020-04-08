@@ -1,1 +1,0 @@
-exports.ids=[4],exports.modules={64:function(t,n,e){"use strict";e.r(n);var o={},r=e(1);var component=Object(r.a)(o,(function(){var t=this.$createElement;return(this._self._c||t)("div",{staticClass:"container"},[this._ssrNode("\n\tWorking on Portfolio Content\n")])}),[],!1,(function(t){}),null,"75c967d7");n.default=component.exports}};
