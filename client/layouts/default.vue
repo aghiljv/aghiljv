@@ -67,7 +67,9 @@ html {
 	transition: 0.5s;
 	background: var(--background-color-primary);
 }
-
+* {
+	overflow: hidden;
+}
 *,
 *:before,
 *:after {
@@ -110,6 +112,12 @@ html {
 	right: 1%;
 	height: 100%;
 	width: 100%;
+}
+@media only screen and (max-width: 600px) {
+	.container {
+		top: 10%;
+		min-height: 80%;
+	}
 }
 @media only screen and (min-width: 600px) {
 	.navButton {

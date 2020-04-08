@@ -43,4 +43,11 @@ export default {
 .customButton:hover {
 	transform: scale(1.1);
 }
+@media only screen and (max-width: 600px) {
+	.customButton {
+		width: 45%;
+		height: 40%;
+		font-size: 0.8rem;
+	}
+}
 </style>

@@ -118,6 +118,9 @@ li {
 	}
 	.socialClass {
 		align-items: flex-end;
+		width: 100%;
+		bottom: 2%;
+		height: 7%;
 	}
 	ul {
 		display: flex;
@@ -125,7 +128,7 @@ li {
 		justify-content: center;
 	}
 	li {
-		width: 10%;
+		width: 12%;
 	}
 }
 @media only screen and (min-width: 600px) {
