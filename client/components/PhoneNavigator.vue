@@ -30,8 +30,11 @@ export default {
 				root.style.setProperty('--link-text-color', 'rgb(114, 114, 114)');
 				root.style.setProperty('--active-link-text-color', 'rgba(0,0,0,1)');
 				root.style.setProperty('--active-link-background-color', 'white');
-				root.style.setProperty('--main-bg-img', `url('/lightbg.jpg')`);
 				root.style.setProperty('--particle-bg-color', 'white');
+				root.style.setProperty('--intro-card-bg', 'rgba(225, 225, 225, 0.5)');
+				root.style.setProperty('--intro-card-pic-border-color', 'rgba(205, 205, 205, 1)');
+				root.style.setProperty('--intro-card-button-holder-color', 'rgba(205, 205, 205, 0)');
+				root.style.setProperty('--intro-card-shadow', 'rgba(0, 0, 0, 0.2)');
 				this.$emit('changeBG', 'Light');
 				this.themeName = 'Dark Theme';
 			} else {
@@ -41,8 +44,11 @@ export default {
 				root.style.setProperty('--link-text-color', 'rgb(114, 114, 114)');
 				root.style.setProperty('--active-link-text-color', 'rgba(255, 255, 255, 1)');
 				root.style.setProperty('--active-link-background-color', 'white');
-				root.style.setProperty('--main-bg-img', `url('/darkbg.jpg')`);
 				root.style.setProperty('--particle-bg-color', 'black');
+				root.style.setProperty('--intro-card-bg', 'rgba(25, 25, 25, 0.5)');
+				root.style.setProperty('--intro-card-pic-border-color', 'rgba(50, 50, 50, 1)');
+				root.style.setProperty('--intro-card-button-holder-color', 'rgba(50, 50, 50, 0)');
+				root.style.setProperty('--intro-card-shadow', 'rgba(0, 0, 0, 0.2)');
 				this.$emit('changeBG', 'Dark');
 				this.themeName = 'Light Theme';
 			}

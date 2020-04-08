@@ -46,7 +46,6 @@ export default {
 	--link-text-color: rgb(114, 114, 114);
 	--active-link-text-color: rgba(255, 255, 255, 1);
 	--active-link-background-color: rgba(0, 0, 0, 0);
-	--main-bg-img: url('/darkbg.jpg');
 	--particle-color: white;
 	--particle-bg-color: black;
 	--intro-card-bg: rgba(25, 25, 25, 0.5);
