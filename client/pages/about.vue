@@ -17,7 +17,7 @@
 				teams. Apart from these, I love football, travel, photography and reading.
 			</p>
 		</div>
-		<img src="/img/logo.png" class="logoImg" />
+		<img src="/img/aghiljvlogo.png" class="logoImg" />
 	</div>
 </template>
 
