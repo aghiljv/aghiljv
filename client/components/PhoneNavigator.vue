@@ -1,9 +1,10 @@
 <template>
 	<div class="phoneNavClass" id="phoneNavID" @click="toggleNav">
-		<nuxt-link class="indRoute" to="/" @click="toggleNav">HOME</nuxt-link>
-		<nuxt-link class="indRoute" to="/portfolio" @click="toggleNav">PORTFOLIO</nuxt-link>
-		<nuxt-link class="indRoute" to="/blog" @click="toggleNav">BLOG</nuxt-link>
-		<nuxt-link class="indRoute" to="/contact" @click="toggleNav">CONTACT</nuxt-link>
+		<nuxt-link class="indRoute" to="/" @click.native="selectedRoute('HOME')">HOME</nuxt-link>
+		<nuxt-link class="indRoute" to="/portfolio" @click.native="selectedRoute('PORTFOLIO')">PORTFOLIO</nuxt-link>
+		<nuxt-link class="indRoute" to="/blog" @click.native="selectedRoute('BLOG')">BLOG</nuxt-link>
+		<nuxt-link class="indRoute" to="/about" @click.native="selectedRoute('ABOUT')">ABOUT</nuxt-link>
+		<nuxt-link class="indRoute" to="/contact" @click.native="selectedRoute('CONTACT')">CONTACT</nuxt-link>
 		<div class="indRoute" @click="switchTheme">{{ themeName }}</div>
 	</div>
 </template>
@@ -15,9 +16,12 @@ export default {
 			themeName: 'Light Theme',
 		};
 	},
+	mounted() {
+		this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
+		this.$emit('currentRoute', this.currentRoute);
+	},
 	methods: {
 		toggleNav() {
-			console.log('toggleNav');
 			document.getElementById('phoneNavID').style.bottom = '-100%';
 			document.getElementById('nav-icon').classList.toggle('open');
 		},
@@ -52,6 +56,11 @@ export default {
 				this.$emit('changeBG', 'Dark');
 				this.themeName = 'Light Theme';
 			}
+		},
+		selectedRoute(currentRoute) {
+			console.log(currentRoute);
+			this.currentRoute = currentRoute;
+			this.$emit('currentRoute', currentRoute);
 		},
 	},
 };

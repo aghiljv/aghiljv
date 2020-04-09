@@ -1,5 +1,7 @@
 <template>
-	<div class="customButton" :style="style" @mouseover="mouseOver" @mouseleave="mouseLeave">{{ buttonName }}</div>
+	<div class="customButton" @mouseover="mouseOver" @mouseleave="mouseLeave" :style="style">
+		<img :src="`img/${imgName}`" />
+	</div>
 </template>
 <script>
 export default {
@@ -7,6 +9,7 @@ export default {
 	data() {
 		return {
 			hovering: false,
+			tempName: 'download.png',
 		};
 	},
 	methods: {
@@ -25,13 +28,16 @@ export default {
 				return 'background: ' + this.$props.colorHover;
 			}
 		},
+		imgName() {
+			return this.$props.buttonName + '.png';
+		},
 	},
 };
 </script>
 <style scoped>
 .customButton {
-	width: 30%;
-	height: 20%;
+	width: 10vh;
+	height: 10vh;
 	color: white;
 	display: flex;
 	justify-content: center;
@@ -43,10 +49,14 @@ export default {
 .customButton:hover {
 	transform: scale(1.1);
 }
+img {
+	position: relative;
+	height: 80%;
+}
 @media only screen and (max-width: 600px) {
 	.customButton {
-		width: 45%;
-		height: 40%;
+		width: 5vh;
+		height: 5vh;
 		font-size: 0.8rem;
 	}
 }

@@ -1,16 +1,18 @@
 <template>
-	<div>
-		<Particle class="particleClass" v-bind:themeName="themeName" />
-		<ProjectHeader class="headerClassMain" @changeBG="changeBG($event)" />
-		<PhoneNavigator @changeBG="changeBG($event)" />
-		<SocialLinks />
+	<div @mousemove="mouseMoveEvent($event)">
+		<Particle class="particleClass" :themeName="themeName" />
+		<ProjectHeader class="headerClassMain" @changeBG="changeBG($event)" :currentRoute="currentRoute" />
+		<PhoneNavigator @changeBG="changeBG($event)" @currentRoute="updateHeader($event)" />
+		<SocialLinks id="socialLinks" />
+		<Routes @changeBG="changeBG($event)" id="sideRoutes" @currentRoute="updateHeader($event)" />
 		<nuxt id="mainContent" />
-		<PhoneNavButton class="navButton" v-bind:navAction="navAction" />
+		<PhoneNavButton class="navButton" :navAction="navAction" />
 	</div>
 </template>
 
 <script>
 import ProjectHeader from '../components/ProjectHeader.vue';
+import Routes from '../components/Routes.vue';
 import PhoneNavigator from '../components/PhoneNavigator.vue';
 import PhoneNavButton from '../components/PhoneNavButton.vue';
 import SocialLinks from '../components/SocialLinks.vue';
@@ -22,17 +24,32 @@ export default {
 		Particle,
 		PhoneNavigator,
 		PhoneNavButton,
+		Routes,
 	},
 	mounted() {},
 	data() {
 		return {
 			themeName: 'Dark',
 			navAction: false,
+			currentRoute: null,
 		};
 	},
 	methods: {
 		changeBG(themeName) {
 			this.themeName = themeName;
+		},
+		updateHeader(currentRoute) {
+			this.currentRoute = currentRoute;
+		},
+		mouseMoveEvent(e) {
+			// let change = e.offsetX / 1000;
+			let centreWidth = document.getElementById('mainContent').clientWidth / 2;
+			let centreHeight = document.getElementById('mainContent').clientHeight / 2;
+			let change = (centreHeight - e.clientY) / 100;
+
+			// console.log(change);
+			// console.log(document.getElementById('mainContent').clientWidth);
+			document.getElementById('currentActiveRoute').style.transform = 'translateY(' + change + '%)';
 		},
 	},
 };
@@ -42,7 +59,7 @@ export default {
 :root {
 	--color-primary: white;
 	--background-color-primary: black;
-	--header-bg-color: rgba(0, 0, 0, 0.61);
+	--header-bg-color: rgba(0, 0, 0, 0);
 	--link-text-color: rgb(114, 114, 114);
 	--active-link-text-color: rgba(255, 255, 255, 1);
 	--active-link-background-color: rgba(0, 0, 0, 0);
@@ -75,18 +92,24 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 }
+#mainContent {
+	/* transition: 0.5s; */
+}
 .container {
 	position: absolute;
 	margin: 0 auto;
+	left: 5%;
 	min-height: 100%;
-	width: 100%;
-	display: flex;
+	width: 80%;
+	/* display: flex; */
 	flex: 100%;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* text-align: center; */
+	color: white;
 	color: var(--color-primary);
 	z-index: 3;
+	overflow: auto;
 }
 .headerClassMain {
 	position: fixed;
@@ -94,7 +117,7 @@ html {
 	height: 10%;
 	width: 100%;
 	color: var(--color-primary);
-	background: var(--header-bg-color);
+	/* background: var(--header-bg-color); */
 	z-index: 5;
 	text-align: left;
 }
@@ -116,6 +139,7 @@ html {
 	.container {
 		top: 10%;
 		min-height: 80%;
+		width: 90%;
 	}
 }
 @media only screen and (min-width: 600px) {

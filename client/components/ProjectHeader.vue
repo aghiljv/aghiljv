@@ -1,6 +1,6 @@
 <template>
 	<div class="headerClass">
-		<div class="title">Aghil Jose</div>
+		<div class="title">{{ currentRoute }}</div>
 		<div class="routeClass">
 			<nuxt-link class="indRoute" to="/">HOME</nuxt-link>
 			<nuxt-link class="indRoute" to="/portfolio">PORTFOLIO</nuxt-link>
@@ -18,6 +18,7 @@ export default {
 			themeName: 'Light Theme',
 		};
 	},
+	props: ['currentRoute'],
 	methods: {
 		switchTheme() {
 			let root = document.documentElement;
@@ -60,11 +61,12 @@ export default {
 	padding: 1% 0% 1% 5%;
 	transition: 0.5s;
 	display: flex;
+	/* display: none; */
 	align-items: center;
 }
 .title {
 	width: 30%;
-	font-size: 3rem;
+	font-size: 4rem;
 	transition: 0.5s;
 	color: var(--active-link-text-color);
 }
@@ -77,6 +79,7 @@ export default {
 	height: 100%;
 	right: 0%;
 	display: flex;
+	display: none;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
@@ -98,12 +101,17 @@ export default {
 }
 @media only screen and (max-width: 600px) {
 	.title {
-		width: 40%;
+		width: 100%;
 		font-size: 2rem;
 	}
 	.routeClass {
 		display: none;
 		width: 60%;
+	}
+}
+@media only screen and (min-width: 600px) {
+	.title {
+		display: none;
 	}
 }
 </style>

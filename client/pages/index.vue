@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<IndexContent />
+		<!-- <IndexContent /> -->
 	</div>
 </template>
 
@@ -10,7 +10,7 @@ import IndexContent from '../components/IndexContent.vue';
 export default {
 	data() {
 		return {
-			title: 'Aghil Jose - Home',
+			title: 'Aghil Jose | Full Stack Engineer',
 		};
 	},
 	head() {

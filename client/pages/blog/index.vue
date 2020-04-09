@@ -8,7 +8,7 @@
 export default {
 	data() {
 		return {
-			title: 'Aghil Jose - Blog',
+			title: 'Aghil Jose | Full Stack Engineer',
 		};
 	},
 	head() {

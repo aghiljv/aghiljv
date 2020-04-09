@@ -4,13 +4,13 @@
 			<div class="imageHolder"></div>
 			<div class="buttonsHolder">
 				<CustomButton
-					buttonName="Download Resume"
+					buttonName="download"
 					buttonColor="rgba(44, 62, 80, 0.5)"
 					colorHover="rgba(44, 62, 80, 1)"
 					@click.native="downloadResume"
 				/>
 				<CustomButton
-					buttonName="Email"
+					buttonName="mail"
 					buttonColor="rgba(150, 40, 27, 0.5)"
 					colorHover="rgba(150, 40, 27, 1)"
 				/>
@@ -26,6 +26,21 @@
 	</div>
 </template>
 
+<script>
+import PostService from '../static/PostService.js';
+import CustomButton from './CustomButton.vue';
+export default {
+	components: {
+		CustomButton,
+	},
+	methods: {
+		async downloadResume() {
+			await PostService.downloadResume();
+		},
+	},
+};
+</script>
+
 <style scoped>
 .contentClass {
 	top: 1vh;
@@ -35,7 +50,7 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	text-align: justify;
+	text-align: left;
 }
 .textContent {
 	/* position: inherit; */
@@ -72,11 +87,12 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
+	align-items: flex-end;
 	border-radius: 1%;
 }
 @media only screen and (max-width: 600px) {
 	.contentClass {
+		top: 1vh;
 		width: 90%;
 		height: 80vh;
 		position: relative;
@@ -102,20 +118,3 @@
 	}
 }
 </style>
-
-<script>
-import PostService from '../static/PostService.js';
-
-import CustomButton from './CustomButton.vue';
-
-export default {
-	components: {
-		CustomButton,
-	},
-	methods: {
-		async downloadResume() {
-			await PostService.downloadResume();
-		},
-	},
-};
-</script>

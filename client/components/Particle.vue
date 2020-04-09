@@ -20,12 +20,14 @@ export default {
 			if (this.$props.themeName == 'Light') {
 				this.particleColor = '#000000';
 				this.particleBg = '#ffffff';
-				this.drawBG();
 			} else if (this.$props.themeName == 'Dark') {
 				this.particleColor = '#ffffff';
 				this.particleBg = '#000000';
-				this.drawBG();
 			}
+			pJSDom[0].pJS.particles.color.value = this.particleColor;
+			pJSDom[0].pJS.particles.shape.stroke.color = this.particleBg;
+			pJSDom[0].pJS.particles.line_linked.color = this.particleColor;
+			pJSDom[0].pJS.fn.particlesRefresh();
 		},
 	},
 	mounted() {

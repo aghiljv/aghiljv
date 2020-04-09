@@ -1,14 +1,15 @@
 <template>
 	<div class="container">
-		Just you wait
+		<IndexContent />
 	</div>
 </template>
 
 <script>
+import IndexContent from '../components/IndexContent.vue';
 export default {
 	data() {
 		return {
-			title: 'Aghil Jose - Contact',
+			title: 'Aghil Jose | Full Stack Engineer',
 		};
 	},
 	head() {
@@ -23,7 +24,9 @@ export default {
 			],
 		};
 	},
-	components: {},
+	components: {
+		IndexContent,
+	},
 };
 </script>
 

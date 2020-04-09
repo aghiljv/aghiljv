@@ -108,7 +108,7 @@ ul {
 	width: 100%;
 }
 li {
-	width: 100%;
+	width: 85%;
 	transition: 0.5s;
 }
 
