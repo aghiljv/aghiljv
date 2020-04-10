@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<img src="/img/about.jpg" class="aboutImg" />
+		<img src="/img/about.jpg" class="aboutImg" alt="Aghil Jose" />
 		<div class="aboutTitleHolder">HEY THERE, I'M <br />AGHIL JOSE</div>
 		<div class="aboutDescHolder">
 			<p>
@@ -17,7 +17,7 @@
 				teams. Apart from these, I love football, travel, photography and reading.
 			</p>
 		</div>
-		<img src="/img/aghiljvlogo.png" class="logoImg" />
+		<img src="/img/aghiljvlogo.png" class="logoImg" alt="Aghil Jose Logo" />
 	</div>
 </template>
 

@@ -5,7 +5,8 @@
 		<PhoneNavigator @changeBG="changeBG($event)" @currentRoute="updateHeader($event)" />
 		<SocialLinks id="socialLinks" />
 		<Routes @changeBG="changeBG($event)" id="sideRoutes" @currentRoute="updateHeader($event)" />
-		<nuxt id="mainContent" />
+		<main><nuxt id="mainContent" /></main>
+
 		<PhoneNavButton class="navButton" :navAction="navAction" />
 	</div>
 </template>
@@ -18,6 +19,17 @@ import PhoneNavButton from '../components/PhoneNavButton.vue';
 import SocialLinks from '../components/SocialLinks.vue';
 import Particle from '../components/Particle.vue';
 export default {
+	head() {
+		return {
+			meta: [
+				{
+					hid: 'base',
+					name: 'Base Layout',
+					content: 'The portfolio and blog of Full Stack Engineer Aghil Jose',
+				},
+			],
+		};
+	},
 	components: {
 		ProjectHeader,
 		SocialLinks,

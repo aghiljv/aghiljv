@@ -1,6 +1,6 @@
 <template>
 	<div class="customButton" @mouseover="mouseOver" @mouseleave="mouseLeave" :style="style">
-		<img :src="`img/${imgName}`" />
+		<img :src="`img/${imgName}`" alt="Custom Button" />
 	</div>
 </template>
 <script>
