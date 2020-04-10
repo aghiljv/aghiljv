@@ -19,7 +19,7 @@ export default {
 				content: 'The blog and portfolio of Aghil Jose | Full Stack Engineer',
 			},
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/img/aghiljvlogo.png' }],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/aghiljvlogo.png' }],
 		script: [
 			// { type: 'text/javascript', src: 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js' }
 		],
