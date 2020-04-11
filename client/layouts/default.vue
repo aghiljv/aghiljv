@@ -141,7 +141,7 @@ html {
 }
 .navButton {
 	position: absolute;
-	bottom: 0.5%;
+	bottom: 2.5%;
 	z-index: 11;
 	right: 1%;
 }
