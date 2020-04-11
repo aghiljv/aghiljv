@@ -1,5 +1,6 @@
 <template>
 	<div @mousemove="mouseMoveEvent($event)">
+		<HomePageIntro />
 		<Particle class="particleClass" :themeName="themeName" />
 		<ProjectHeader class="headerClassMain" @changeBG="changeBG($event)" :currentRoute="currentRoute" />
 		<PhoneNavigator @changeBG="changeBG($event)" @currentRoute="updateHeader($event)" />
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import HomePageIntro from '../components/HomePageIntro.vue';
 import ProjectHeader from '../components/ProjectHeader.vue';
 import Routes from '../components/Routes.vue';
 import PhoneNavigator from '../components/PhoneNavigator.vue';
@@ -31,6 +33,7 @@ export default {
 		};
 	},
 	components: {
+		HomePageIntro,
 		ProjectHeader,
 		SocialLinks,
 		Particle,
@@ -38,7 +41,9 @@ export default {
 		PhoneNavButton,
 		Routes,
 	},
-	mounted() {},
+	mounted() {
+		setTimeout(this.introAnimRemove, 9000);
+	},
 	data() {
 		return {
 			themeName: 'Dark',
@@ -47,6 +52,13 @@ export default {
 		};
 	},
 	methods: {
+		introAnimRemove() {
+			document.getElementById('introAnimComp').style.opacity = 0;
+			setTimeout(this.sendElementDown, 1000);
+		},
+		sendElementDown() {
+			document.getElementById('introAnimComp').style.display = 'none';
+		},
 		changeBG(themeName) {
 			this.themeName = themeName;
 		},
@@ -54,14 +66,16 @@ export default {
 			this.currentRoute = currentRoute;
 		},
 		mouseMoveEvent(e) {
-			// let change = e.offsetX / 1000;
 			let centreWidth = document.getElementById('mainContent').clientWidth / 2;
 			let centreHeight = document.getElementById('mainContent').clientHeight / 2;
-			let change = (centreHeight - e.clientY) / 100;
+			let changeY = (centreHeight - e.clientY) / 100;
+			let changeX = (centreWidth - e.clientX) / 200;
 
-			// console.log(change);
-			// console.log(document.getElementById('mainContent').clientWidth);
-			document.getElementById('currentActiveRoute').style.transform = 'translateY(' + change + '%)';
+			document.getElementById('currentActiveRoute').style.transform = 'translateY(' + changeY + '%)';
+			if (document.getElementById('homeTitle1') != null) {
+				document.getElementById('homeTitle1').style.transform = 'translateX(' + changeX + '%)';
+				document.getElementById('homeTitle2').style.transform = 'translateX(' + -changeX + '%)';
+			}
 		},
 	},
 };
@@ -143,7 +157,7 @@ html {
 	position: absolute;
 	bottom: 2.5%;
 	z-index: 11;
-	right: 1%;
+	right: 3%;
 }
 @media only screen and (max-width: 600px) {
 	.container {

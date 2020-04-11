@@ -1,7 +1,7 @@
 <template>
 	<div class="homeTitle">
-		<p>FULL STACK</p>
-		<p>ENGINEER</p>
+		<p id="homeTitle1">FULL STACK</p>
+		<p id="homeTitle2">ENGINEER</p>
 	</div>
 </template>
 
@@ -9,4 +9,13 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+.homeTitle {
+	font-size: 12.5rem;
+}
+@media only screen and (max-width: 600px) {
+	.homeTitle {
+		font-size: 3.5rem;
+	}
+}
+</style>

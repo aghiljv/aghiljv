@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 #nav-icon {
-	width: 15%;
+	width: 12%;
 	height: 5%;
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
@@ -41,7 +41,7 @@ export default {
 	display: block;
 	position: absolute;
 	height: 10%;
-	width: 80%;
+	width: 100%;
 	background: var(--color-primary);
 	opacity: 1;
 	left: 0;

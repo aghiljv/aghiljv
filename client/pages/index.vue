@@ -1,11 +1,13 @@
 <template>
 	<div class="container">
-		<!-- <IndexContent /> -->
+		<!-- <HomePageIntro /> -->
+		<HomePage />
 	</div>
 </template>
 
 <script>
-import IndexContent from '../components/IndexContent.vue';
+import HomePage from '../components/HomePage.vue';
+// import HomePageIntro from '../components/HomePageIntro.vue';
 
 export default {
 	data() {
@@ -26,7 +28,8 @@ export default {
 		};
 	},
 	components: {
-		IndexContent,
+		HomePage,
+		// HomePageIntro,
 	},
 };
 </script>
