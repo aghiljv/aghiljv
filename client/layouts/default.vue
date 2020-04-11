@@ -42,7 +42,7 @@ export default {
 		Routes,
 	},
 	mounted() {
-		setTimeout(this.introAnimRemove, 9000);
+		setTimeout(this.introAnimRemove, 8000);
 	},
 	data() {
 		return {
