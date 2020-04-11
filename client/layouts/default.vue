@@ -141,11 +141,9 @@ html {
 }
 .navButton {
 	position: absolute;
-	bottom: 1%;
+	bottom: 0.5%;
 	z-index: 11;
 	right: 1%;
-	height: 100%;
-	width: 100%;
 }
 @media only screen and (max-width: 600px) {
 	.container {

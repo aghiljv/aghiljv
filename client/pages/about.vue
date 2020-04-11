@@ -17,7 +17,16 @@
 				teams. Apart from these, I love football, travel, photography and reading.
 			</p>
 		</div>
-		<img src="/img/aghiljvlogo.png" class="logoImg" alt="Aghil Jose Logo" />
+		<div class="experienceHolder">
+			<div class="experienceTitle">EXPERIENCE</div>
+			<!-- <ul> -->
+			<p>
+				Nissan Motor Coorporation / Software Engineer / Sep 2018 - Present<br />
+				Accenture / Associate Software Engineer / Jan 2018 - Jun 2018
+			</p>
+			<!-- </ul> -->
+		</div>
+		<!-- <img src="/img/aghiljvlogo.png" class="logoImg" alt="Aghil Jose Logo" /> -->
 	</div>
 </template>
 
@@ -75,6 +84,14 @@ p {
 	width: 25%;
 	bottom: 5%;
 }
+.experienceHolder {
+	position: absolute;
+	top: 70%;
+	left: 65%;
+}
+.experienceTitle {
+	font-size: 2rem;
+}
 
 @media only screen and (max-width: 600px) {
 	.aboutImg {
@@ -82,19 +99,26 @@ p {
 		width: 50%;
 	}
 	.aboutTitleHolder {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		top: 55%;
 		left: 0%;
 	}
 	.aboutDescHolder {
 		width: 100%;
 		left: 0%;
-		top: 65%;
+		top: 70%;
 	}
 	.logoImg {
 		top: 110%;
 		width: 100%;
 		right: 0%;
+	}
+	.experienceHolder {
+		top: 120%;
+		left: 0%;
+	}
+	.experienceTitle {
+		font-size: 1.5rem;
 	}
 }
 </style>
