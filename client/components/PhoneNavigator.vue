@@ -17,8 +17,10 @@ export default {
 		};
 	},
 	mounted() {
-		this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
-		this.$emit('currentRoute', this.currentRoute);
+		if (document.getElementsByClassName('nuxt-link-exact-active')[0] != null) {
+			this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
+			this.$emit('currentRoute', this.currentRoute);
+		}
 	},
 	methods: {
 		toggleNav() {
@@ -58,7 +60,6 @@ export default {
 			}
 		},
 		selectedRoute(currentRoute) {
-			console.log(currentRoute);
 			this.currentRoute = currentRoute;
 			this.$emit('currentRoute', currentRoute);
 		},
@@ -67,6 +68,14 @@ export default {
 </script>
 
 <style scoped>
+.animDiv {
+	position: absolute;
+	background: white;
+	height: 100vh;
+	width: 100vh;
+	border-radius: 50%;
+	z-index: 100;
+}
 .phoneNavClass {
 	position: absolute;
 	bottom: -100%;

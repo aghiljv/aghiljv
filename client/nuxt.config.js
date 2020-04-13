@@ -35,7 +35,10 @@ export default {
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: [{ src: '~/plugins/particlePlugin', ssr: false }],
+	plugins: [
+		{ src: '~/plugins/particlePlugin', ssr: false },
+		{ src: '~/plugins/lethargyPlugin', ssr: false },
+	],
 	/*
 	 ** Nuxt.js dev-modules
 	 */

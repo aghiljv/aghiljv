@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import PostService from '../static/PostService.js';
+import ServerService from '../static/ServerService.js';
 import CustomButton from './CustomButton.vue';
 export default {
 	components: {
@@ -35,7 +35,7 @@ export default {
 	},
 	methods: {
 		async downloadResume() {
-			await PostService.downloadResume();
+			await ServerService.downloadResume();
 		},
 	},
 };

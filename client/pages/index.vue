@@ -1,13 +1,11 @@
 <template>
 	<div class="container">
-		<!-- <HomePageIntro /> -->
 		<HomePage />
 	</div>
 </template>
 
 <script>
 import HomePage from '../components/HomePage.vue';
-// import HomePageIntro from '../components/HomePageIntro.vue';
 
 export default {
 	data() {
@@ -27,9 +25,18 @@ export default {
 			],
 		};
 	},
+	mounted() {},
+	methods: {
+		introAnimRemove() {
+			document.getElementById('introAnimComp').style.opacity = 0;
+			setTimeout(this.sendElementDown, 1000);
+		},
+		sendElementDown() {
+			document.getElementById('introAnimComp').style.display = 'none';
+		},
+	},
 	components: {
 		HomePage,
-		// HomePageIntro,
 	},
 };
 </script>

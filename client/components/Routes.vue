@@ -25,7 +25,10 @@ export default {
 		};
 	},
 	mounted() {
-		this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
+		if (document.getElementsByClassName('nuxt-link-exact-active')[0] != null) {
+			this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
+			this.$emit('currentRoute', this.currentRoute);
+		}
 	},
 	methods: {
 		switchTheme() {

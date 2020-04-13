@@ -1,14 +1,34 @@
 <template>
 	<div class="container">
-		Working on Portfolio Content
+		<div class="portfolioContainer">
+			<PortfolioMain
+				v-for="(portfolio, index) in portfolios"
+				v-bind:item="portfolio"
+				v-bind:index="index"
+				v-bind:key="portfolio._id"
+				v-if="index == currentIndex"
+				:portfolioName="portfolio.name"
+				:portfolioImage="portfolio.titleImage"
+			/>
+		</div>
 	</div>
 </template>
 
 <script>
+import ServerService from '../../static/ServerService.js';
+import PortfolioMain from '../../components/portfolio/PortfolioMain.vue';
 export default {
+	components: {
+		PortfolioMain,
+	},
 	data() {
 		return {
 			title: 'Aghil Jose | Full Stack Engineer',
+			portfolios: [],
+			scrollState: null,
+			currentIndex: 0,
+			minIndex: 0,
+			maxIndex: 0,
 		};
 	},
 	head() {
@@ -23,7 +43,44 @@ export default {
 			],
 		};
 	},
+	async created() {
+		try {
+			this.portfolios = await ServerService.getPortfolios();
+		} catch (err) {
+			this.error = err.message;
+		}
+	},
+	mounted() {
+		document.getElementById('mainContent').addEventListener('wheel', this.handleScroll);
+	},
+	methods: {
+		handleScroll(e) {
+			if (e.deltaY < -20) {
+				this.scrollState = 'up';
+			} else if (e.deltaY > 20) {
+				this.scrollState = 'down';
+			}
+		},
+	},
+	watch: {
+		scrollState() {
+			console.log(this.scrollState);
+			if (this.currentIndex > 0) {
+				this.currentIndex--;
+			} else if (this.currentIndex < this.maxIndex) {
+				this.currentIndex++;
+			}
+		},
+		portfolios() {
+			this.maxIndex = this.portfolios.length;
+		},
+	},
 };
 </script>
 
-<style></style>
+<style scoped>
+.portfolioContainer {
+	position: absolute;
+	width: 100%;
+}
+</style>

@@ -17,15 +17,15 @@
 				v-bind:key="post._id"
 				v-on:dblclick="deletePost(post._id)"
 			>
-				{{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}
-				<p class="text">{{ post.text }}</p>
+				{{ `${post.name}` }}
+				<p class="text">{{ post.titleImage }}</p>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import PostService from '../static/PostService.js';
+import ServerService from '../static/ServerService.js';
 
 export default {
 	name: 'PostComponent',
@@ -38,19 +38,19 @@ export default {
 	},
 	async created() {
 		try {
-			this.posts = await PostService.getPosts();
+			this.posts = await ServerService.getPosts();
 		} catch (err) {
 			this.error = err.message;
 		}
 	},
 	methods: {
 		async createPost() {
-			await PostService.insertPost(this.text);
-			this.posts = await PostService.getPosts();
+			await ServerService.insertPost(this.text);
+			this.posts = await ServerService.getPosts();
 		},
 		async deletePost(id) {
-			await PostService.deletePost(id);
-			this.posts = await PostService.getPosts();
+			await ServerService.deletePost(id);
+			this.posts = await ServerService.getPosts();
 		},
 	},
 };

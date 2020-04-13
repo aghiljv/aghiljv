@@ -43,7 +43,8 @@ async function loadPostCollection() {
 			useUnifiedTopology: true,
 		}
 	);
-	return client.db('testdb').collection('posts');
+	// console.log(client);
+	return client.db('website').collection('portfolios');
 }
 
 module.exports = router;
