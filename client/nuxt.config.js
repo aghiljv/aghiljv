@@ -37,7 +37,7 @@ export default {
 	 */
 	plugins: [
 		{ src: '~/plugins/particlePlugin', ssr: false },
-		{ src: '~/plugins/lethargyPlugin', ssr: false },
+		{ src: '~/plugins/vueTouchPlugin', ssr: false },
 	],
 	/*
 	 ** Nuxt.js dev-modules

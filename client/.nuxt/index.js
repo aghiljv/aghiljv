@@ -13,7 +13,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_axios_153982d1 from 'nuxt_plugin_axios_153982d1' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_particlePlugin_5470224f from 'nuxt_plugin_particlePlugin_5470224f' // Source: ../plugins/particlePlugin (mode: 'client')
-import nuxt_plugin_lethargyPlugin_78048f4e from 'nuxt_plugin_lethargyPlugin_78048f4e' // Source: ../plugins/lethargyPlugin (mode: 'client')
+import nuxt_plugin_vueTouchPlugin_5f9432e2 from 'nuxt_plugin_vueTouchPlugin_5f9432e2' // Source: ../plugins/vueTouchPlugin (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -160,8 +160,8 @@ async function createApp (ssrContext) {
     await nuxt_plugin_particlePlugin_5470224f(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_lethargyPlugin_78048f4e === 'function') {
-    await nuxt_plugin_lethargyPlugin_78048f4e(app.context, inject)
+  if (process.client && typeof nuxt_plugin_vueTouchPlugin_5f9432e2 === 'function') {
+    await nuxt_plugin_vueTouchPlugin_5f9432e2(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

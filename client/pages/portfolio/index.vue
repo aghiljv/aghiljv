@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="portfolioContainer">
+		<div class="portfolioContainer" v-touch:swipe.top="swipeDownAction" v-touch:swipe.bottom="swipeUpAction">
 			<PortfolioMain
 				v-for="(portfolio, index) in portfolios"
 				v-bind:item="portfolio"
@@ -61,10 +61,15 @@ export default {
 				this.scrollState = 'down';
 			}
 		},
+		swipeUpAction() {
+			this.scrollState = 'up';
+		},
+		swipeDownAction() {
+			this.scrollState = 'down';
+		},
 	},
 	watch: {
 		scrollState() {
-			console.log(this.scrollState);
 			if (this.currentIndex > 0) {
 				this.currentIndex--;
 			} else if (this.currentIndex < this.maxIndex) {
@@ -82,5 +87,14 @@ export default {
 .portfolioContainer {
 	position: absolute;
 	width: 100%;
+}
+@media only screen and (max-width: 600px) {
+	.portfolioContainer {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
 }
 </style>

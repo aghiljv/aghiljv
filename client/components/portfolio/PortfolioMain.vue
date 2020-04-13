@@ -15,7 +15,7 @@ export default {
 .portfolioHolder {
 	margin: 1%;
 	padding: 1%;
-	width: 98%;
+	width: 100%;
 	display: inline-block;
 	transition: 0.5s;
 }
