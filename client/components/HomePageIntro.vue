@@ -32,7 +32,7 @@ export default {};
 	position: absolute;
 	height: 50%;
 	/* animation: spin 2s linear infinite; */
-	animation: logoAnim 10s linear infinite;
+	animation: logoAnim 10s linear forwards;
 }
 
 #loadingText {

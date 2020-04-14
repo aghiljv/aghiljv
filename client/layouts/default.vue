@@ -44,8 +44,13 @@ export default {
 		PhoneNavButton,
 		Routes
 	},
-	mounted() {
+	async mounted() {
 		setTimeout(this.introAnimRemove, 8000);
+		try {
+			this.$store.commit('portfolios/add', await ServerService.getPortfolios());
+		} catch (err) {
+			this.error = err.message;
+		}
 	},
 	data() {
 		return {
@@ -54,13 +59,13 @@ export default {
 			currentRoute: null
 		};
 	},
-	async created() {
-		try {
-			this.$store.commit('portfolios/add', await ServerService.getPortfolios());
-		} catch (err) {
-			this.error = err.message;
-		}
-	},
+	// async created() {
+	// 	try {
+	// 		this.$store.commit('portfolios/add', await ServerService.getPortfolios());
+	// 	} catch (err) {
+	// 		this.error = err.message;
+	// 	}
+	// },
 	methods: {
 		introAnimRemove() {
 			document.getElementById('introAnimComp').style.opacity = 0;

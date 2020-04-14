@@ -41,7 +41,6 @@ export default {
 	},
 	mounted() {
 		document.getElementById('mainContent').addEventListener('wheel', this.handleScroll);
-		this.mountState = true;
 	},
 	methods: {
 		handleScroll(e) {
