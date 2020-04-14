@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="portfolioContainer" v-touch:swipe.right="swipeUpAction" v-touch:swipe.left="swipeDownAction">
+		<div class="portfolioContainer" v-touch:swipe.bottom="swipeUpAction" v-touch:swipe.top="swipeDownAction">
 			<PortfolioMain :portfolioName="portfolio.name" :portfolioImage="portfolio.titleImage" />
 		</div>
 	</div>
@@ -23,7 +23,6 @@ export default {
 			minIndex: 0,
 			error: '',
 			currentDeltaY: 0,
-			mountState: false,
 			firstLoad: true
 		};
 	},

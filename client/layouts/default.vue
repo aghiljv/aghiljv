@@ -59,13 +59,6 @@ export default {
 			currentRoute: null
 		};
 	},
-	// async created() {
-	// 	try {
-	// 		this.$store.commit('portfolios/add', await ServerService.getPortfolios());
-	// 	} catch (err) {
-	// 		this.error = err.message;
-	// 	}
-	// },
 	methods: {
 		introAnimRemove() {
 			document.getElementById('introAnimComp').style.opacity = 0;
