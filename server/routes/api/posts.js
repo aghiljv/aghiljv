@@ -43,7 +43,6 @@ async function loadPostCollection() {
 			useUnifiedTopology: true,
 		}
 	);
-	// console.log(client);
 	return client.db('website').collection('portfolios');
 }
 
