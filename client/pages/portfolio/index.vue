@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<div class="portfolioContainer" v-touch:swipe.bottom="swipeUpAction" v-touch:swipe.top="swipeDownAction">
+		<div class="portfolioContainer" v-touch:swipe.right="swipeUpAction" v-touch:swipe.left="swipeDownAction">
 			<PortfolioMain :portfolioName="portfolio.name" :portfolioImage="portfolio.titleImage" />
 		</div>
 	</div>
