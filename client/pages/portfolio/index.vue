@@ -1,15 +1,7 @@
 <template>
 	<div class="container">
-		<div class="portfolioContainer" v-touch:swipe.top="swipeDownAction" v-touch:swipe.bottom="swipeUpAction">
-			<PortfolioMain
-				v-for="(portfolio, index) in portfolios"
-				v-bind:item="portfolio"
-				v-bind:index="index"
-				v-bind:key="portfolio._id"
-				v-if="index == currentIndex"
-				:portfolioName="portfolio.name"
-				:portfolioImage="portfolio.titleImage"
-			/>
+		<div class="portfolioContainer" v-touch:swipe.right="swipeUpAction" v-touch:swipe.left="swipeDownAction">
+			<PortfolioMain :portfolioName="portfolio.name" :portfolioImage="portfolio.titleImage" />
 		</div>
 	</div>
 </template>
@@ -19,16 +11,20 @@ import ServerService from '../../static/ServerService.js';
 import PortfolioMain from '../../components/portfolio/PortfolioMain.vue';
 export default {
 	components: {
-		PortfolioMain,
+		PortfolioMain
 	},
 	data() {
 		return {
 			title: 'Aghil Jose | Full Stack Engineer',
-			portfolios: [],
 			scrollState: null,
+			swipeState: null,
+			scrollDirecton: 0,
 			currentIndex: 0,
 			minIndex: 0,
-			maxIndex: 0,
+			error: '',
+			currentDeltaY: 0,
+			mountState: false,
+			firstLoad: true
 		};
 	},
 	head() {
@@ -38,48 +34,75 @@ export default {
 				{
 					hid: 'portfolio',
 					name: 'Portfolio',
-					content: 'The portfolio of Full Stack Engineer Aghil Jose',
-				},
-			],
+					content: 'The portfolio of Full Stack Engineer Aghil Jose'
+				}
+			]
 		};
-	},
-	async created() {
-		try {
-			this.portfolios = await ServerService.getPortfolios();
-		} catch (err) {
-			this.error = err.message;
-		}
 	},
 	mounted() {
 		document.getElementById('mainContent').addEventListener('wheel', this.handleScroll);
+		this.mountState = true;
 	},
 	methods: {
 		handleScroll(e) {
+			this.firstLoad = false;
 			if (e.deltaY < -20) {
 				this.scrollState = 'up';
 			} else if (e.deltaY > 20) {
 				this.scrollState = 'down';
 			}
+			if (e.deltaY == -1 || e.deltaY == 1) {
+				this.scrollState = null;
+			}
+		},
+		switchPortfolio(opacityState) {
+			document.getElementById('portfolioDisplay').style.opacity = opacityState;
 		},
 		swipeUpAction() {
 			this.scrollState = 'up';
+			setTimeout(() => {
+				this.scrollState = null;
+			}, 500);
 		},
 		swipeDownAction() {
 			this.scrollState = 'down';
-		},
+			setTimeout(() => {
+				this.scrollState = null;
+			}, 500);
+		}
 	},
 	watch: {
 		scrollState() {
-			if (this.currentIndex > 0) {
-				this.currentIndex--;
-			} else if (this.currentIndex < this.maxIndex) {
-				this.currentIndex++;
+			if (this.scrollState == 'up') {
+				if (this.currentIndex > 0) {
+					this.switchPortfolio(0);
+					setTimeout(() => {
+						this.currentIndex--;
+					}, 500);
+				}
+			} else if (this.scrollState == 'down') {
+				if (this.currentIndex < this.maxIndex - 1) {
+					this.switchPortfolio(0);
+					setTimeout(() => {
+						this.currentIndex++;
+					}, 500);
+				}
+			} else {
+				this.switchPortfolio(1);
 			}
-		},
-		portfolios() {
-			this.maxIndex = this.portfolios.length;
-		},
+		}
 	},
+	computed: {
+		portfolios() {
+			return this.$store.state.portfolios.portfolios;
+		},
+		portfolio() {
+			return this.portfolios[this.currentIndex];
+		},
+		maxIndex() {
+			return this.$store.state.portfolios.portfolios.length;
+		}
+	}
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="portfolioHolder">
+	<div class="portfolioHolder" id="portfolioDisplay">
 		<img class="portImage" :src="`/img/portfolio/${portfolioImage}.jpg`" alt="portfolioImage" />
 		<div class="portName">{{ portfolioName }}</div>
 	</div>
@@ -7,7 +7,7 @@
 
 <script>
 export default {
-	props: ['portfolioName', 'portfolioImage'],
+	props: ['portfolioName', 'portfolioImage']
 };
 </script>
 
@@ -17,6 +17,10 @@ export default {
 	padding: 1%;
 	width: 100%;
 	display: inline-block;
+	transition: 0.5s;
+}
+#portfolioDisplay {
+	opacity: 1;
 	transition: 0.5s;
 }
 .portImage {

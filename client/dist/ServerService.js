@@ -7,12 +7,11 @@ class ServerService {
 	static getPortfolios() {
 		return new Promise((resolve, reject) => {
 			try {
-				axios.get(url).then((response) => {
+				axios.get(url).then(response => {
 					const data = response.data;
 					resolve(
-						data.map((post) => ({
-							...post,
-							createdAt: new Date(post.createdAt),
+						data.map(post => ({
+							...post
 						}))
 					);
 				});
@@ -25,7 +24,7 @@ class ServerService {
 	//Create Posts
 	static insertPost(text) {
 		return axios.post(url, {
-			text,
+			text
 		});
 	}
 
@@ -35,7 +34,7 @@ class ServerService {
 	}
 
 	static downloadResume() {
-		axios.get(`${url}downloadResume`, { responseType: 'blob' }).then((response) => {
+		axios.get(`${url}downloadResume`, { responseType: 'blob' }).then(response => {
 			var fileURL = window.URL.createObjectURL(new Blob([response.data]));
 			var fileLink = document.createElement('a');
 			fileLink.href = fileURL;

@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import ServerService from '../static/ServerService.js';
+
 import HomePageIntro from '../components/HomePageIntro.vue';
 import ProjectHeader from '../components/ProjectHeader.vue';
 import Routes from '../components/Routes.vue';
@@ -28,9 +30,9 @@ export default {
 				{
 					hid: 'base',
 					name: 'Base Layout',
-					content: 'The portfolio and blog of Full Stack Engineer Aghil Jose',
-				},
-			],
+					content: 'The portfolio and blog of Full Stack Engineer Aghil Jose'
+				}
+			]
 		};
 	},
 	components: {
@@ -40,7 +42,7 @@ export default {
 		Particle,
 		PhoneNavigator,
 		PhoneNavButton,
-		Routes,
+		Routes
 	},
 	mounted() {
 		setTimeout(this.introAnimRemove, 8000);
@@ -49,8 +51,15 @@ export default {
 		return {
 			themeName: 'Dark',
 			navAction: false,
-			currentRoute: null,
+			currentRoute: null
 		};
+	},
+	async created() {
+		try {
+			this.$store.commit('portfolios/add', await ServerService.getPortfolios());
+		} catch (err) {
+			this.error = err.message;
+		}
 	},
 	methods: {
 		introAnimRemove() {
@@ -77,8 +86,8 @@ export default {
 				document.getElementById('homeTitle1').style.transform = 'translateX(' + changeX + '%)';
 				document.getElementById('homeTitle2').style.transform = 'translateX(' + -changeX + '%)';
 			}
-		},
-	},
+		}
+	}
 };
 </script>
 

@@ -7,7 +7,7 @@ export default {
 	 */
 	head: {
 		htmlAttrs: {
-			lang: 'en',
+			lang: 'en'
 		},
 		title: 'Aghil Jose',
 		meta: [
@@ -16,13 +16,13 @@ export default {
 			{
 				hid: 'description',
 				name: 'description',
-				content: 'The blog and portfolio of Aghil Jose | Full Stack Engineer',
-			},
+				content: 'The blog and portfolio of Aghil Jose | Full Stack Engineer'
+			}
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/aghiljvlogo.png' }],
 		script: [
 			// { type: 'text/javascript', src: 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js' }
-		],
+		]
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -37,7 +37,7 @@ export default {
 	 */
 	plugins: [
 		{ src: '~/plugins/particlePlugin', ssr: false },
-		{ src: '~/plugins/vueTouchPlugin', ssr: false },
+		{ src: '~/plugins/vueTouchPlugin', ssr: false }
 	],
 	/*
 	 ** Nuxt.js dev-modules
@@ -48,7 +48,7 @@ export default {
 	 */
 	modules: [
 		// Doc: https://axios.nuxtjs.org/usage
-		'@nuxtjs/axios',
+		'@nuxtjs/axios'
 	],
 	/*
 	 ** Axios module configuration
@@ -75,9 +75,9 @@ export default {
 					enforce: 'pre',
 					test: /\.(js|vue)$/,
 					loader: 'eslint-loader',
-					exclude: /(node_modules)/,
+					exclude: /(node_modules)/
 				});
 			}
-		},
-	},
+		}
+	}
 };
