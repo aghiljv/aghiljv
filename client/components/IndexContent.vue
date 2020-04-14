@@ -16,13 +16,13 @@
 				/>
 			</div>
 		</div>
-		<div id="introContent" class="textContent">
+		<!-- <div id="introContent" class="textContent">
 			A Software Engineer with experience in End-to-End Application Development and have worked with Accenture and
 			Nissan Digital. I specialize in building application to the needs of the business and clients in Agile
 			Environment. Experienced in Automotive visualization and virtual testing environment for Autonomous
 			vehicles. A team player with strong inter-personal skills, with the ability to collaborate with
 			multi-functional teams. Apart from these, I love football, travel, photography and reading.
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -31,21 +31,20 @@ import ServerService from '../static/ServerService.js';
 import CustomButton from './CustomButton.vue';
 export default {
 	components: {
-		CustomButton,
+		CustomButton
 	},
 	methods: {
 		async downloadResume() {
 			await ServerService.downloadResume();
-		},
-	},
+		}
+	}
 };
 </script>
 
 <style scoped>
 .contentClass {
-	top: 1vh;
 	width: 100%;
-	height: 90%;
+	height: 100%;
 	position: absolute;
 	display: flex;
 	justify-content: space-evenly;
@@ -58,9 +57,6 @@ export default {
 	width: 50%;
 }
 .introCard {
-	/* position: fixed; */
-	/* right: 5%; */
-	/* top: 15%; */
 	width: 35%;
 	height: 70%;
 	background: var(--intro-card-bg);
@@ -92,11 +88,9 @@ export default {
 }
 @media only screen and (max-width: 600px) {
 	.contentClass {
-		top: 1vh;
-		width: 90%;
-		height: 80vh;
-		position: relative;
-		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
 		align-items: center;
 		flex-direction: column-reverse;
 		justify-content: space-around;

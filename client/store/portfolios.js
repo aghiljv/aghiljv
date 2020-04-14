@@ -3,7 +3,9 @@ export const state = () => ({
 		{
 			_id: '5e9311b61c9d4400003cf285',
 			name: 'Feel',
-			titleImage: 'feel'
+			titleImage: 'feel',
+			briefdesc:
+				'The application assists the user to determine a car model suited for them according to their lifestyle.'
 		}
 	]
 });

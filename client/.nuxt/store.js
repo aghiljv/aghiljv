@@ -13,6 +13,7 @@ let store = {};
   // Enforce store modules
   store.modules = store.modules || {}
 
+  resolveStoreModules(require('../store/blogs.js'), 'blogs.js')
   resolveStoreModules(require('../store/portfolios.js'), 'portfolios.js')
 
   // If the environment supports hot reloading...

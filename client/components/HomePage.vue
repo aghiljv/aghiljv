@@ -114,5 +114,10 @@ div :nth-child(12) {
 		height: 30%;
 		width: 100%;
 	}
+	.logoHolder {
+		width: 100%;
+		height: 50%;
+		justify-content: center;
+	}
 }
 </style>

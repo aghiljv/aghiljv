@@ -2,7 +2,7 @@
 	<div @mousemove="mouseMoveEvent($event)">
 		<HomePageIntro />
 		<Particle class="particleClass" :themeName="themeName" />
-		<!-- <ProjectHeader class="headerClassMain" @changeBG="changeBG($event)" :currentRoute="currentRoute" /> -->
+		<ProjectHeader class="headerClassMain" @changeBG="changeBG($event)" :currentRoute="currentRoute" />
 		<PhoneNavigator @changeBG="changeBG($event)" @currentRoute="updateHeader($event)" />
 		<SocialLinks id="socialLinks" />
 		<Routes @changeBG="changeBG($event)" id="sideRoutes" @currentRoute="updateHeader($event)" />
@@ -51,6 +51,12 @@ export default {
 		} catch (err) {
 			this.error = err.message;
 		}
+		try {
+			this.$store.commit('blogs/add', await ServerService.getBlogs());
+		} catch (err) {
+			this.error = err.message;
+		}
+		console.log(this.$store.state.blogs.blogs);
 	},
 	data() {
 		return {

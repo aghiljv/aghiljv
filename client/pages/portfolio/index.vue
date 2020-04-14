@@ -1,7 +1,15 @@
 <template>
 	<div class="container">
 		<div class="portfolioContainer" v-touch:swipe.right="swipeUpAction" v-touch:swipe.left="swipeDownAction">
-			<PortfolioMain :portfolioName="portfolio.name" :portfolioImage="portfolio.titleImage" />
+			<PortfolioMain
+				v-for="(portfolio, index) in portfolios"
+				v-bind:item="portfolio"
+				v-bind:index="index"
+				v-bind:key="portfolio._id"
+				:portfolioName="portfolio.name"
+				:portfolioImage="portfolio.titleImage"
+				:portfolioBrief="portfolio.briefdesc"
+			/>
 		</div>
 	</div>
 </template>
@@ -73,20 +81,20 @@ export default {
 		scrollState() {
 			if (this.scrollState == 'up') {
 				if (this.currentIndex > 0) {
-					this.switchPortfolio(0);
+					// this.switchPortfolio(0);
 					setTimeout(() => {
 						this.currentIndex--;
 					}, 500);
 				}
 			} else if (this.scrollState == 'down') {
 				if (this.currentIndex < this.maxIndex - 1) {
-					this.switchPortfolio(0);
+					// this.switchPortfolio(0);
 					setTimeout(() => {
 						this.currentIndex++;
 					}, 500);
 				}
 			} else {
-				this.switchPortfolio(1);
+				// this.switchPortfolio(1);
 			}
 		}
 	},
@@ -94,9 +102,9 @@ export default {
 		portfolios() {
 			return this.$store.state.portfolios.portfolios;
 		},
-		portfolio() {
-			return this.portfolios[this.currentIndex];
-		},
+		// portfolio() {
+		// 	return this.portfolios[this.currentIndex];
+		// },
 		maxIndex() {
 			return this.$store.state.portfolios.portfolios.length;
 		}
@@ -108,14 +116,20 @@ export default {
 .portfolioContainer {
 	position: absolute;
 	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding-top: 5%;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
 }
-@media only screen and (max-width: 600px) {
-	.portfolioContainer {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-	}
-}
+/* @media only screen and (max-width: 600px) {
+    .portfolioContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+} */
 </style>
