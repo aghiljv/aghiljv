@@ -42,6 +42,7 @@ export default {
 .portImage {
 	/* position: absolute;  */
 	width: 100%;
+	transition: 0.5s;
 }
 .portfolioItem {
 	position: relative;
@@ -67,8 +68,8 @@ export default {
 	}
 }
 @media only screen and (min-width: 600px) {
-	.portfolioHolder:hover {
-		transform: scale(1.01);
+	.portfolioHolder:hover .portImage {
+		transform: scale(1.1);
 	}
 }
 </style>

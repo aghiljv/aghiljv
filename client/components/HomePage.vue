@@ -38,7 +38,7 @@ export default {};
 }
 .logoHolder {
 	position: absolute;
-	width: 97%;
+	width: 95%;
 	height: 49%;
 	bottom: 0%;
 	display: flex;
