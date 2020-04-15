@@ -119,9 +119,13 @@ export default {
 	height: 100%;
 	overflow: auto;
 	padding-top: 5%;
+	-ms-overflow-style: none;
 	/* display: flex;
 	align-items: center;
 	justify-content: center; */
+}
+.portfolioContainer::-webkit-scrollbar {
+	display: none;
 }
 /* @media only screen and (max-width: 600px) {
     .portfolioContainer {
