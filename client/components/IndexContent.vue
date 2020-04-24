@@ -31,13 +31,13 @@ import ServerService from '../static/ServerService.js';
 import CustomButton from './CustomButton.vue';
 export default {
 	components: {
-		CustomButton
+		CustomButton,
 	},
 	methods: {
 		async downloadResume() {
 			await ServerService.downloadResume();
-		}
-	}
+		},
+	},
 };
 </script>
 
@@ -73,7 +73,7 @@ export default {
 	height: 35vh;
 	width: 35vh;
 	border-radius: 50%;
-	background-image: url('../assets/intro.png');
+	background-image: url('/img/intro.png');
 	background-size: cover;
 }
 .buttonsHolder {

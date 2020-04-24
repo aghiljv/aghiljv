@@ -30,9 +30,9 @@ export default {
 				{
 					hid: 'base',
 					name: 'Base Layout',
-					content: 'The portfolio and blog of Full Stack Engineer Aghil Jose'
-				}
-			]
+					content: 'The portfolio and blog of Full Stack Engineer Aghil Jose',
+				},
+			],
 		};
 	},
 	components: {
@@ -42,7 +42,7 @@ export default {
 		Particle,
 		PhoneNavigator,
 		PhoneNavButton,
-		Routes
+		Routes,
 	},
 	async mounted() {
 		setTimeout(this.introAnimRemove, 8000);
@@ -62,7 +62,7 @@ export default {
 		return {
 			themeName: 'Dark',
 			navAction: false,
-			currentRoute: null
+			currentRoute: null,
 		};
 	},
 	methods: {
@@ -90,8 +90,8 @@ export default {
 				document.getElementById('homeTitle1').style.transform = 'translateX(' + changeX + '%)';
 				document.getElementById('homeTitle2').style.transform = 'translateX(' + -changeX + '%)';
 			}
-		}
-	}
+		},
+	},
 };
 </script>
 

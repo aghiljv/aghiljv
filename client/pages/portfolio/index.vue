@@ -1,15 +1,29 @@
 <template>
 	<div class="container">
 		<div class="portfolioContainer" v-touch:swipe.right="swipeUpAction" v-touch:swipe.left="swipeDownAction">
-			<PortfolioMain
-				v-for="(portfolio, index) in portfolios"
-				v-bind:item="portfolio"
-				v-bind:index="index"
-				v-bind:key="portfolio._id"
-				:portfolioName="portfolio.name"
-				:portfolioImage="portfolio.titleImage"
-				:portfolioBrief="portfolio.briefdesc"
-			/>
+			<div class="portContentContainer">
+				<PortfolioMain
+					v-for="(portfolio, index) in portfolios"
+					v-bind:item="portfolio"
+					v-bind:index="index"
+					v-bind:key="portfolio._id"
+					:portfolioName="portfolio.name"
+					:portfolioImage="portfolio.titleImage"
+					:portfolioBrief="portfolio.briefdesc"
+					:activePortIndex="activePortIndex"
+				/>
+			</div>
+			<div class="portNavContainer">
+				<PortfolioNav
+					v-for="(portfolio, index) in portfolios"
+					v-bind:index="index"
+					v-bind:key="portfolio._id"
+					:portfolioName="portfolio.name"
+					:portfolioImage="portfolio.titleImage"
+					@setActiveOpacity="setActiveOpacity($event)"
+					@setDetPos="setDetPos($event)"
+				/>
+			</div>
 		</div>
 	</div>
 </template>
@@ -17,9 +31,11 @@
 <script>
 import ServerService from '../../static/ServerService.js';
 import PortfolioMain from '../../components/portfolio/PortfolioMain.vue';
+import PortfolioNav from '../../components/portfolio/PortfolioNav.vue';
 export default {
 	components: {
-		PortfolioMain
+		PortfolioMain,
+		PortfolioNav,
 	},
 	data() {
 		return {
@@ -31,7 +47,8 @@ export default {
 			minIndex: 0,
 			error: '',
 			currentDeltaY: 0,
-			firstLoad: true
+			firstLoad: true,
+			activePortIndex: -1,
 		};
 	},
 	head() {
@@ -41,9 +58,9 @@ export default {
 				{
 					hid: 'portfolio',
 					name: 'Portfolio',
-					content: 'The portfolio of Full Stack Engineer Aghil Jose'
-				}
-			]
+					content: 'The portfolio of Full Stack Engineer Aghil Jose',
+				},
+			],
 		};
 	},
 	mounted() {
@@ -75,7 +92,20 @@ export default {
 			setTimeout(() => {
 				this.scrollState = null;
 			}, 500);
-		}
+		},
+		setActiveOpacity(index) {
+			this.activePortIndex = index;
+		},
+		setDetPos(e) {
+			let currentNavId = 'portNav' + this.activePortIndex;
+			let currentDetId = 'portfolioItem' + this.activePortIndex;
+			let centreWidth = document.getElementById(currentNavId).clientWidth / 2;
+			let centreHeight = document.getElementById(currentNavId).clientHeight / 2;
+			let changeY = (centreHeight - e.offsetY) / -50;
+			let changeX = (centreWidth - e.offsetX) / -50;
+
+			document.getElementById(currentDetId).style.transform = 'translate(' + changeX + '%, ' + changeY + '%)';
+		},
 	},
 	watch: {
 		scrollState() {
@@ -96,7 +126,7 @@ export default {
 			} else {
 				// this.switchPortfolio(1);
 			}
-		}
+		},
 	},
 	computed: {
 		portfolios() {
@@ -107,8 +137,8 @@ export default {
 		// },
 		maxIndex() {
 			return this.$store.state.portfolios.portfolios.length;
-		}
-	}
+		},
+	},
 };
 </script>
 
@@ -118,14 +148,28 @@ export default {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	padding-top: 5%;
-	-ms-overflow-style: none;
-	/* display: flex;
+	bottom: 0%;
+	display: flex;
+	justify-content: space-around;
 	align-items: center;
-	justify-content: center; */
 }
 .portfolioContainer::-webkit-scrollbar {
 	display: none;
+}
+.portContentContainer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0%;
+}
+.portNavContainer {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	right: 0%;
+	display: flex;
+	flex-direction: column;
+	margin: 1%;
 }
 /* @media only screen and (max-width: 600px) {
     .portfolioContainer {
