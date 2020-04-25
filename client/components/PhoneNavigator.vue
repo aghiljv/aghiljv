@@ -41,6 +41,7 @@ export default {
 				root.style.setProperty('--intro-card-pic-border-color', 'rgba(205, 205, 205, 1)');
 				root.style.setProperty('--intro-card-button-holder-color', 'rgba(205, 205, 205, 0)');
 				root.style.setProperty('--intro-card-shadow', 'rgba(0, 0, 0, 0.2)');
+				root.style.setProperty('--invert-value', 'invert(1)');
 				this.$emit('changeBG', 'Light');
 				this.themeName = 'Dark Theme';
 			} else {
@@ -55,6 +56,7 @@ export default {
 				root.style.setProperty('--intro-card-pic-border-color', 'rgba(50, 50, 50, 1)');
 				root.style.setProperty('--intro-card-button-holder-color', 'rgba(50, 50, 50, 0)');
 				root.style.setProperty('--intro-card-shadow', 'rgba(0, 0, 0, 0.2)');
+				root.style.setProperty('--invert-value', 'invert(0)');
 				this.$emit('changeBG', 'Dark');
 				this.themeName = 'Light Theme';
 			}

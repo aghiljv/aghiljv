@@ -102,7 +102,7 @@ export default {
 			let centreWidth = document.getElementById(currentNavId).clientWidth / 2;
 			let centreHeight = document.getElementById(currentNavId).clientHeight / 2;
 			let changeY = (centreHeight - e.offsetY) / -50;
-			let changeX = (centreWidth - e.offsetX) / -50;
+			let changeX = (centreWidth - e.offsetX) / -20;
 
 			document.getElementById(currentDetId).style.transform = 'translate(' + changeX + '%, ' + changeY + '%)';
 		},
@@ -171,13 +171,9 @@ export default {
 	flex-direction: column;
 	margin: 1%;
 }
-/* @media only screen and (max-width: 600px) {
-    .portfolioContainer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-} */
+@media only screen and (max-width: 600px) {
+	.portNavContainer {
+		width: 100%;
+	}
+}
 </style>

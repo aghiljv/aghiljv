@@ -97,8 +97,8 @@ export default {
 
 <style>
 :root {
-	--color-primary: white;
-	--background-color-primary: black;
+	--color-primary: rgba(255, 255, 255, 1);
+	--background-color-primary: rgba(0, 0, 0, 1);
 	--header-bg-color: rgba(0, 0, 0, 0);
 	--link-text-color: rgb(114, 114, 114);
 	--active-link-text-color: rgba(255, 255, 255, 1);
@@ -109,6 +109,7 @@ export default {
 	--intro-card-pic-border-color: rgba(50, 50, 50, 1);
 	--intro-card-button-holder-color: rgba(50, 50, 50, 0);
 	--intro-card-shadow: rgba(0, 0, 0, 0.2);
+	--invert-value: invert(0);
 }
 html {
 	font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,

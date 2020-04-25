@@ -102,7 +102,7 @@ export default {
 @media only screen and (max-width: 600px) {
 	.title {
 		width: 100%;
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 	.routeClass {
 		display: none;

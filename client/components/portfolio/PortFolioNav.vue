@@ -49,13 +49,13 @@ export default {
 	/* background: #ff0000; */
 	font-size: 4rem;
 	text-transform: uppercase;
-	-webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+	-webkit-text-stroke: 1px var(--color-primary);
 	-webkit-text-fill-color: rgba(255, 255, 255, 0);
-	z-index: 2;
+	z-index: 0;
 }
 .portImageHolder:hover {
 	filter: grayscale(0);
-	-webkit-text-fill-color: rgba(255, 255, 255, 1);
+	-webkit-text-fill-color: var(--color-primary);
 	letter-spacing: 0px;
 	z-index: 6;
 	/* transform: scale(2.5); */
@@ -78,6 +78,9 @@ export default {
 		flex-direction: column;
 		height: 60%;
 		padding: 5% 0% 5% 0%;
+	}
+	.portImageHolder {
+		font-size: 2rem;
 	}
 }
 @media only screen and (min-width: 600px) {

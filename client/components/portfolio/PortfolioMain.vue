@@ -1,11 +1,11 @@
 <template>
-	<div
-		class="portfolioHolder"
-		id="portfolioDisplay"
-		:style="[index == activePortIndex ? { opacity: '1', 'z-index': '5' } : { opacity: '0' }]"
-	>
-		<div class="portfolioItem" :id="'portfolioItem' + index">
-			<div class="portName">{{ portfolioName }}</div>
+	<div class="portfolioHolder" id="portfolioDisplay">
+		<div
+			class="portfolioItem"
+			:style="[index == activePortIndex ? { opacity: '1', 'z-index': '5' } : { opacity: '0' }]"
+			:id="'portfolioItem' + index"
+		>
+			<!-- <div class="portName">{{ portfolioName }}</div> -->
 			<div class="portImageHolder">
 				<img class="portImage" :src="`/img/portfolio/${portfolioImage}.jpg`" alt="portfolioImage" />
 			</div>
@@ -39,6 +39,8 @@ export default {
 	align-items: center;
 	opacity: 1;
 	transition: 0.5s;
+	/* background: var(--color-primary);
+	color: var(--background-color-primary); */
 }
 .portImage {
 	/* position: absolute;  */
@@ -50,15 +52,15 @@ export default {
 	top: 10%;
 	left: 5%;
 	height: 80%;
-	width: 70%;
+	width: 50%;
 	padding: 1%;
 	text-align: center;
-	/* transition: 0.1s; */
+	/* transition: 0.5s; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	z-index: 0;
+	z-index: -1;
 }
 .portName {
 	/* position: absolute; */
