@@ -8,6 +8,7 @@
 import HomePage from '../components/HomePage.vue';
 
 export default {
+	transition: 'fade',
 	data() {
 		return {
 			title: 'Aghil Jose | Full Stack Engineer',

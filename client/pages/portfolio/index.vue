@@ -33,6 +33,7 @@ import ServerService from '../../static/ServerService.js';
 import PortfolioMain from '../../components/portfolio/PortfolioMain.vue';
 import PortfolioNav from '../../components/portfolio/PortfolioNav.vue';
 export default {
+	transition: 'fade',
 	components: {
 		PortfolioMain,
 		PortfolioNav,

@@ -18,8 +18,9 @@
 import BlogMain from '../../components/blog/BlogMain.vue'; //to change
 
 export default {
+	transition: 'fade',
 	components: {
-		BlogMain //to change
+		BlogMain, //to change
 	},
 	data() {
 		return {
@@ -31,7 +32,7 @@ export default {
 			minIndex: 0,
 			error: '',
 			currentDeltaY: 0,
-			firstLoad: true
+			firstLoad: true,
 		};
 	},
 	head() {
@@ -41,9 +42,9 @@ export default {
 				{
 					hid: 'blog',
 					name: 'Blog',
-					content: 'The blog of Full Stack Engineer Aghil Jose'
-				}
-			]
+					content: 'The blog of Full Stack Engineer Aghil Jose',
+				},
+			],
 		};
 	},
 	mounted() {
@@ -75,7 +76,7 @@ export default {
 			setTimeout(() => {
 				this.scrollState = null;
 			}, 500);
-		}
+		},
 	},
 	watch: {
 		scrollState() {
@@ -96,7 +97,7 @@ export default {
 			} else {
 				// this.switchPortfolio(1);
 			}
-		}
+		},
 	},
 	computed: {
 		portfolios() {
@@ -108,8 +109,8 @@ export default {
 		// },
 		maxIndex() {
 			return this.$store.state.blogs.blogs.length;
-		}
-	}
+		},
+	},
 };
 </script>
 

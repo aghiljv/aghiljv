@@ -47,6 +47,7 @@
 <script>
 import ServerService from '../static/ServerService.js';
 export default {
+	transition: 'fade',
 	data() {
 		return {
 			title: 'Aghil Jose | Full Stack Engineer',

@@ -13,7 +13,7 @@
 
 <script>
 export default {
-	props: ['portfolioName', 'portfolioImage', 'portfolioBrief']
+	props: ['portfolioName', 'portfolioImage', 'portfolioBrief'],
 };
 </script>
 
@@ -24,7 +24,7 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid var(--color-primary);
+	/* border-bottom: 1px solid var(--color-primary); */
 	padding: 1% 0% 1% 0%;
 }
 #portfolioDisplay {
