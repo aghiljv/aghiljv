@@ -114,7 +114,7 @@ p {
 		right: 0%;
 	}
 	.experienceHolder {
-		top: 125%;
+		top: 130%;
 		left: 0%;
 	}
 	.experienceTitle {
