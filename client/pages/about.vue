@@ -106,7 +106,7 @@ p {
 	.aboutDescHolder {
 		width: 100%;
 		left: 0%;
-		top: 70%;
+		top: 75%;
 	}
 	.logoImg {
 		top: 110%;
@@ -114,7 +114,7 @@ p {
 		right: 0%;
 	}
 	.experienceHolder {
-		top: 120%;
+		top: 125%;
 		left: 0%;
 	}
 	.experienceTitle {
