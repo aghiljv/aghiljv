@@ -150,7 +150,7 @@ img.contactContent {
 	.contactDescHolder {
 		width: 100%;
 		left: 0%;
-		top: 50%;
+		top: 55%;
 	}
 	.logoImg {
 		top: 110%;
@@ -158,7 +158,7 @@ img.contactContent {
 		right: 0%;
 	}
 	.experienceHolder {
-		top: 80%;
+		top: 90%;
 		left: 0%;
 	}
 }
