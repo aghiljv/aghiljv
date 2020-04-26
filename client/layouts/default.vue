@@ -133,20 +133,13 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 }
-#mainContent {
-	/* transition: 0.5s; */
-}
 .container {
 	position: absolute;
 	margin: 0 auto;
 	left: 5%;
 	min-height: 100%;
 	width: 80%;
-	/* display: flex; */
 	flex: 100%;
-	/* justify-content: center; */
-	/* align-items: center; */
-	/* text-align: center; */
 	color: white;
 	color: var(--color-primary);
 	z-index: 3;
@@ -158,7 +151,6 @@ html {
 	height: 10%;
 	width: 100%;
 	color: var(--color-primary);
-	/* background: var(--header-bg-color); */
 	z-index: 5;
 	text-align: left;
 }
@@ -179,6 +171,9 @@ html {
 		top: 10%;
 		min-height: 80%;
 		width: 90%;
+	}
+	#sideRoutes {
+		display: none;
 	}
 }
 @media only screen and (min-width: 600px) {

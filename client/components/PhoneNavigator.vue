@@ -70,14 +70,6 @@ export default {
 </script>
 
 <style scoped>
-.animDiv {
-	position: absolute;
-	background: white;
-	height: 100vh;
-	width: 100vh;
-	border-radius: 50%;
-	z-index: 100;
-}
 .phoneNavClass {
 	position: absolute;
 	bottom: -100%;

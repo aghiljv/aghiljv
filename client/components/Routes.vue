@@ -80,10 +80,8 @@ export default {
 	width: 5%;
 	right: 0%;
 	flex-direction: column;
-	/* transform: rotate(-90deg); */
 	display: flex;
 	z-index: 5;
-
 	justify-content: space-evenly;
 	align-items: center;
 	border-left: 2px solid var(--color-primary);
@@ -119,16 +117,7 @@ export default {
 	text-align: center;
 }
 .nuxt-link-exact-active {
-	/* background: var(--active-link-background-color); */
 	color: var(--active-link-text-color);
 	font-weight: bolder;
-}
-@media only screen and (max-width: 600px) {
-	.routeHolder {
-		display: none;
-	}
-	.currentRouteHolder {
-		display: none;
-	}
 }
 </style>
