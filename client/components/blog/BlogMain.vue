@@ -1,5 +1,5 @@
 <template>
-	<div class="blogHolder" id="blogDisplay">
+	<nuxt-link class="blogHolder" id="blogDisplay" :to="/blog/">
 		<div class="portImageHolder">
 			<img class="portImage" :src="`/img/blog/${blogImage}.jpg`" alt="blogImage" />
 		</div>
@@ -8,7 +8,7 @@
 			<div class="blogDesc">{{ blogBrief }}</div>
 		</div>
 		<!-- <hr style="width: 100%" /> -->
-	</div>
+	</nuxt-link>
 </template>
 
 <script>
@@ -25,6 +25,8 @@ export default {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1% 0% 1% 0%;
+	text-decoration: none;
+	color: var(--primary-color);
 }
 #blogDisplay {
 	opacity: 1;

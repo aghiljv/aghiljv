@@ -56,7 +56,6 @@ export default {
 		} catch (err) {
 			this.error = err.message;
 		}
-		console.log(this.$store.state.blogs.blogs);
 	},
 	data() {
 		return {
