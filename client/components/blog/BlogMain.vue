@@ -1,11 +1,11 @@
 <template>
-	<div class="portfolioHolder" id="portfolioDisplay">
+	<div class="blogHolder" id="blogDisplay">
 		<div class="portImageHolder">
-			<img class="portImage" :src="`/img/blog/${portfolioImage}.jpg`" alt="blogImage" />
+			<img class="portImage" :src="`/img/blog/${blogImage}.jpg`" alt="blogImage" />
 		</div>
-		<div class="portfolioItem">
-			<div class="portName">{{ portfolioName }}</div>
-			<div class="portfolioDesc">{{ portfolioBrief }}</div>
+		<div class="blogItem">
+			<div class="portName">{{ blogName }}</div>
+			<div class="blogDesc">{{ blogBrief }}</div>
 		</div>
 		<!-- <hr style="width: 100%" /> -->
 	</div>
@@ -13,21 +13,20 @@
 
 <script>
 export default {
-	props: ['portfolioName', 'portfolioImage', 'portfolioBrief'],
+	props: ['blogName', 'blogImage', 'blogBrief'],
 };
 </script>
 
 <style scoped>
-.portfolioHolder {
+.blogHolder {
 	width: 100%;
 	height: 30%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	/* border-bottom: 1px solid var(--color-primary); */
 	padding: 1% 0% 1% 0%;
 }
-#portfolioDisplay {
+#blogDisplay {
 	opacity: 1;
 	transition: 0.5s;
 }
@@ -40,11 +39,10 @@ export default {
 	align-items: center;
 }
 .portImage {
-	/* position: absolute;  */
 	width: 100%;
 	transition: 0.5s;
 }
-.portfolioItem {
+.blogItem {
 	position: relative;
 	height: 100%;
 	width: 70%;
@@ -55,20 +53,20 @@ export default {
 	font-size: 2rem;
 }
 @media only screen and (max-width: 600px) {
-	.portfolioHolder {
+	.blogHolder {
 		flex-direction: column;
-		height: 60%;
+		height: 50%;
 		padding: 5% 0% 5% 0%;
 	}
 	.portImageHolder {
 		width: 100%;
 	}
-	.portfolioItem {
+	.blogItem {
 		width: 100%;
 	}
 }
 @media only screen and (min-width: 600px) {
-	.portfolioHolder:hover .portImage {
+	.blogHolder:hover .portImage {
 		transform: scale(1.1);
 	}
 }

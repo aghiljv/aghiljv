@@ -2,25 +2,25 @@
 	<div class="container">
 		<div class="blogContainer" v-touch:swipe.right="swipeUpAction" v-touch:swipe.left="swipeDownAction">
 			<BlogMain
-				v-for="(portfolio, index) in portfolios"
-				v-bind:item="portfolio"
+				v-for="(blog, index) in blogs"
+				v-bind:item="blog"
 				v-bind:index="index"
-				v-bind:key="portfolio._id"
-				:portfolioName="portfolio.name"
-				:portfolioImage="portfolio.titleImage"
-				:portfolioBrief="portfolio.briefdesc"
+				v-bind:key="blog._id"
+				:blogName="blog.name"
+				:blogImage="blog.titleImage"
+				:blogBrief="blog.briefdesc"
 			/>
 		</div>
 	</div>
 </template>
 
 <script>
-import BlogMain from '../../components/blog/BlogMain.vue'; //to change
+import BlogMain from '../../components/blog/BlogMain.vue';
 
 export default {
 	transition: 'fade',
 	components: {
-		BlogMain, //to change
+		BlogMain,
 	},
 	data() {
 		return {
@@ -62,8 +62,8 @@ export default {
 				this.scrollState = null;
 			}
 		},
-		switchPortfolio(opacityState) {
-			document.getElementById('portfolioDisplay').style.opacity = opacityState;
+		switchblog(opacityState) {
+			document.getElementById('blogDisplay').style.opacity = opacityState;
 		},
 		swipeUpAction() {
 			this.scrollState = 'up';
@@ -82,31 +82,26 @@ export default {
 		scrollState() {
 			if (this.scrollState == 'up') {
 				if (this.currentIndex > 0) {
-					// this.switchPortfolio(0);
 					setTimeout(() => {
 						this.currentIndex--;
 					}, 500);
 				}
 			} else if (this.scrollState == 'down') {
 				if (this.currentIndex < this.maxIndex - 1) {
-					// this.switchPortfolio(0);
+					// this.switchblog(0);
 					setTimeout(() => {
 						this.currentIndex++;
 					}, 500);
 				}
 			} else {
-				// this.switchPortfolio(1);
+				// this.switchblog(1);
 			}
 		},
 	},
 	computed: {
-		portfolios() {
-			// console.log(this.$store.state.blogs.blogs);
+		blogs() {
 			return this.$store.state.blogs.blogs;
 		},
-		// portfolio() {
-		// 	return this.portfolios[this.currentIndex];
-		// },
 		maxIndex() {
 			return this.$store.state.blogs.blogs.length;
 		},
@@ -122,20 +117,8 @@ export default {
 	overflow: auto;
 	padding-top: 5%;
 	-ms-overflow-style: none;
-	/* display: flex;
-	align-items: center;
-	justify-content: center; */
 }
 .blogContainer::-webkit-scrollbar {
 	display: none;
 }
-/* @media only screen and (max-width: 600px) {
-    .blogContainer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-} */
 </style>
