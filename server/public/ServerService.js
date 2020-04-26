@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/api/posts/';
-// const url = 'https://aghiljv.herokuapp.com/api/posts/';
+// const url = 'http://localhost:5000/api/posts/';
+const url = 'https://aghiljv.herokuapp.com/api/posts/';
 
-const blogUrl = 'http://localhost:5000/api/blogs/';
-// const blogUrl = 'https://aghiljv.herokuapp.com/api/blogs/';
+// const blogUrl = 'http://localhost:5000/api/blogs/';
+const blogUrl = 'https://aghiljv.herokuapp.com/api/blogs/';
 
 class ServerService {
 	//Get posts

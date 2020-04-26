@@ -56,10 +56,6 @@ export default {
 		} catch (err) {
 			this.error = err.message;
 		}
-		// if (document.getElementsByClassName('nuxt-link-exact-active')[0] != null) {
-		// 	this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
-		// 	console.log(this.currentRoute);
-		// }
 	},
 	data() {
 		return {
@@ -80,7 +76,6 @@ export default {
 			this.themeName = themeName;
 		},
 		updateHeader(currentRoute) {
-			console.log(currentRoute);
 			this.currentRoute = currentRoute;
 		},
 		mouseMoveEvent(e) {
