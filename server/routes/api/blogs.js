@@ -12,6 +12,11 @@ router.get('/', async (req, res) => {
 	res.send(await posts.find({}).toArray());
 });
 
+router.get('/:name', async (req, res) => {
+	const posts = await loadBlogCollection();
+	res.send(await posts.find({ name: req.params.name }).toArray());
+});
+
 // //Add Posts
 // router.post('/', async (req, res) => {
 // 	const posts = await loadPorfolioCollection();

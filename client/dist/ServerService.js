@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-// const url = 'http://localhost:5000/api/posts/';
-const url = 'https://aghiljv.herokuapp.com/api/posts/';
+const url = 'http://localhost:5000/api/posts/';
+// const url = 'https://aghiljv.herokuapp.com/api/posts/';
 
-// const blogUrl = 'http://localhost:5000/api/blogs/';
-const blogUrl = 'https://aghiljv.herokuapp.com/api/blogs/';
+const blogUrl = 'http://localhost:5000/api/blogs/';
+// const blogUrl = 'https://aghiljv.herokuapp.com/api/blogs/';
 
 class ServerService {
 	//Get posts
@@ -30,6 +30,23 @@ class ServerService {
 		return new Promise((resolve, reject) => {
 			try {
 				axios.get(blogUrl).then((response) => {
+					const blogData = response.data;
+					resolve(
+						blogData.map((blog) => ({
+							...blog,
+						}))
+					);
+				});
+			} catch (err) {
+				reject(err);
+			}
+		});
+	}
+
+	static getBlog(name) {
+		return new Promise((resolve, reject) => {
+			try {
+				axios.get(`${blogUrl}${name}`).then((response) => {
 					const blogData = response.data;
 					resolve(
 						blogData.map((blog) => ({

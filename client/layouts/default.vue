@@ -4,9 +4,9 @@
 		<Particle class="particleClass" :themeName="themeName" />
 		<ProjectHeader class="headerClassMain" @changeBG="changeBG($event)" :currentRoute="currentRoute" />
 		<PhoneNavigator @changeBG="changeBG($event)" @currentRoute="updateHeader($event)" />
-		<SocialLinks id="socialLinks" />
+		<SocialLinks id="socialLinks" @currentRoute="updateHeader($event)" />
 		<Routes @changeBG="changeBG($event)" id="sideRoutes" @currentRoute="updateHeader($event)" />
-		<main><nuxt id="mainContent" /></main>
+		<main @currentRoute="updateHeader($event)"><nuxt id="mainContent" /></main>
 
 		<PhoneNavButton class="navButton" :navAction="navAction" />
 	</div>
@@ -56,6 +56,10 @@ export default {
 		} catch (err) {
 			this.error = err.message;
 		}
+		// if (document.getElementsByClassName('nuxt-link-exact-active')[0] != null) {
+		// 	this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
+		// 	console.log(this.currentRoute);
+		// }
 	},
 	data() {
 		return {
@@ -76,6 +80,7 @@ export default {
 			this.themeName = themeName;
 		},
 		updateHeader(currentRoute) {
+			console.log(currentRoute);
 			this.currentRoute = currentRoute;
 		},
 		mouseMoveEvent(e) {

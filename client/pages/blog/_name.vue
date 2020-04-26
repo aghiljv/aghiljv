@@ -1,5 +1,9 @@
 <template>
 	<div class="container">
+		<nuxt-link class="backButton" id="blogDisplay" :to="'/blog/'"
+			>« Return to List <br />
+			BLOGS</nuxt-link
+		>
 		<div class="blogContainer">
 			<div class="blogTitleImageHolder">
 				<img class="blogTitleImg" :src="`/img/blog/${blogItem.titleImage}.jpg`" alt="blogImage" />
@@ -13,6 +17,8 @@
 </template>
 
 <script>
+import ServerService from '../../static/ServerService.js';
+
 export default {
 	transition: 'fade',
 	head() {
@@ -31,16 +37,22 @@ export default {
 		return {
 			title: 'Aghil Jose | Full Stack Engineer',
 			blogItem: {},
+			currentRoute: '',
 		};
 	},
-	mounted() {
-		let blogsContent = this.$store.state.blogs.blogs;
-		blogsContent.forEach((blogContent) => {
-			console.log(blogContent);
-			if (blogContent.name == this.$route.params.name) {
-				this.blogItem = blogContent;
-			}
-		});
+	async mounted() {
+		if (this.$store.state.blogs.blogs.length > 1) {
+			let blogsContent = this.$store.state.blogs.blogs;
+			blogsContent.forEach((blogContent) => {
+				if (blogContent.name == this.$route.params.name) {
+					this.blogItem = blogContent;
+				}
+			});
+		} else {
+			let blogsContent = await ServerService.getBlog(this.$route.params.name);
+			this.blogItem = blogsContent[0];
+		}
+		this.$emit('currentRoute', 'BLOG');
 	},
 	validate({ params }) {
 		return isNaN(+params.name);
@@ -49,8 +61,12 @@ export default {
 </script>
 
 <style scoped>
-.indBlog {
+.backButton {
 	position: absolute;
+	text-decoration: none;
+	top: 10%;
+	color: var(--primary-color);
+	z-index: 6;
 }
 .container {
 	/* flex-direction: column; */
@@ -96,6 +112,13 @@ export default {
 	width: 50%;
 }
 @media only screen and (max-width: 600px) {
+	.backButton {
+		position: unset;
+	}
+	.blogContainer {
+		top: 10%;
+		height: 85%;
+	}
 	.blogTitleImageHolder {
 		height: 30%;
 	}
