@@ -1,5 +1,5 @@
 <template>
-	<nuxt-link class="blogHolder" id="blogDisplay" :to="/blog/">
+	<nuxt-link class="blogHolder" id="blogDisplay" :to="'/blog/' + blogName">
 		<div class="portImageHolder">
 			<img class="portImage" :src="`/img/blog/${blogImage}.jpg`" alt="blogImage" />
 		</div>
@@ -7,13 +7,12 @@
 			<div class="portName">{{ blogName }}</div>
 			<div class="blogDesc">{{ blogBrief }}</div>
 		</div>
-		<!-- <hr style="width: 100%" /> -->
 	</nuxt-link>
 </template>
 
 <script>
 export default {
-	props: ['blogName', 'blogImage', 'blogBrief'],
+	props: ['blogName', 'blogImage', 'blogBrief', 'index'],
 };
 </script>
 
