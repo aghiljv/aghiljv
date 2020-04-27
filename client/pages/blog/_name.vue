@@ -120,7 +120,7 @@ export default {
 		height: 85%;
 	}
 	.blogTitleImageHolder {
-		height: 30%;
+		height: 35%;
 	}
 	.blogTitle {
 		font-size: 2rem;
