@@ -14,31 +14,57 @@
 				You can also check out my <span @click="downloadResume()"><u>resume</u></span>
 			</p>
 		</div>
-		<div class="experienceHolder">
+		<div class="contactHolder">
 			<a
 				href="https://www.linkedin.com/in/aghil-jose/"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="indConatct"
 			>
-				<img class="contactContent" src="/img/linkedinp.png" alt="LinkedIn" />
-				<div class="contactContent">LinkedIn</div>
+				<div class="contactTitleContent">
+					<img class="contactContent" src="/img/linkedinp.png" alt="LinkedIn" />
+					<div class="contactContent">LinkedIn</div>
+				</div>
+				<div class="contactDesc">
+					I do posts and aricles relevant to the profession on a regualr basis around here.
+				</div>
 			</a>
 			<a href="https://github.com/aghiljv" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<img class="contactContent" src="/img/githubp.png" alt="GitHub" />
-				<div class="contactContent">GitHub</div>
+				<div class="contactTitleContent">
+					<img class="contactContent" src="/img/githubp.png" alt="GitHub" />
+					<div class="contactContent">GitHub</div>
+				</div>
+				<div class="contactDesc">
+					This is the place where I do my personal and fun projects. Although, most of the repositories are
+					private.
+				</div>
 			</a>
 			<a href="https://twitter.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<img class="contactContent" src="/img/twitterp.png" alt="Twitter" />
-				<div class="contactContent">Twitter</div>
+				<div class="contactTitleContent">
+					<img class="contactContent" src="/img/twitterp.png" alt="Twitter" />
+					<div class="contactContent">Twitter</div>
+				</div>
+				<div class="contactDesc">
+					I am not much of a tweeter. but I have my moments.
+				</div>
 			</a>
 			<a href="https://www.instagram.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<img class="contactContent" src="/img/instagramp.png" alt="Instagram" />
-				<div class="contactContent">Instagram</div>
+				<div class="contactTitleContent">
+					<img class="contactContent" src="/img/instagramp.png" alt="Instagram" />
+					<div class="contactContent">Instagram</div>
+				</div>
+				<div class="contactDesc">
+					This is the platform I use to showcase one of my hobbies - Photography.
+				</div>
 			</a>
 			<a href="https://www.facebook.com/aghiljv" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<img class="contactContent" src="/img/facebookp.png" alt="Facebook" />
-				<div class="contactContent">Facebook</div>
+				<div class="contactTitleContent">
+					<img class="contactContent" src="/img/facebookp.png" alt="Facebook" />
+					<div class="contactContent">Facebook</div>
+				</div>
+				<div class="contactDesc">
+					I just login for memes.
+				</div>
 			</a>
 		</div>
 	</div>
@@ -80,7 +106,6 @@ export default {
 	width: 45%;
 	left: 0%;
 	top: 10%;
-	/* filter: grayscale(1);*/
 }
 
 .contactTitleHolder {
@@ -96,6 +121,16 @@ export default {
 	top: 35%;
 	left: 45%;
 	text-align: left;
+}
+.contactTitleContent {
+	display: flex;
+	align-items: center;
+}
+.contactDesc {
+	padding-left: 12%;
+	position: relative;
+	font-size: 80%;
+	font-weight: lighter;
 }
 p {
 	padding-top: 5%;
@@ -115,22 +150,21 @@ span {
 	width: 25%;
 	bottom: 5%;
 }
-.experienceHolder {
+.contactHolder {
 	position: absolute;
 	top: 60%;
 	left: 45%;
-	widows: 35%;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: auto auto;
 }
 .indConatct {
-	display: inline-flex;
+	/* display: inline-flex; */
 	align-items: center;
 	padding: 1%;
 }
 .contactContent {
 	display: inline-block;
-	width: 20%;
+	width: 80%;
 	padding: 1%;
 }
 img.contactContent {
@@ -158,9 +192,10 @@ img.contactContent {
 		width: 100%;
 		right: 0%;
 	}
-	.experienceHolder {
+	.contactHolder {
 		top: 90%;
 		left: 0%;
+		grid-template-columns: auto;
 	}
 }
 </style>
