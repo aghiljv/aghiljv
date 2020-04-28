@@ -45,13 +45,13 @@ export default {
 }
 .blogItem {
 	position: relative;
-	height: 100%;
+	height: 50%;
 	width: 70%;
 	padding: 1%;
 }
 .portName {
 	text-align: left;
-	font-size: 2rem;
+	font-size: 2vw;
 }
 @media only screen and (max-width: 600px) {
 	.blogHolder {
@@ -64,6 +64,9 @@ export default {
 	}
 	.blogItem {
 		width: 100%;
+	}
+	.portName {
+		font-size: 5vw;
 	}
 }
 @media only screen and (min-width: 600px) {

@@ -98,7 +98,7 @@ export default {
 	top: 40%;
 	width: 100%;
 	text-align: center;
-	font-size: 4rem;
+	font-size: 4vw;
 }
 .blogContentHolder {
 	/* position: absolute; */
@@ -106,7 +106,7 @@ export default {
 	justify-content: center;
 	width: 100%;
 	top: 50%;
-	font-size: 1rem;
+	font-size: 1vw;
 }
 .blogContent {
 	width: 50%;
@@ -123,10 +123,13 @@ export default {
 		height: 35%;
 	}
 	.blogTitle {
-		font-size: 2rem;
+		font-size: 8vw;
 	}
 	.blogContent {
 		width: 100%;
+	}
+	.blogContentHolder {
+		font-size: 3vw;
 	}
 }
 </style>

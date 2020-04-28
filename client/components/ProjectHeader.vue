@@ -24,14 +24,14 @@ export default {
 }
 .title {
 	width: 30%;
-	font-size: 4rem;
+	font-size: 4vw;
 	transition: 0.5s;
 	color: var(--active-link-text-color);
 }
 @media only screen and (max-width: 600px) {
 	.title {
 		width: 100%;
-		font-size: 3rem;
+		font-size: 12vw;
 	}
 }
 @media only screen and (min-width: 600px) {

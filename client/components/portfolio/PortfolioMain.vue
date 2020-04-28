@@ -66,7 +66,7 @@ export default {
 	/* position: absolute; */
 	/* opacity: 0; */
 	text-align: left;
-	font-size: 5rem;
+	font-size: 5vw;
 	transition: 0.5s;
 	/* height: 100%; */
 	width: 100%;
@@ -87,7 +87,7 @@ export default {
 	/* left: 10%; */
 }
 .portNumber {
-	font-size: 1rem;
+	font-size: 1vw;
 	width: 100%;
 	/* height: 100%; */
 	display: flex;
@@ -119,7 +119,7 @@ export default {
 	}
 	.portfolioHolder:hover .portName {
 		opacity: 1;
-		font-size: 2rem;
+		font-size: 2vw;
 		transform: translate(-45%, -50%);
 	}
 	.portfolioHolder:hover .portfolioDesc {

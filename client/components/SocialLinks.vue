@@ -86,7 +86,7 @@ export default {
 .computerScreen {
 	position: absolute;
 	left: -30%;
-	font-size: 0.5rem;
+	font-size: 0.5vw;
 	color: white;
 	transition: 0.5s;
 	width: 100%;
@@ -94,7 +94,7 @@ export default {
 .phoneScreen {
 	position: absolute;
 	bottom: 0.5%;
-	font-size: 0.5rem;
+	font-size: 0.5vw;
 	color: white;
 	transition: 0.5s;
 	width: 100%;
@@ -127,7 +127,7 @@ li {
 		justify-content: center;
 	}
 	li {
-		width: 12%;
+		width: 12vw;
 	}
 }
 @media only screen and (min-width: 600px) {

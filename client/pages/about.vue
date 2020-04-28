@@ -64,9 +64,9 @@ export default {
 }
 .aboutTitleHolder {
 	position: absolute;
-	font-size: 8rem;
+	font-size: 8vw;
 	color: var(--color-primary);
-	top: 20%;
+	top: 15%;
 	left: 20%;
 }
 .aboutDescHolder {
@@ -78,6 +78,7 @@ export default {
 }
 p {
 	padding-top: 5%;
+	font-size: 1vw;
 }
 .logoImg {
 	position: absolute;
@@ -91,7 +92,7 @@ p {
 	left: 65%;
 }
 .experienceTitle {
-	font-size: 2rem;
+	font-size: 2vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -100,7 +101,7 @@ p {
 		width: 50%;
 	}
 	.aboutTitleHolder {
-		font-size: 2.5rem;
+		font-size: 12vw;
 		top: 55%;
 		left: 0%;
 	}
@@ -119,7 +120,10 @@ p {
 		left: 0%;
 	}
 	.experienceTitle {
-		font-size: 1.5rem;
+		font-size: 5vw;
+	}
+	p {
+		font-size: 3vw;
 	}
 }
 </style>

@@ -107,10 +107,11 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 1vw;
 }
 .routeCurrentText {
 	transform: rotate(90deg);
-	font-size: 9rem;
+	font-size: 8vw;
 	width: 100vh;
 	height: 20vh;
 	position: fixed;

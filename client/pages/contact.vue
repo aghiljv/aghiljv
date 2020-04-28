@@ -110,7 +110,7 @@ export default {
 
 .contactTitleHolder {
 	position: absolute;
-	font-size: 8rem;
+	font-size: 8vw;
 	color: var(--color-primary);
 	top: 20%;
 	left: 20%;
@@ -118,7 +118,7 @@ export default {
 .contactDescHolder {
 	position: absolute;
 	width: 35%;
-	top: 35%;
+	top: 30%;
 	left: 45%;
 	text-align: left;
 }
@@ -129,12 +129,12 @@ export default {
 .contactDesc {
 	padding-left: 12%;
 	position: relative;
-	font-size: 80%;
+	font-size: 0.8vw;
 	font-weight: lighter;
 }
 p {
 	padding-top: 5%;
-	font-size: 1.5rem;
+	font-size: 1.25vw;
 }
 a {
 	text-decoration: none;
@@ -166,6 +166,7 @@ span {
 	display: inline-block;
 	width: 80%;
 	padding: 1%;
+	font-size: 1vw;
 }
 img.contactContent {
 	width: 10%;
@@ -178,7 +179,7 @@ img.contactContent {
 		width: 100%;
 	}
 	.contactTitleHolder {
-		font-size: 2.5rem;
+		font-size: 2.5vw;
 		top: 55%;
 		left: 0%;
 	}
@@ -196,6 +197,15 @@ img.contactContent {
 		top: 90%;
 		left: 0%;
 		grid-template-columns: auto;
+	}
+	p {
+		font-size: 5vw;
+	}
+	.contactDesc {
+		font-size: 3vw;
+	}
+	.contactContent {
+		font-size: 5vw;
 	}
 }
 </style>

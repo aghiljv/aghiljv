@@ -28,7 +28,7 @@ export default {};
 
 <style scoped>
 .homeTitle {
-	font-size: 12.5rem;
+	font-size: 12vw;
 	padding: 0% 0% 0% 5%;
 }
 #homeLogoID {
@@ -47,7 +47,7 @@ export default {};
 }
 .skillHolder {
 	position: absolute;
-	font-size: 1rem;
+	font-size: 1vw;
 	top: 60%;
 	height: 40%;
 	width: 60%;
@@ -106,13 +106,14 @@ div :nth-child(12) {
 }
 @media only screen and (max-width: 600px) {
 	.homeTitle {
-		font-size: 3.5rem;
+		font-size: 15vw;
 		padding: 0% 0% 0% 0%;
 	}
 	.skillHolder {
-		top: 25%;
+		top: 30%;
 		height: 30%;
 		width: 100%;
+		font-size: 5vw;
 	}
 	.logoHolder {
 		width: 100%;
