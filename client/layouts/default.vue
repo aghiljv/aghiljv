@@ -134,6 +134,12 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 }
+a:active,
+a:focus {
+	outline: 0;
+	border: none;
+	-moz-outline-style: none;
+}
 .container {
 	position: absolute;
 	margin: 0 auto;

@@ -116,5 +116,9 @@ export default {
 	height: 100%;
 	overflow: auto;
 	padding-top: 5%;
+	-ms-overflow-style: none;
+}
+.blogContainer::-webkit-scrollbar {
+	display: none;
 }
 </style>
