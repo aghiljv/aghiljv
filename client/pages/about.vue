@@ -2,31 +2,30 @@
 	<div class="container">
 		<img src="/img/about.jpg" class="aboutImg" alt="Aghil Jose" />
 		<div class="aboutTitleHolder">HEY THERE, I'M <br />AGHIL JOSE</div>
-		<div class="aboutDescHolder">
-			<p>
-				A Full Stack Engineer based in Trivandrum, Kerala, India. I'm into learning new technologies as well as
-				working in challenging environments.
-			</p>
-			<p>
-				I often build applications that leaves people wondering, "How was this bult?". I hold experience in
-				End-to-End Application Development and have worked with Accenture and Nissan Motor Coorperation.
-				Experienced in Automotive visualization and virtual testing environment for Autonomous vehicles.
-			</p>
-			<p>
-				A team player with strong inter-personal skills, with the ability to collaborate with cross-functional
-				teams. Apart from these, I love football, travel, photography and reading.
-			</p>
+		<div class="aboutTextHolder">
+			<div class="indTextHolder">
+				<p>
+					A Full Stack Engineer based in Trivandrum, Kerala, India. I'm into learning new technologies as well
+					as working in challenging environments.
+				</p>
+				<p>
+					I often build applications that leaves people wondering, "How was this bult?". I hold experience in
+					End-to-End Application Development and have worked with Accenture and Nissan Motor Coorperation.
+					Experienced in Automotive visualization and virtual testing environment for Autonomous vehicles.
+				</p>
+				<p>
+					A team player with strong inter-personal skills, with the ability to collaborate with
+					cross-functional teams. Apart from these, I love football, travel, photography and reading.
+				</p>
+			</div>
+			<div class="indTextHolder experienceHolder">
+				<div class="experienceTitle">EXPERIENCE</div>
+				<p>
+					Nissan Motor Coorporation / Software Engineer / Sep 2018 - Present<br />
+					Accenture / Associate Software Engineer / Jan 2018 - Jun 2018
+				</p>
+			</div>
 		</div>
-		<div class="experienceHolder">
-			<div class="experienceTitle">EXPERIENCE</div>
-			<!-- <ul> -->
-			<p>
-				Nissan Motor Coorporation / Software Engineer / Sep 2018 - Present<br />
-				Accenture / Associate Software Engineer / Jan 2018 - Jun 2018
-			</p>
-			<!-- </ul> -->
-		</div>
-		<!-- <img src="/img/aghiljvlogo.png" class="logoImg" alt="Aghil Jose Logo" /> -->
 	</div>
 </template>
 
@@ -60,7 +59,6 @@ export default {
 	width: 25%;
 	left: 0%;
 	top: 5%;
-	/* filter: grayscale(1); */
 }
 .aboutTitleHolder {
 	position: absolute;
@@ -69,27 +67,23 @@ export default {
 	top: 15%;
 	left: 20%;
 }
-.aboutDescHolder {
+.aboutTextHolder {
 	position: absolute;
-	width: 30%;
-	top: 55%;
+	top: 50%;
 	left: 30%;
-	text-align: left;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.indTextHolder {
+	padding: 5%;
 }
 p {
 	padding-top: 5%;
 	font-size: 1vw;
 }
-.logoImg {
-	position: absolute;
-	right: 5%;
-	width: 25%;
-	bottom: 5%;
-}
 .experienceHolder {
-	position: absolute;
-	top: 70%;
-	left: 65%;
+	position: relative;
+	top: 40%;
 }
 .experienceTitle {
 	font-size: 2vw;
@@ -105,18 +99,16 @@ p {
 		top: 55%;
 		left: 0%;
 	}
-	.aboutDescHolder {
-		width: 100%;
-		left: 0%;
+	.aboutTextHolder {
 		top: 75%;
+		left: 0%;
+		grid-template-columns: auto;
 	}
-	.logoImg {
-		top: 110%;
-		width: 100%;
-		right: 0%;
+	.indTextHolder {
+		padding: 5% 0% 0% 0%;
 	}
 	.experienceHolder {
-		top: 130%;
+		top: 0%;
 		left: 0%;
 	}
 	.experienceTitle {

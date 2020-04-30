@@ -45,7 +45,7 @@
 					<div class="contactContent">Twitter</div>
 				</div>
 				<div class="contactDesc">
-					I am not much of a tweeter. but I have my moments.
+					I am not much of a tweetter of the twitterverse. But, I have my moments.
 				</div>
 			</a>
 			<a href="https://www.instagram.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
@@ -63,7 +63,7 @@
 					<div class="contactContent">Facebook</div>
 				</div>
 				<div class="contactDesc">
-					I just login for memes.
+					I just go in for the memes.
 				</div>
 			</a>
 		</div>
