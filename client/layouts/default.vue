@@ -126,6 +126,7 @@ html {
 * {
 	overflow: hidden;
 	scrollbar-width: none;
+	border: none;
 }
 *,
 *:before,
