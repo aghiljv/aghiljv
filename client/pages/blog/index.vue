@@ -116,6 +116,5 @@ export default {
 	height: 100%;
 	overflow: auto;
 	padding-top: 5%;
-	scrollbar-width: none;
 }
 </style>
