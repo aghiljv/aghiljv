@@ -54,14 +54,19 @@ export default {
 					color: {
 						value: this.particleColor,
 					},
+					// shape: {
+					// 	type: 'image',
+					// 	image: {
+					// 		src: 'aghiljvlogo.png',
+					// 		width: 5,
+					// 		height: 5,
+					// 	},
+					// },
 					shape: {
 						type: 'circle',
 						stroke: {
-							width: 0,
-							color: this.particleBg,
-						},
-						polygon: {
-							nb_sides: 5,
+							width: 4,
+							color: '#fff',
 						},
 					},
 					opacity: {
@@ -75,7 +80,7 @@ export default {
 						},
 					},
 					size: {
-						value: 3,
+						value: 2,
 						random: true,
 						anim: {
 							enable: false,
@@ -93,7 +98,7 @@ export default {
 					},
 					move: {
 						enable: true,
-						speed: 6,
+						speed: 5,
 						direction: 'none',
 						random: false,
 						straight: false,

@@ -111,9 +111,9 @@ div :nth-child(12) {
 	}
 	.skillHolder {
 		top: 30%;
-		height: 30%;
+		height: 20%;
 		width: 100%;
-		font-size: 5vw;
+		font-size: 3.5vw;
 	}
 	.logoHolder {
 		width: 100%;
