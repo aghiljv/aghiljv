@@ -9,7 +9,7 @@
 					as working in challenging environments.
 				</p>
 				<p>
-					I often build applications that leaves people wondering, "How was this bult?". I hold experience in
+					I often build applications that leaves people wondering, "How was this built?". I hold experience in
 					End-to-End Application Development and have worked with Accenture and Nissan Motor Coorperation.
 					Experienced in Automotive visualization and virtual testing environment for Autonomous vehicles.
 				</p>

@@ -26,7 +26,8 @@
 					<div class="contactContent">LinkedIn</div>
 				</div>
 				<div class="contactDesc">
-					I do posts and aricles relevant to the profession on a regualr basis around here.
+					I am mostly active around here with posts and articles on a regualr basis which are relevant to the
+					profession.
 				</div>
 			</a>
 			<a href="https://github.com/aghiljv" target="_blank" rel="noopener noreferrer" class="indConatct">
@@ -45,7 +46,7 @@
 					<div class="contactContent">Twitter</div>
 				</div>
 				<div class="contactDesc">
-					I am not much of a tweetter of the twitterverse. But, I have my moments.
+					I am not much for the twitterverse. But, I have my moments.
 				</div>
 			</a>
 			<a href="https://www.instagram.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
