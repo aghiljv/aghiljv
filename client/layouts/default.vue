@@ -143,7 +143,8 @@ a:focus {
 .container {
 	position: absolute;
 	margin: 0 auto;
-	left: 5%;
+	/* left: 5%; */
+	margin-left: 5%;
 	min-height: 100%;
 	width: 80%;
 	flex: 100%;

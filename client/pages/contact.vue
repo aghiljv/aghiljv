@@ -1,72 +1,86 @@
 <template>
 	<div class="container">
-		<img src="/img/homelogo.png" class="contactImg" alt="Aghil Jose" />
-		<div class="contactDescHolder">
-			<p>
-				I am mostly active on
-				<a href="https://www.linkedin.com/in/aghil-jose/" target="_blank" rel="noopener noreferrer"
-					><u>LinkedIn</u>
-				</a>
-				and reachable <a href="mailto:aghiljv@gmail.com"><u>via email</u></a>
-			</p>
-			<p>But you can also find me in most places on internet as <u>@aghiljv</u></p>
-			<p>
-				You can also check out my <span @click="downloadResume()"><u>resume</u></span>
-			</p>
-		</div>
-		<div class="contactHolder">
-			<a
-				href="https://www.linkedin.com/in/aghil-jose/"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="indConatct"
-			>
-				<div class="contactTitleContent">
-					<img class="contactContent" src="/img/linkedinp.png" alt="LinkedIn" />
-					<div class="contactContent">LinkedIn</div>
+		<div class="contentContainer">
+			<img src="/img/homelogo.png" class="contactImg" alt="Aghil Jose" />
+			<div class="contactTextContent">
+				<div class="contactDescHolder">
+					<p>
+						I am mostly active on
+						<a href="https://www.linkedin.com/in/aghil-jose/" target="_blank" rel="noopener noreferrer"
+							><u>LinkedIn</u>
+						</a>
+						and reachable <a href="mailto:aghiljv@gmail.com"><u>via email</u></a>
+					</p>
+					<p>But you can also find me in most places on internet as <u>@aghiljv</u></p>
+					<p>
+						You can also check out my <span @click="downloadResume()"><u>resume</u></span>
+					</p>
 				</div>
-				<div class="contactDesc">
-					I am mostly active around here with posts and articles on a regualr basis which are relevant to the
-					profession.
+				<div class="contactHolder">
+					<a
+						href="https://www.linkedin.com/in/aghil-jose/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="indConatct"
+					>
+						<div class="contactTitleContent">
+							<img class="contactContent" src="/img/linkedinp.png" alt="LinkedIn" />
+							<div class="contactContent">LinkedIn</div>
+						</div>
+						<div class="contactDesc">
+							I am mostly active around here with posts and articles on a regualr basis which are relevant
+							to the profession.
+						</div>
+					</a>
+					<a href="https://github.com/aghiljv" target="_blank" rel="noopener noreferrer" class="indConatct">
+						<div class="contactTitleContent">
+							<img class="contactContent" src="/img/githubp.png" alt="GitHub" />
+							<div class="contactContent">GitHub</div>
+						</div>
+						<div class="contactDesc">
+							This is the place where I do my personal and fun projects. Although, most of the
+							repositories are private.
+						</div>
+					</a>
+					<a href="https://twitter.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
+						<div class="contactTitleContent">
+							<img class="contactContent" src="/img/twitterp.png" alt="Twitter" />
+							<div class="contactContent">Twitter</div>
+						</div>
+						<div class="contactDesc">
+							I am not much for the twitterverse. But, I have my moments.
+						</div>
+					</a>
+					<a
+						href="https://www.instagram.com/aghiljv/"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="indConatct"
+					>
+						<div class="contactTitleContent">
+							<img class="contactContent" src="/img/instagramp.png" alt="Instagram" />
+							<div class="contactContent">Instagram</div>
+						</div>
+						<div class="contactDesc">
+							This is the platform I use to showcase one of my hobbies - Photography.
+						</div>
+					</a>
+					<a
+						href="https://www.facebook.com/aghiljv"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="indConatct"
+					>
+						<div class="contactTitleContent">
+							<img class="contactContent" src="/img/facebookp.png" alt="Facebook" />
+							<div class="contactContent">Facebook</div>
+						</div>
+						<div class="contactDesc">
+							I just go in for the memes.
+						</div>
+					</a>
 				</div>
-			</a>
-			<a href="https://github.com/aghiljv" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<div class="contactTitleContent">
-					<img class="contactContent" src="/img/githubp.png" alt="GitHub" />
-					<div class="contactContent">GitHub</div>
-				</div>
-				<div class="contactDesc">
-					This is the place where I do my personal and fun projects. Although, most of the repositories are
-					private.
-				</div>
-			</a>
-			<a href="https://twitter.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<div class="contactTitleContent">
-					<img class="contactContent" src="/img/twitterp.png" alt="Twitter" />
-					<div class="contactContent">Twitter</div>
-				</div>
-				<div class="contactDesc">
-					I am not much for the twitterverse. But, I have my moments.
-				</div>
-			</a>
-			<a href="https://www.instagram.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<div class="contactTitleContent">
-					<img class="contactContent" src="/img/instagramp.png" alt="Instagram" />
-					<div class="contactContent">Instagram</div>
-				</div>
-				<div class="contactDesc">
-					This is the platform I use to showcase one of my hobbies - Photography.
-				</div>
-			</a>
-			<a href="https://www.facebook.com/aghiljv" target="_blank" rel="noopener noreferrer" class="indConatct">
-				<div class="contactTitleContent">
-					<img class="contactContent" src="/img/facebookp.png" alt="Facebook" />
-					<div class="contactContent">Facebook</div>
-				</div>
-				<div class="contactDesc">
-					I just go in for the memes.
-				</div>
-			</a>
+			</div>
 		</div>
 	</div>
 </template>
@@ -102,13 +116,25 @@ export default {
 </script>
 
 <style scoped>
-.contactImg {
+.contentContainer {
 	position: absolute;
-	width: 45%;
+	display: grid;
+	grid-template-columns: 40% 60%;
+	min-height: 100%;
+}
+.contactImg {
+	position: relative;
+	width: 90%;
 	left: 0%;
 	top: 10%;
 }
-
+.contactTextContent {
+	position: relative;
+	top: 30%;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 25% 40%;
+}
 .contactTitleHolder {
 	position: absolute;
 	font-size: 8vw;
@@ -117,8 +143,7 @@ export default {
 	left: 20%;
 }
 .contactDescHolder {
-	position: absolute;
-	width: 35%;
+	width: 60%;
 	top: 30%;
 	left: 45%;
 	text-align: left;
@@ -152,7 +177,6 @@ span {
 	bottom: 5%;
 }
 .contactHolder {
-	position: absolute;
 	top: 60%;
 	left: 45%;
 	display: grid;
@@ -175,9 +199,17 @@ img.contactContent {
 }
 
 @media only screen and (max-width: 600px) {
+	.contentContainer {
+		grid-template-columns: auto;
+		grid-template-rows: 30%;
+	}
 	.contactImg {
-		top: 5%;
+		top: 0%;
 		width: 100%;
+	}
+	.contactTextContent {
+		top: 0%;
+		grid-template-rows: auto;
 	}
 	.contactTitleHolder {
 		font-size: 2.5vw;

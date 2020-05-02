@@ -86,7 +86,7 @@ export default {
 	/* position: absolute; */
 	top: 0%;
 	width: 100%;
-	height: 40%;
+	height: 60%;
 	display: flex;
 	justify-content: center;
 }
@@ -120,7 +120,10 @@ export default {
 		height: 85%;
 	}
 	.blogTitleImageHolder {
-		height: 35%;
+		height: 45%;
+	}
+	.blogTitleImg {
+		width: 100%;
 	}
 	.blogTitle {
 		font-size: 8vw;

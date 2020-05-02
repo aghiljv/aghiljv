@@ -1,15 +1,14 @@
 <template>
-	<div
-		class="portfolioNavHolder"
-		:id="'portNav' + index"
-		@mousemove="mouseMove($event)"
-		@mouseover="activePort(index)"
-		@mouseleave="activePort(-1)"
-	>
-		<div class="portImageHolder">
+	<nuxt-link class="portfolioNavHolder" :id="'portNav' + index" :to="'/portfolio/' + portfolioName">
+		<div
+			class="portImageHolder"
+			@mousemove="mouseMove($event)"
+			@mouseover="activePort(index)"
+			@mouseleave="activePort(-1)"
+		>
 			{{ portfolioName }}
 		</div>
-	</div>
+	</nuxt-link>
 </template>
 
 <script>
@@ -33,6 +32,7 @@ export default {
 	align-items: center;
 	width: 100%;
 	transition: 0.5s;
+	text-decoration: none;
 }
 .portImageHolder {
 	position: relative;
@@ -61,9 +61,6 @@ export default {
 	/* transform: scale(2.5); */
 	/* font-size: 5rem; */
 }
-.portfolioNavHolder:hover {
-	/* transform: scale(1.5); */
-}
 .portImage {
 	/* position: absolute;  */
 	width: 100%;
@@ -74,30 +71,10 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-	.portfolioNavHolder {
-		flex-direction: column;
-		height: 60%;
-	}
 	.portImageHolder {
 		font-size: 8vw;
 	}
 }
 @media only screen and (min-width: 600px) {
-	/* .portfolioNavHolder:hover .portImageHolder {
-		opacity: 1;
-		transform: translateX(15%);
-	}
-	.portfolioNavHolder:hover .portNumber {
-		transform: translateX(-45%);
-	}
-	.portfolioNavHolder:hover .portName {
-		opacity: 1;
-		font-size: 2vw;
-		transform: translate(-45%, -50%);
-	}
-	.portfolioNavHolder:hover .portfolioDesc {
-		opacity: 1;
-		transform: translate(30%, 45%);
-	} */
 }
 </style>

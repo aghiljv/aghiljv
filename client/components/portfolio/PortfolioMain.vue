@@ -5,11 +5,10 @@
 			:style="[index == activePortIndex ? { opacity: '1', 'z-index': '5' } : { opacity: '0' }]"
 			:id="'portfolioItem' + index"
 		>
-			<!-- <div class="portName">{{ portfolioName }}</div> -->
 			<div class="portImageHolder">
 				<img class="portImage" :src="`/img/portfolio/${portfolioImage}.jpg`" alt="portfolioImage" />
 			</div>
-			<div class="portfolioDesc">{{ portfolioBrief }}</div>
+			<!-- <div class="portfolioDesc">{{ portfolioBrief }}</div> -->
 		</div>
 	</div>
 </template>
@@ -26,12 +25,9 @@ export default {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	/* border-bottom: 1px solid var(--color-primary); */
-	/* padding: 1% 0% 1% 0%; */
 	width: 100%;
 }
 .portImageHolder {
-	/* position: relative;  */
 	height: 60%;
 	width: 100%;
 	display: flex;
@@ -39,12 +35,8 @@ export default {
 	align-items: center;
 	opacity: 1;
 	transition: 0.5s;
-	/* background: var(--color-primary);
-	color: var(--background-color-primary); */
 }
 .portImage {
-	/* position: absolute;  */
-	/* width: 100%; */
 	transition: 0.5s;
 }
 .portfolioItem {
@@ -55,7 +47,6 @@ export default {
 	width: 50%;
 	padding: 1%;
 	text-align: center;
-	/* transition: 0.5s; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -63,38 +54,23 @@ export default {
 	z-index: -1;
 }
 .portName {
-	/* position: absolute; */
-	/* opacity: 0; */
 	text-align: left;
 	font-size: 5vw;
 	transition: 0.5s;
-	/* height: 100%; */
 	width: 100%;
 	justify-content: center;
 	display: flex;
 }
 .portfolioDesc {
-	/* opacity: 0; */
 	transition: 0.5s;
-	/* height: 100%; */
-}
-.portfolioHolder:nth-child(even) .portNumber {
-	/* justify-content: flex-end; */
-	/* right: 50%; */
-}
-.portfolioHolder:nth-child(odd) .portNumber {
-	/* justify-content: flex-start; */
-	/* left: 10%; */
 }
 .portNumber {
 	font-size: 1vw;
 	width: 100%;
-	/* height: 100%; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: 0.5s;
-	/* position: absolute; */
 }
 @media only screen and (max-width: 600px) {
 	.portfolioHolder {
@@ -110,21 +86,5 @@ export default {
 	}
 }
 @media only screen and (min-width: 600px) {
-	/* .portfolioHolder:hover .portImageHolder {
-		opacity: 1;
-		transform: translateX(15%);
-	}
-	.portfolioHolder:hover .portNumber {
-		transform: translateX(-45%);
-	}
-	.portfolioHolder:hover .portName {
-		opacity: 1;
-		font-size: 2vw;
-		transform: translate(-45%, -50%);
-	}
-	.portfolioHolder:hover .portfolioDesc {
-		opacity: 1;
-		transform: translate(30%, 45%);
-	} */
 }
 </style>

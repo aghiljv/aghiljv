@@ -25,6 +25,23 @@ class ServerService {
 		});
 	}
 
+	static getPortfolio(name) {
+		return new Promise((resolve, reject) => {
+			try {
+				axios.get(`${url}${name}`).then((response) => {
+					const data = response.data;
+					resolve(
+						data.map((post) => ({
+							...post,
+						}))
+					);
+				});
+			} catch (err) {
+				reject(err);
+			}
+		});
+	}
+
 	//Get Blogs
 	static getBlogs() {
 		return new Promise((resolve, reject) => {

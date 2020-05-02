@@ -150,7 +150,6 @@ export default {
 	height: 100%;
 	overflow: auto;
 	bottom: 0%;
-	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
@@ -158,23 +157,26 @@ export default {
 	display: none;
 }
 .portContentContainer {
-	position: absolute;
+	position: fixed;
 	height: 100%;
 	width: 100%;
 	left: 0%;
 }
 .portNavContainer {
 	position: absolute;
-	height: 50%;
 	width: 50%;
 	right: 0%;
-	display: flex;
-	flex-direction: column;
+	top: 10%;
 	margin: 1%;
+	overflow: auto;
+	-ms-overflow-style: none;
 }
 @media only screen and (max-width: 600px) {
 	.portNavContainer {
 		width: 100%;
+	}
+	.portContentContainer {
+		display: none;
 	}
 }
 </style>
