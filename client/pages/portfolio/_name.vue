@@ -87,7 +87,6 @@ export default {
 	display: none;
 }
 .portfolioTitleImageHolder {
-	/* position: absolute; */
 	top: 0%;
 	width: 100%;
 	height: 40%;
@@ -98,14 +97,12 @@ export default {
 	height: 100%;
 }
 .portfolioTitle {
-	/* position: absolute; */
 	top: 40%;
 	width: 100%;
 	text-align: center;
 	font-size: 4vw;
 }
 .portfolioContentHolder {
-	/* position: absolute; */
 	display: flex;
 	justify-content: center;
 	width: 100%;
