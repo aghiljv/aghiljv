@@ -24,7 +24,7 @@ export default {
 	},
 	methods: {
 		toggleNav() {
-			document.getElementById('phoneNavID').style.bottom = '-100%';
+			document.getElementById('phoneNavID').style.bottom = '-120%';
 			document.getElementById('nav-icon').classList.toggle('open');
 		},
 		switchTheme() {
@@ -72,7 +72,7 @@ export default {
 <style scoped>
 .phoneNavClass {
 	position: absolute;
-	bottom: -100%;
+	bottom: -120%;
 	width: 100%;
 	height: 100%;
 	z-index: 10;

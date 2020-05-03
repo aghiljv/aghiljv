@@ -1,6 +1,6 @@
 <template>
 	<div class="headerClass">
-		<div class="title">{{ currentRoute }}</div>
+		<div class="title">{{ pageTitle }}</div>
 	</div>
 </template>
 
@@ -12,6 +12,14 @@ export default {
 		};
 	},
 	props: ['currentRoute'],
+	computed: {
+		pageTitle() {
+			if (this.$props.currentRoute == '') {
+				return this.$store.state.pageTitle.pageTitle;
+			}
+			return this.$props.currentRoute;
+		},
+	},
 };
 </script>
 

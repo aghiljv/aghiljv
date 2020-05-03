@@ -6,7 +6,7 @@
 		<PhoneNavigator @changeBG="changeBG($event)" @currentRoute="updateHeader($event)" />
 		<SocialLinks id="socialLinks" @currentRoute="updateHeader($event)" />
 		<Routes @changeBG="changeBG($event)" id="sideRoutes" @currentRoute="updateHeader($event)" />
-		<main @currentRoute="updateHeader($event)"><nuxt id="mainContent" /></main>
+		<main><nuxt id="mainContent" /></main>
 
 		<PhoneNavButton class="navButton" :navAction="navAction" />
 	</div>
@@ -61,7 +61,7 @@ export default {
 		return {
 			themeName: 'Dark',
 			navAction: false,
-			currentRoute: null,
+			currentRoute: '',
 		};
 	},
 	methods: {
@@ -170,7 +170,7 @@ a:focus {
 }
 .navButton {
 	position: absolute;
-	bottom: 2.5%;
+	bottom: 1.5%;
 	z-index: 11;
 	right: 3%;
 }

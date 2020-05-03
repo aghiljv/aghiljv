@@ -118,8 +118,8 @@ li {
 	.socialClass {
 		align-items: flex-end;
 		width: 100%;
-		bottom: 2%;
-		height: 7%;
+		bottom: 1%;
+		height: 10%;
 	}
 	ul {
 		display: flex;

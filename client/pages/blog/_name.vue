@@ -1,10 +1,10 @@
 <template>
 	<div class="container">
-		<nuxt-link class="backButton" id="blogDisplay" :to="'/blog/'"
-			>« Return to List <br />
-			BLOGS</nuxt-link
-		>
 		<div class="blogContainer">
+			<nuxt-link class="backButton" id="blogDisplay" :to="'/blog/'"
+				>« Return to List <br />
+				BLOGS</nuxt-link
+			>
 			<div class="blogTitleImageHolder">
 				<img class="blogTitleImg" :src="`/img/blog/${blogItem.titleImage}.jpg`" alt="blogImage" />
 			</div>
@@ -52,7 +52,7 @@ export default {
 			let blogsContent = await ServerService.getBlog(this.$route.params.name);
 			this.blogItem = blogsContent[0];
 		}
-		this.$emit('currentRoute', 'BLOG');
+		this.$store.commit('pageTitle/set', 'BLOG');
 	},
 	validate({ params }) {
 		return isNaN(+params.name);
@@ -83,7 +83,6 @@ export default {
 	display: none;
 }
 .blogTitleImageHolder {
-	/* position: absolute; */
 	top: 0%;
 	width: 100%;
 	height: 60%;
@@ -94,14 +93,12 @@ export default {
 	height: 100%;
 }
 .blogTitle {
-	/* position: absolute; */
 	top: 40%;
 	width: 100%;
 	text-align: center;
 	font-size: 4vw;
 }
 .blogContentHolder {
-	/* position: absolute; */
 	display: flex;
 	justify-content: center;
 	width: 100%;
@@ -115,15 +112,13 @@ export default {
 	.backButton {
 		position: unset;
 	}
-	.blogContainer {
-		top: 10%;
-		height: 85%;
-	}
 	.blogTitleImageHolder {
-		height: 45%;
+		margin-top: 2%;
+		height: 50%;
 	}
 	.blogTitleImg {
 		width: 100%;
+		object-fit: cover;
 	}
 	.blogTitle {
 		font-size: 8vw;

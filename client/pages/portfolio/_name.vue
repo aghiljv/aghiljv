@@ -56,7 +56,7 @@ export default {
 			let portfoliosContent = await ServerService.getPortfolio(this.$route.params.name);
 			this.portfolioItem = portfoliosContent[0];
 		}
-		this.$emit('currentRoute', 'portfolio');
+		this.$store.commit('pageTitle/set', 'PORTFOLIO');
 	},
 	validate({ params }) {
 		return isNaN(+params.name);
@@ -89,7 +89,7 @@ export default {
 .portfolioTitleImageHolder {
 	top: 0%;
 	width: 100%;
-	height: 40%;
+	height: 60%;
 	display: flex;
 	justify-content: center;
 }
@@ -113,12 +113,13 @@ export default {
 	.backButton {
 		position: unset;
 	}
-	.portfolioContainer {
-		top: 10%;
-		height: 85%;
-	}
 	.portfolioTitleImageHolder {
-		height: 35%;
+		margin-top: 2%;
+		height: 50%;
+	}
+	.portfolioTitleImg {
+		width: 100%;
+		object-fit: cover;
 	}
 	.portfolioTitle {
 		font-size: 8vw;

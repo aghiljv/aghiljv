@@ -15,7 +15,7 @@ export default {
 			if (document.getElementById('phoneNavID').style.bottom != '0%') {
 				document.getElementById('phoneNavID').style.bottom = '0%';
 			} else {
-				document.getElementById('phoneNavID').style.bottom = '-100%';
+				document.getElementById('phoneNavID').style.bottom = '-120%';
 			}
 		},
 	},
@@ -25,7 +25,7 @@ export default {
 <style scoped>
 #nav-icon {
 	width: 12%;
-	height: 5%;
+	height: 10vw;
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-o-transform: rotate(0deg);
