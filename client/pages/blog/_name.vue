@@ -40,6 +40,9 @@ export default {
 			currentRoute: '',
 		};
 	},
+	created() {
+		this.$store.commit('pageTitle/set', 'BLOG');
+	},
 	async mounted() {
 		if (this.$store.state.blogs.blogs.length > 1) {
 			let blogsContent = this.$store.state.blogs.blogs;
@@ -52,7 +55,6 @@ export default {
 			let blogsContent = await ServerService.getBlog(this.$route.params.name);
 			this.blogItem = blogsContent[0];
 		}
-		this.$store.commit('pageTitle/set', 'BLOG');
 	},
 	validate({ params }) {
 		return isNaN(+params.name);
@@ -91,6 +93,7 @@ export default {
 }
 .blogTitleImg {
 	height: 100%;
+	object-fit: cover;
 }
 .blogTitle {
 	top: 40%;
@@ -118,7 +121,6 @@ export default {
 	}
 	.blogTitleImg {
 		width: 100%;
-		object-fit: cover;
 	}
 	.blogTitle {
 		font-size: 8vw;

@@ -10,7 +10,7 @@
 		</div>
 		<div class="currentRouteHolder" id="currentActiveRoute">
 			<div class="routeCurrentText">
-				{{ currentRoute }}
+				{{ pageTitle }}
 			</div>
 		</div>
 	</div>
@@ -21,14 +21,20 @@ export default {
 	data() {
 		return {
 			themeName: 'Light Theme',
-			currentRoute: null,
+			currentRoute: '',
 		};
 	},
-	mounted() {
-		if (document.getElementsByClassName('nuxt-link-exact-active')[0] != null) {
-			this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
-			this.$emit('currentRoute', this.currentRoute);
-		}
+	computed: {
+		pageTitle() {
+			if (this.currentRoute == '') {
+				if (process.client && document.getElementsByClassName('nuxt-link-exact-active')[0] != null) {
+					this.currentRoute = document.getElementsByClassName('nuxt-link-exact-active')[0].textContent;
+				} else {
+					return this.$store.state.pageTitle.pageTitle;
+				}
+			}
+			return this.currentRoute;
+		},
 	},
 	methods: {
 		switchTheme() {
@@ -112,10 +118,11 @@ export default {
 .routeCurrentText {
 	transform: rotate(90deg);
 	font-size: 8vw;
-	width: 100vh;
-	height: 20vh;
+	width: 80vw;
+	height: 8vw;
 	position: fixed;
 	text-align: center;
+	/* z-index: 1001;*/
 }
 .nuxt-link-exact-active {
 	color: var(--active-link-text-color);

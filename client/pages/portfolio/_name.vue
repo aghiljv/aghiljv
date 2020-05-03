@@ -44,6 +44,9 @@ export default {
 			currentRoute: '',
 		};
 	},
+	created() {
+		this.$store.commit('pageTitle/set', 'PORTFOLIO');
+	},
 	async mounted() {
 		if (this.$store.state.portfolios.portfolios.length > 1) {
 			let portfoliosContent = this.$store.state.portfolios.portfolios;
@@ -56,7 +59,6 @@ export default {
 			let portfoliosContent = await ServerService.getPortfolio(this.$route.params.name);
 			this.portfolioItem = portfoliosContent[0];
 		}
-		this.$store.commit('pageTitle/set', 'PORTFOLIO');
 	},
 	validate({ params }) {
 		return isNaN(+params.name);
@@ -95,6 +97,7 @@ export default {
 }
 .portfolioTitleImg {
 	height: 100%;
+	object-fit: cover;
 }
 .portfolioTitle {
 	top: 40%;
@@ -119,7 +122,6 @@ export default {
 	}
 	.portfolioTitleImg {
 		width: 100%;
-		object-fit: cover;
 	}
 	.portfolioTitle {
 		font-size: 8vw;
