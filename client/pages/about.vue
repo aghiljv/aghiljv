@@ -1,29 +1,36 @@
 <template>
 	<div class="container">
-		<img src="/img/about.jpg" class="aboutImg" alt="Aghil Jose" />
-		<div class="aboutTitleHolder">HEY THERE, I'M <br />AGHIL JOSE</div>
-		<div class="aboutTextHolder">
-			<div class="indTextHolder">
-				<p>
-					A Full Stack Engineer based in Trivandrum, Kerala, India. I'm into learning new technologies as well
-					as working in challenging environments.
-				</p>
-				<p>
-					I often build applications that leaves people wondering, "How was this built?". I hold experience in
-					End-to-End Application Development and have worked with Accenture and Nissan Motor Coorperation.
-					Experienced in Automotive visualization and virtual testing environment for Autonomous vehicles.
-				</p>
-				<p>
-					A team player with strong inter-personal skills, with the ability to collaborate with
-					cross-functional teams. Apart from these, I love football, travel, photography and reading.
-				</p>
+		<div class="aboutTextContents">
+			<div class="aboutTitleContents">
+				<div>
+					<img src="/img/about.jpg" class="aboutImg" alt="Aghil Jose" />
+				</div>
+				<div class="aboutTitleHolder">HEY THERE, I'M <br />AGHIL JOSE</div>
 			</div>
-			<div class="indTextHolder experienceHolder">
-				<div class="experienceTitle">EXPERIENCE</div>
-				<p>
-					Nissan Motor Coorporation / Software Engineer / Sep 2018 - Present<br />
-					Accenture / Associate Software Engineer / Jan 2018 - Jun 2018
-				</p>
+			<div class="aboutTextHolder">
+				<div class="indTextHolder">
+					<p>
+						A Full Stack Engineer based in Trivandrum, Kerala, India. I'm into learning new technologies as
+						well as working in challenging environments.
+					</p>
+					<p>
+						I often build applications that leaves people wondering, "How was this built?". I hold
+						experience in End-to-End Application Development and have worked with Accenture and Nissan Motor
+						Coorperation. Experienced in Automotive visualization and virtual testing environment for
+						Autonomous vehicles.
+					</p>
+					<p>
+						A team player with strong inter-personal skills, with the ability to collaborate with
+						cross-functional teams. Apart from these, I love football, travel, photography and reading.
+					</p>
+				</div>
+				<div class="indTextHolder experienceHolder">
+					<div class="experienceTitle">EXPERIENCE</div>
+					<p>
+						Nissan Motor Coorporation / Software Engineer / Sep 2018 - Present<br />
+						Accenture / Associate Software Engineer / Jan 2018 - Jun 2018
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -60,21 +67,40 @@ export default {
 	left: 0%;
 	top: 5%;
 }
-.aboutTitleHolder {
+.aboutTextContents {
 	position: absolute;
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-rows: 65% 35%;
+}
+.aboutTitleContents {
+	position: relative;
+	display: grid;
+	grid-template-columns: 30% 70%;
+}
+.aboutTitleHolder {
+	position: relative;
 	font-size: 8vw;
 	color: var(--color-primary);
-	top: 15%;
-	left: 20%;
+	top: 25%;
+	left: -15%;
+	height: 75%;
 }
 .aboutTextHolder {
-	position: absolute;
-	top: 50%;
-	left: 30%;
+	left: 25%;
+	top: -40%;
+	padding: 1%;
+	position: relative;
 	display: grid;
 	grid-template-columns: auto auto;
+	width: 75%;
+	height: 140%;
 }
 .indTextHolder {
+	position: relative;
+	height: 100%;
 	padding: 5%;
 }
 p {
@@ -90,6 +116,12 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+	.aboutTextContents {
+		grid-template-columns: auto;
+	}
+	.aboutTitleContents {
+		grid-template-columns: auto;
+	}
 	.aboutImg {
 		top: 10%;
 		width: 50%;
@@ -100,8 +132,10 @@ p {
 		left: 0%;
 	}
 	.aboutTextHolder {
-		top: 75%;
+		top: 0%;
 		left: 0%;
+		width: 100%;
+		height: 170%;
 		grid-template-columns: auto;
 	}
 	.indTextHolder {

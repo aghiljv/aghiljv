@@ -1,23 +1,27 @@
 <template>
-	<div class="homeTitle">
-		<p id="homeTitle1">FULL STACK</p>
-		<p id="homeTitle2">ENGINEER</p>
-		<div class="logoHolder">
-			<img id="homeLogoID" src="/img/homelogo.png" class="logoImg" alt="Aghil Jose Logo" />
+	<div class="contentContainer">
+		<div class="homeTitle">
+			<p id="homeTitle1">FULL STACK</p>
+			<p id="homeTitle2">ENGINEER</p>
 		</div>
-		<div class="skillHolder">
-			<div class="skillClass">Javascript</div>
-			<div class="skillClass">Java</div>
-			<div class="skillClass">MongoDB</div>
-			<div class="skillClass">NodeJS</div>
-			<div class="skillClass">Express</div>
-			<div class="skillClass">Unity 3D</div>
-			<div class="skillClass">Angular</div>
-			<div class="skillClass">React</div>
-			<div class="skillClass">VueJS</div>
-			<div class="skillClass">NuxtJS</div>
-			<div class="skillClass">HTML5</div>
-			<div class="skillClass">CSS3</div>
+		<div class="skillAndLogo">
+			<div class="skillHolder">
+				<div class="skillClass">Javascript</div>
+				<div class="skillClass">Java</div>
+				<div class="skillClass">MongoDB</div>
+				<div class="skillClass">NodeJS</div>
+				<div class="skillClass">Express</div>
+				<div class="skillClass">Unity 3D</div>
+				<div class="skillClass">Angular</div>
+				<div class="skillClass">React</div>
+				<div class="skillClass">VueJS</div>
+				<div class="skillClass">NuxtJS</div>
+				<div class="skillClass">HTML5</div>
+				<div class="skillClass">CSS3</div>
+			</div>
+			<div class="logoHolder">
+				<img id="homeLogoID" src="/img/homelogo.png" class="logoImg" alt="Aghil Jose Logo" />
+			</div>
 		</div>
 	</div>
 </template>
@@ -27,30 +31,42 @@ export default {};
 </script>
 
 <style scoped>
+.contentContainer {
+	position: absolute;
+	display: grid;
+	grid-template-rows: 55% 45%;
+	height: 100%;
+	width: 100%;
+}
 .homeTitle {
+	position: relative;
 	font-size: 12vw;
 	padding: 0% 0% 0% 5%;
 }
+.skillAndLogo {
+	position: relative;
+	display: grid;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: auto;
+}
 #homeLogoID {
-	bottom: 0%;
-	height: 100%;
-	right: 0%;
+	object-fit: contain;
 }
 .logoHolder {
-	position: absolute;
-	width: 95%;
-	height: 49%;
-	bottom: 0%;
+	/* position: absolute; */
+	/* width: 95%; */
+	/* height: 49%; */
+	/* bottom: 0%; */
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	justify-content: center;
+	/* align-items: center;*/
 }
 .skillHolder {
-	position: absolute;
+	/* position: absolute; */
 	font-size: 1vw;
-	top: 60%;
-	height: 40%;
-	width: 60%;
+	/* top: 60%; */
+	/* height: 40%; */
+	/* width: 60%;*/
 }
 .skillClass {
 	padding: 2%;
@@ -105,20 +121,19 @@ div :nth-child(12) {
 	}
 }
 @media only screen and (max-width: 600px) {
+	.contentContainer {
+		grid-template-rows: 30% 70%;
+	}
 	.homeTitle {
 		font-size: 15vw;
 		padding: 0% 0% 0% 0%;
 	}
-	.skillHolder {
-		top: 30%;
-		height: 20%;
-		width: 100%;
-		font-size: 3.5vw;
+	.skillAndLogo {
+		top: 0%;
+		grid-template-columns: auto;
 	}
-	.logoHolder {
-		width: 100%;
-		height: 50%;
-		justify-content: center;
+	.skillHolder {
+		font-size: 3.5vw;
 	}
 }
 </style>
