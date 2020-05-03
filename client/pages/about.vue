@@ -118,6 +118,7 @@ p {
 @media only screen and (max-width: 600px) {
 	.aboutTextContents {
 		grid-template-columns: auto;
+		grid-template-rows: 75% 40%;
 	}
 	.aboutTitleContents {
 		grid-template-columns: auto;
