@@ -128,7 +128,7 @@ p {
 		width: 50%;
 	}
 	.aboutTitleHolder {
-		font-size: 12vw;
+		font-size: 10vw;
 		top: 55%;
 		left: 0%;
 	}
