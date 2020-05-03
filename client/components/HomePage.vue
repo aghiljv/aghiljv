@@ -125,7 +125,7 @@ div :nth-child(12) {
 		grid-template-rows: 30% 70%;
 	}
 	.homeTitle {
-		font-size: 15vw;
+		font-size: 14.5vw;
 		padding: 0% 0% 0% 0%;
 	}
 	.skillAndLogo {
