@@ -117,7 +117,7 @@ export default {
 	}
 	.blogTitleImageHolder {
 		margin-top: 2%;
-		height: 50%;
+		height: auto;
 	}
 	.blogTitleImg {
 		width: 100%;

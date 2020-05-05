@@ -118,7 +118,7 @@ export default {
 	}
 	.portfolioTitleImageHolder {
 		margin-top: 2%;
-		height: 50%;
+		height: auto;
 	}
 	.portfolioTitleImg {
 		width: 100%;
