@@ -42,6 +42,7 @@ export default {};
 	position: relative;
 	font-size: 12vw;
 	padding: 0% 0% 0% 5%;
+	margin: -2%;
 }
 .skillAndLogo {
 	position: relative;
