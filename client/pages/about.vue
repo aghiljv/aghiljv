@@ -75,6 +75,9 @@ export default {
 	display: grid;
 	grid-template-rows: 65% 35%;
 }
+.aboutTextContents::-webkit-scrollbar {
+	display: none;
+}
 .aboutTitleContents {
 	position: relative;
 	display: grid;
@@ -96,7 +99,7 @@ export default {
 	display: grid;
 	grid-template-columns: auto auto;
 	width: 75%;
-	height: 140%;
+	height: 135%;
 }
 .indTextHolder {
 	position: relative;
