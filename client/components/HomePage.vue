@@ -33,10 +33,11 @@ export default {};
 <style scoped>
 .contentContainer {
 	position: absolute;
-	display: grid;
-	grid-template-rows: 60% 40%;
+	overflow: auto;
 	height: 100%;
 	width: 100%;
+	display: grid;
+	grid-template-rows: 60vh 40vh;
 }
 .homeTitle {
 	position: relative;
@@ -47,7 +48,7 @@ export default {};
 .skillAndLogo {
 	position: relative;
 	display: grid;
-	grid-template-columns: 60% 40%;
+	grid-template-columns: 6fr 4fr;
 	grid-template-rows: auto;
 }
 #homeLogoID {
@@ -68,37 +69,37 @@ export default {};
 .skillHolder :hover {
 	transform: scale(1.5);
 }
-div :nth-child(2) {
+.skillHolder :nth-child(2) {
 	animation-delay: 0.25s;
 }
-div :nth-child(3) {
+.skillHolder :nth-child(3) {
 	animation-delay: 0.5s;
 }
-div :nth-child(4) {
+.skillHolder :nth-child(4) {
 	animation-delay: 0.75s;
 }
-div :nth-child(5) {
+.skillHolder :nth-child(5) {
 	animation-delay: 1s;
 }
-div :nth-child(6) {
+.skillHolder :nth-child(6) {
 	animation-delay: 1.25s;
 }
-div :nth-child(7) {
+.skillHolder :nth-child(7) {
 	animation-delay: 1.5s;
 }
-div :nth-child(8) {
+.skillHolder :nth-child(8) {
 	animation-delay: 1.75s;
 }
-div :nth-child(9) {
+.skillHolder :nth-child(9) {
 	animation-delay: 2s;
 }
-div :nth-child(10) {
+.skillHolder :nth-child(10) {
 	animation-delay: 2.25s;
 }
-div :nth-child(11) {
+.skillHolder :nth-child(11) {
 	animation-delay: 2.5s;
 }
-div :nth-child(12) {
+.skillHolder :nth-child(12) {
 	animation-delay: 2.75s;
 }
 @keyframes jump {
@@ -114,11 +115,12 @@ div :nth-child(12) {
 }
 @media only screen and (max-width: 600px) {
 	.contentContainer {
-		grid-template-rows: 30% 70%;
+		grid-template-rows: 20vh 60vh;
 	}
 	.homeTitle {
 		font-size: 14vw;
 		padding: 0% 0% 0% 0%;
+		margin: 0%;
 	}
 	.skillAndLogo {
 		top: 0%;

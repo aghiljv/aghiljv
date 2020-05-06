@@ -119,7 +119,7 @@ export default {
 .contentContainer {
 	position: absolute;
 	display: grid;
-	grid-template-columns: 40% 60%;
+	grid-template-columns: 30vw 50vw;
 	min-height: 100%;
 }
 .contactImg {
@@ -133,7 +133,7 @@ export default {
 	top: 30%;
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 25% 40%;
+	grid-template-rows: 25vh 40vh;
 }
 .contactTitleHolder {
 	position: absolute;

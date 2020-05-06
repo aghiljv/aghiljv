@@ -73,7 +73,7 @@ export default {
 	height: 100%;
 	width: 100%;
 	display: grid;
-	grid-template-rows: 65% 35%;
+	grid-template-rows: 65vh 35vh;
 }
 .aboutTextContents::-webkit-scrollbar {
 	display: none;
@@ -121,13 +121,14 @@ p {
 @media only screen and (max-width: 600px) {
 	.aboutTextContents {
 		grid-template-columns: auto;
-		grid-template-rows: 75% 40%;
+		grid-template-rows: 55vh 30vh;
 	}
 	.aboutTitleContents {
 		grid-template-columns: auto;
+		grid-template-rows: 2fr 2fr;
 	}
 	.aboutImg {
-		top: 10%;
+		/* top: 10%; */
 		width: 50%;
 	}
 	.aboutTitleHolder {
