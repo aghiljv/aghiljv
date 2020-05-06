@@ -122,7 +122,9 @@ export default {
 	height: 8vw;
 	position: fixed;
 	text-align: center;
-	/* z-index: 1001;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .nuxt-link-exact-active {
 	color: var(--active-link-text-color);

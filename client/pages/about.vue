@@ -90,7 +90,7 @@ export default {
 }
 .aboutTextHolder {
 	left: 25%;
-	top: -40%;
+	top: -35%;
 	padding: 1%;
 	position: relative;
 	display: grid;
@@ -101,7 +101,7 @@ export default {
 .indTextHolder {
 	position: relative;
 	height: 100%;
-	padding: 5%;
+	padding: 2%;
 }
 p {
 	padding-top: 5%;

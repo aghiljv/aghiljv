@@ -34,7 +34,7 @@ export default {};
 .contentContainer {
 	position: absolute;
 	display: grid;
-	grid-template-rows: 55% 45%;
+	grid-template-rows: 60% 40%;
 	height: 100%;
 	width: 100%;
 }
@@ -53,20 +53,11 @@ export default {};
 	object-fit: contain;
 }
 .logoHolder {
-	/* position: absolute; */
-	/* width: 95%; */
-	/* height: 49%; */
-	/* bottom: 0%; */
 	display: flex;
 	justify-content: center;
-	/* align-items: center;*/
 }
 .skillHolder {
-	/* position: absolute; */
 	font-size: 1vw;
-	/* top: 60%; */
-	/* height: 40%; */
-	/* width: 60%;*/
 }
 .skillClass {
 	padding: 2%;
