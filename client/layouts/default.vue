@@ -169,7 +169,7 @@ a:focus {
 	z-index: 2;
 }
 .navButton {
-	position: absolute;
+	position: fixed;
 	bottom: 1.5%;
 	z-index: 11;
 	right: 3%;
