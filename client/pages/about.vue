@@ -125,16 +125,19 @@ p {
 	}
 	.aboutTitleContents {
 		grid-template-columns: auto;
-		grid-template-rows: 2fr 2fr;
+		grid-template-rows: 4fr 2fr;
 	}
 	.aboutImg {
-		/* top: 10%; */
+		top: 0%;
 		width: 50%;
 	}
 	.aboutTitleHolder {
 		font-size: 10vw;
-		top: 55%;
 		left: 0%;
+		top: 0%;
+		display: flex;
+		height: 100%;
+		align-items: center;
 	}
 	.aboutTextHolder {
 		top: 0%;
