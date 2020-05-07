@@ -41,9 +41,8 @@ export default {};
 }
 .homeTitle {
 	position: relative;
-	font-size: 12vw;
+	font-size: 10vw;
 	padding: 0% 0% 0% 5%;
-	margin: -2%;
 }
 .skillAndLogo {
 	position: relative;
