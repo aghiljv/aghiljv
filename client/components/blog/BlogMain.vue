@@ -56,7 +56,7 @@ export default {
 @media only screen and (max-width: 600px) {
 	.blogHolder {
 		flex-direction: column;
-		height: 50%;
+		height: auto;
 		padding: 5% 0% 5% 0%;
 	}
 	.portImageHolder {
