@@ -48,11 +48,10 @@ class ServerService {
 			try {
 				axios.get(blogUrl).then((response) => {
 					const blogData = response.data;
-					resolve(
-						blogData.map((blog) => ({
-							...blog,
-						}))
-					);
+					blogData.map((blog) => ({
+						...blog,
+					}));
+					resolve(blogData.reverse());
 				});
 			} catch (err) {
 				reject(err);
