@@ -47,7 +47,7 @@ export default {
 		if (this.$store.state.blogs.blogs.length > 1) {
 			let blogsContent = this.$store.state.blogs.blogs;
 			blogsContent.forEach((blogContent) => {
-				if (blogContent.name == this.$route.params.name) {
+				if (blogContent.name.includes(this.$route.params.name)) {
 					this.blogItem = blogContent;
 				}
 			});
