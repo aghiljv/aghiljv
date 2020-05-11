@@ -9,7 +9,7 @@
 export default {
 	data() {
 		return {
-			particleColor: '#ffffff',
+			particleColor: '#808080',
 			particleBg: '#000000',
 			darkMode: true,
 		};
@@ -18,16 +18,14 @@ export default {
 	watch: {
 		themeName() {
 			if (this.$props.themeName == 'Light') {
-				this.particleColor = '#000000';
+				this.particleColor = '#808080';
 				this.particleBg = '#ffffff';
 			} else if (this.$props.themeName == 'Dark') {
-				this.particleColor = '#ffffff';
+				this.particleColor = '#808080';
 				this.particleBg = '#000000';
+				console.log(this.$props.themeName);
 			}
-			pJSDom[0].pJS.particles.color.value = this.particleColor;
-			pJSDom[0].pJS.particles.shape.stroke.color = this.particleBg;
-			pJSDom[0].pJS.particles.line_linked.color = this.particleColor;
-			pJSDom[0].pJS.fn.particlesRefresh();
+			this.applyThemeChanges();
 		},
 	},
 	mounted() {
@@ -152,6 +150,13 @@ export default {
 				},
 				retina_detect: true,
 			});
+			this.applyThemeChanges();
+		},
+		applyThemeChanges() {
+			pJSDom[0].pJS.particles.color.value = this.particleColor;
+			pJSDom[0].pJS.particles.shape.stroke.color = this.particleBg;
+			pJSDom[0].pJS.particles.line_linked.color = this.particleColor;
+			pJSDom[0].pJS.fn.particlesRefresh();
 		},
 	},
 };
