@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:name', async (req, res) => {
 	const posts = await loadBlogCollection();
-	res.send(await posts.find({ name: req.params.name }).toArray());
+	res.send(await posts.find({ name: { $regex: `.*${req.params.name}.*` } }).toArray());
 });
 
 // //Add Posts
