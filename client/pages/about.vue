@@ -125,11 +125,12 @@ p {
 	}
 	.aboutTitleContents {
 		grid-template-columns: auto;
-		grid-template-rows: 70vw 20vw;
+		grid-template-rows: 75vw 25vw;
 	}
 	.aboutImg {
 		top: 0%;
-		width: 50%;
+		height: 75vw;
+		width: auto;
 	}
 	.aboutTitleHolder {
 		font-size: 10vw;
@@ -143,11 +144,12 @@ p {
 		top: 0%;
 		left: 0%;
 		width: 100%;
-		height: 100vw;
+		height: 90vw;
 		grid-template-columns: auto;
+		grid-template-rows: 60vw 30vw;
 	}
 	.indTextHolder {
-		padding: 5% 0% 0% 0%;
+		padding: 0%;
 	}
 	.experienceHolder {
 		top: 0%;
