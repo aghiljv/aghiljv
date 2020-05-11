@@ -114,7 +114,7 @@ export default {};
 }
 @media only screen and (max-width: 600px) {
 	.contentContainer {
-		grid-template-rows: 20vh 60vh;
+		grid-template-rows: 25vh 55vh;
 	}
 	.homeTitle {
 		font-size: 14vw;

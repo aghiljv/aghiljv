@@ -121,11 +121,11 @@ p {
 @media only screen and (max-width: 600px) {
 	.aboutTextContents {
 		grid-template-columns: auto;
-		grid-template-rows: 55vh 30vh;
+		grid-template-rows: 100vw 100vh;
 	}
 	.aboutTitleContents {
 		grid-template-columns: auto;
-		grid-template-rows: 4fr 2fr;
+		grid-template-rows: 70vw 20vw;
 	}
 	.aboutImg {
 		top: 0%;
@@ -143,7 +143,7 @@ p {
 		top: 0%;
 		left: 0%;
 		width: 100%;
-		height: 170%;
+		height: 100vw;
 		grid-template-columns: auto;
 	}
 	.indTextHolder {
