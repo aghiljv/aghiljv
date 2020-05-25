@@ -133,7 +133,7 @@ export default {
 	top: 30%;
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 25vh 40vh;
+	grid-template-rows: 30vh 40vh;
 }
 .contactTitleHolder {
 	position: absolute;
