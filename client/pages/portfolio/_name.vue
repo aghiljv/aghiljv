@@ -53,6 +53,7 @@ export default {
 			portfoliosContent.forEach((portfolioContent) => {
 				if (portfolioContent.name == this.$route.params.name) {
 					this.portfolioItem = portfolioContent;
+					this.title = this.portfolioItem.name + ' | ' + this.title;
 				}
 			});
 		} else {
