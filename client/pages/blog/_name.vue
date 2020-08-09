@@ -49,6 +49,7 @@ export default {
 			blogsContent.forEach((blogContent) => {
 				if (blogContent.name.includes(this.$route.params.name)) {
 					this.blogItem = blogContent;
+					this.title = this.blogItem.name;
 				}
 			});
 		} else {
