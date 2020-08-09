@@ -40,10 +40,8 @@ export default {
 			currentRoute: '',
 		};
 	},
-	created() {
+	async created() {
 		this.$store.commit('pageTitle/set', 'BLOG');
-	},
-	async mounted() {
 		if (this.$store.state.blogs.blogs.length > 1) {
 			let blogsContent = this.$store.state.blogs.blogs;
 			blogsContent.forEach((blogContent) => {
@@ -56,6 +54,20 @@ export default {
 			let blogsContent = await ServerService.getBlog(this.$route.params.name);
 			this.blogItem = blogsContent[0];
 		}
+	},
+	async mounted() {
+		// if (this.$store.state.blogs.blogs.length > 1) {
+		// 	let blogsContent = this.$store.state.blogs.blogs;
+		// 	blogsContent.forEach((blogContent) => {
+		// 		if (blogContent.name.includes(this.$route.params.name)) {
+		// 			this.blogItem = blogContent;
+		// 			this.title = this.blogItem.name;
+		// 		}
+		// 	});
+		// } else {
+		// 	let blogsContent = await ServerService.getBlog(this.$route.params.name);
+		// 	this.blogItem = blogsContent[0];
+		// }
 	},
 	validate({ params }) {
 		return isNaN(+params.name);
