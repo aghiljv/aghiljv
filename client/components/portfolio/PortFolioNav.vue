@@ -72,7 +72,7 @@ export default {
 
 @media only screen and (max-width: 600px) {
 	.portImageHolder {
-		font-size: 8vw;
+		font-size: 7.5vw;
 	}
 }
 @media only screen and (min-width: 600px) {
