@@ -4,7 +4,7 @@
 			<img class="portImage" :src="`/img/blog/${blogImage}.jpg`" alt="blogImage" />
 		</div>
 		<div class="blogItem">
-			<div class="portName">{{ blogName }}</div>
+			<div class="blogName">{{ blogName }}</div>
 			<div class="blogDesc">{{ blogBrief }}</div>
 		</div>
 	</nuxt-link>
@@ -49,9 +49,12 @@ export default {
 	width: 70%;
 	padding: 1%;
 }
-.portName {
+.blogName {
 	text-align: left;
 	font-size: 2vw;
+}
+.blogDesc {
+	font-size: 1vw;
 }
 @media only screen and (max-width: 600px) {
 	.blogHolder {
@@ -65,8 +68,11 @@ export default {
 	.blogItem {
 		width: 100%;
 	}
-	.portName {
+	.blogName {
 		font-size: 5vw;
+	}
+	.blogDesc {
+		font-size: 3vw;
 	}
 }
 @media only screen and (min-width: 600px) {
