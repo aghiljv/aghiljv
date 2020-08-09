@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<div class="contentContainer">
-			<img src="/img/homelogo.png" class="contactImg" alt="Aghil Jose" />
+			<img src="/img/common/homelogo.png" class="contactImg" alt="Aghil Jose" />
 			<div class="contactTextContent">
 				<div class="contactDescHolder">
 					<p>
@@ -24,7 +24,7 @@
 						class="indConatct"
 					>
 						<div class="contactTitleContent">
-							<img class="contactContent" src="/img/linkedinp.png" alt="LinkedIn" />
+							<img class="contactContent" src="/img/common/linkedinp.png" alt="LinkedIn" />
 							<div class="contactContent">LinkedIn</div>
 						</div>
 						<div class="contactDesc">
@@ -34,7 +34,7 @@
 					</a>
 					<a href="https://github.com/aghiljv" target="_blank" rel="noopener noreferrer" class="indConatct">
 						<div class="contactTitleContent">
-							<img class="contactContent" src="/img/githubp.png" alt="GitHub" />
+							<img class="contactContent" src="/img/common/githubp.png" alt="GitHub" />
 							<div class="contactContent">GitHub</div>
 						</div>
 						<div class="contactDesc">
@@ -44,7 +44,7 @@
 					</a>
 					<a href="https://twitter.com/aghiljv/" target="_blank" rel="noopener noreferrer" class="indConatct">
 						<div class="contactTitleContent">
-							<img class="contactContent" src="/img/twitterp.png" alt="Twitter" />
+							<img class="contactContent" src="/img/common/twitterp.png" alt="Twitter" />
 							<div class="contactContent">Twitter</div>
 						</div>
 						<div class="contactDesc">
@@ -58,7 +58,7 @@
 						class="indConatct"
 					>
 						<div class="contactTitleContent">
-							<img class="contactContent" src="/img/instagramp.png" alt="Instagram" />
+							<img class="contactContent" src="/img/common/instagramp.png" alt="Instagram" />
 							<div class="contactContent">Instagram</div>
 						</div>
 						<div class="contactDesc">
@@ -72,7 +72,7 @@
 						class="indConatct"
 					>
 						<div class="contactTitleContent">
-							<img class="contactContent" src="/img/facebookp.png" alt="Facebook" />
+							<img class="contactContent" src="/img/common/facebookp.png" alt="Facebook" />
 							<div class="contactContent">Facebook</div>
 						</div>
 						<div class="contactDesc">

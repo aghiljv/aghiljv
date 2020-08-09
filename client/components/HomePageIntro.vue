@@ -1,6 +1,6 @@
 <template>
 	<div id="introAnimComp" class="homeAnimClass">
-		<img id="introLogo" src="/img/homelogo.png" alt="Logo for Animation" />
+		<img id="introLogo" src="/img/common/homelogo.png" alt="Logo for Animation" />
 		<div id="loadingText">LOADING</div>
 	</div>
 </template>

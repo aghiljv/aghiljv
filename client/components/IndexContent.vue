@@ -73,7 +73,7 @@ export default {
 	height: 35vh;
 	width: 35vh;
 	border-radius: 50%;
-	background-image: url('/img/intro.png');
+	background-image: url('/img/common/intro.png');
 	background-size: cover;
 }
 .buttonsHolder {

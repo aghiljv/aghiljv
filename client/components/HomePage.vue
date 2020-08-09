@@ -20,7 +20,7 @@
 				<div class="skillClass">CSS3</div>
 			</div>
 			<div class="logoHolder">
-				<img id="homeLogoID" src="/img/homelogo.png" class="logoImg" alt="Aghil Jose Logo" />
+				<img id="homeLogoID" src="/img/common/homelogo.png" class="logoImg" alt="Aghil Jose Logo" />
 			</div>
 		</div>
 	</div>

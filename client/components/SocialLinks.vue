@@ -4,29 +4,29 @@
 			<ul>
 				<li style="background: #0077b7">
 					<a href="https://www.linkedin.com/in/aghil-jose/" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/linkedin.png" alt="LinkedIn" />
+						<img style="width : 100%; display : flex;" src="/img/common/linkedin.png" alt="LinkedIn" />
 					</a>
 				</li>
 				<li
 					style="background: radial-gradient(circle at 25% 110%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%),radial-gradient(circle at 25% 110%,#b9a800 0,#938500 5%,#b10f00 45%,#8c0061 60%,#002ca9 90%)"
 				>
 					<a href="https://www.instagram.com/aghiljv/" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/instagram.png" alt="Instagram" />
+						<img style="width : 100%; display : flex;" src="/img/common/instagram.png" alt="Instagram" />
 					</a>
 				</li>
 				<li style="background: #50abf1">
 					<a href="https://twitter.com/aghiljv/" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/twitter.png" alt="Twitter" />
+						<img style="width : 100%; display : flex;" src="/img/common/twitter.png" alt="Twitter" />
 					</a>
 				</li>
 				<li style="background: #3a559f">
 					<a href="https://www.facebook.com/aghiljv" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/facebook.png" alt="Facebook" />
+						<img style="width : 100%; display : flex;" src="/img/common/facebook.png" alt="Facebook" />
 					</a>
 				</li>
 				<li style="background: #2c2c2c">
 					<a href="https://github.com/aghiljv" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/github.png" alt="GitHub" />
+						<img style="width : 100%; display : flex;" src="/img/common/github.png" alt="GitHub" />
 					</a>
 				</li>
 			</ul>
@@ -36,29 +36,29 @@
 			<ul>
 				<li style="background: #0077b7">
 					<a href="https://www.linkedin.com/in/aghil-jose/" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/linkedinp.png" alt="LinkedIn" />
+						<img style="width : 100%; display : flex;" src="/img/common/linkedinp.png" alt="LinkedIn" />
 					</a>
 				</li>
 				<li
 					style="background: radial-gradient(circle at 25% 110%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%),radial-gradient(circle at 25% 110%,#b9a800 0,#938500 5%,#b10f00 45%,#8c0061 60%,#002ca9 90%)"
 				>
 					<a href="https://www.instagram.com/aghiljv/" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/instagramp.png" alt="Instagram" />
+						<img style="width : 100%; display : flex;" src="/img/common/instagramp.png" alt="Instagram" />
 					</a>
 				</li>
 				<li style="background: #50abf1">
 					<a href="https://twitter.com/aghiljv/" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/twitterp.png" alt="Twitter" />
+						<img style="width : 100%; display : flex;" src="/img/common/twitterp.png" alt="Twitter" />
 					</a>
 				</li>
 				<li style="background: #3a559f">
 					<a href="https://www.facebook.com/aghiljv" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/facebookp.png" alt="Facebook" />
+						<img style="width : 100%; display : flex;" src="/img/common/facebookp.png" alt="Facebook" />
 					</a>
 				</li>
 				<li style="background: #2c2c2c">
 					<a href="https://github.com/aghiljv" target="_blank" rel="noopener noreferrer">
-						<img style="width : 100%; display : flex;" src="/img/githubp.png" alt="GitHub" />
+						<img style="width : 100%; display : flex;" src="/img/common/githubp.png" alt="GitHub" />
 					</a>
 				</li>
 			</ul>

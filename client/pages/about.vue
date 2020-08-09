@@ -3,7 +3,7 @@
 		<div class="aboutTextContents">
 			<div class="aboutTitleContents">
 				<div>
-					<img src="/img/about.jpg" class="aboutImg" alt="Aghil Jose" />
+					<img src="/img/common/about.jpg" class="aboutImg" alt="Aghil Jose" />
 				</div>
 				<div class="aboutTitleHolder">HEY THERE, I'M <br />AGHIL JOSE</div>
 			</div>
@@ -146,7 +146,7 @@ p {
 		width: 100%;
 		height: 90vw;
 		grid-template-columns: auto;
-		grid-template-rows: 60vw 30vw;
+		/* grid-template-rows: 60vw 30vw; */
 	}
 	.indTextHolder {
 		padding: 0%;
