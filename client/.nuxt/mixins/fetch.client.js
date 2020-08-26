@@ -52,7 +52,15 @@ function created() {
   }
 }
 
-async function $fetch() {
+function $fetch() {
+  if (!this._fetchPromise) {
+    this._fetchPromise = $_fetch.call(this)
+      .then(() => { delete this._fetchPromise })
+  }
+  return this._fetchPromise
+}
+
+async function $_fetch() {
   this.$nuxt.nbFetching++
   this.$fetchState.pending = true
   this.$fetchState.error = null
@@ -63,6 +71,9 @@ async function $fetch() {
   try {
     await this.$options.fetch.call(this)
   } catch (err) {
+    if (process.dev) {
+      console.error('Error in fetch():', err)
+    }
     error = normalizeError(err)
   }
 

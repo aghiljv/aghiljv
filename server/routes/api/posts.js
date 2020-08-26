@@ -18,10 +18,10 @@ router.get('/:name', async (req, res) => {
 });
 
 //Download
-router.get('/downloadResume', (req, res) => {
-	app.use(express.static(__dirname));
-	res.download(path.join(__dirname, '/ResumeFullStack.pdf'));
-});
+// router.get('/downloadResume', (req, res) => {
+// 	app.use(express.static(__dirname));
+// 	res.download(path.join(__dirname, '/ResumeFullStack.pdf'));
+// });
 
 //Add Posts
 router.post('/', async (req, res) => {

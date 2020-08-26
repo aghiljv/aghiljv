@@ -13,7 +13,7 @@
 					</p>
 					<p>But you can also find me in most places on internet as <u>@aghiljv</u></p>
 					<p>
-						You can also check out my <span @click="downloadResume()"><u>resume</u></span>
+						You can also check out my <span><u><a href="/ResumeFullStack.pdf" download="">resume</a></u></span>	
 					</p>
 				</div>
 				<div class="contactHolder">
@@ -107,9 +107,9 @@ export default {
 		};
 	},
 	methods: {
-		async downloadResume() {
-			await ServerService.downloadResume();
-		},
+		// async downloadResume() {
+		// 	await ServerService.downloadResume();
+		// },
 	},
 	components: {},
 };
