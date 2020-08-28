@@ -3577,7 +3577,7 @@ const axiosExtra = {
   },
 
   setHeader(name, value, scopes = 'common') {
-    for (let scope of Array.isArray(scopes) ? scopes : [scopes]) {
+    for (const scope of Array.isArray(scopes) ? scopes : [scopes]) {
       if (!value) {
         delete this.defaults.headers[scope][name];
         return;
@@ -3619,14 +3619,14 @@ const axiosExtra = {
 
 }; // Request helpers ($get, $post, ...)
 
-for (let method of ['request', 'delete', 'get', 'head', 'options', 'post', 'put', 'patch']) {
+for (const method of ['request', 'delete', 'get', 'head', 'options', 'post', 'put', 'patch']) {
   axiosExtra['$' + method] = function () {
     return this[method].apply(this, arguments).then(res => res && res.data);
   };
 }
 
 const extendAxiosInstance = axios => {
-  for (let key in axiosExtra) {
+  for (const key in axiosExtra) {
     axios[key] = axiosExtra[key].bind(axios);
   }
 };
@@ -3656,7 +3656,10 @@ const setupProgress = axios => {
     set: () => {}
   };
 
-  const $loading = () => window.$nuxt && window.$nuxt.$loading && window.$nuxt.$loading.set ? window.$nuxt.$loading : noopLoading;
+  const $loading = () => {
+    const $nuxt = typeof window !== 'undefined' && window['$nuxt'];
+    return $nuxt && $nuxt.$loading && $nuxt.$loading.set ? $nuxt.$loading : noopLoading;
+  };
 
   let currentRequests = 0;
   axios.onRequest(config => {
@@ -3686,6 +3689,11 @@ const setupProgress = axios => {
     currentRequests--;
 
     if (external_axios_default.a.isCancel(error)) {
+      if (currentRequests <= 0) {
+        currentRequests = 0;
+        $loading().finish();
+      }
+
       return;
     }
 
@@ -3707,8 +3715,10 @@ const setupProgress = axios => {
 };
 
 /* harmony default export */ var _nuxt_axios = ((ctx, inject) => {
-  // baseURL
-  const baseURL =  false ? undefined : process.env._AXIOS_BASE_URL_ || 'http://localhost:3000/'; // Create fresh objects for all default header scopes
+  // runtimeConfig
+  const runtimeConfig = ctx.$config && ctx.$config.axios || {}; // baseURL
+
+  const baseURL =  false ? undefined : runtimeConfig.baseURL || process.env._AXIOS_BASE_URL_ || 'http://localhost:3000/'; // Create fresh objects for all default header scopes
   // Axios creates only one which is shared across SSR requests!
   // https://github.com/mzabriskie/axios/blob/master/lib/defaults.js
 
@@ -3728,14 +3738,18 @@ const setupProgress = axios => {
     headers
   }; // Proxy SSR request headers headers
 
-  axiosOptions.headers.common = ctx.req && ctx.req.headers ? Object.assign({}, ctx.req.headers) : {};
-  delete axiosOptions.headers.common['accept'];
-  delete axiosOptions.headers.common['host'];
-  delete axiosOptions.headers.common['cf-ray'];
-  delete axiosOptions.headers.common['cf-connecting-ip'];
-  delete axiosOptions.headers.common['content-length'];
-  delete axiosOptions.headers.common['content-md5'];
-  delete axiosOptions.headers.common['content-type'];
+  if ( true && ctx.req && ctx.req.headers) {
+    const reqHeaders = { ...ctx.req.headers
+    };
+
+    for (const h of ["accept", "host", "cf-ray", "cf-connecting-ip", "content-length", "content-md5", "content-type"]) {
+      delete reqHeaders[h];
+    }
+
+    axiosOptions.headers.common = { ...reqHeaders,
+      ...axiosOptions.headers.common
+    };
+  }
 
   if (true) {
     // Don't accept brotli encoding because Node can't parse it
