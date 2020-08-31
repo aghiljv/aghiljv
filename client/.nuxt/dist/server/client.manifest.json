@@ -4,7 +4,7 @@
     "../server/index.spa.html",
     "../server/index.ssr.html",
     "LICENSES",
-    "app.ffcfb3b.js",
+    "app.e5aa23c.js",
     "pages/about.4c7c91f.js",
     "pages/blog/_name.5a5f030.js",
     "pages/blog/index.25356f9.js",
@@ -18,7 +18,7 @@
   "initial": [
     "runtime.b09ac9e.js",
     "vendors/commons.aec0f72.js",
-    "app.ffcfb3b.js"
+    "app.e5aa23c.js"
   ],
   "async": [
     "pages/about.4c7c91f.js",
@@ -142,6 +142,9 @@
       3
     ],
     "61a32636": [
+      3
+    ],
+    "63ea5df0": [
       3
     ],
     "ed2fd692": [
@@ -1104,7 +1107,7 @@
   },
   "assetsMapping": {
     "1a3ae26b": [
-      "app.ffcfb3b.js"
+      "app.e5aa23c.js"
     ],
     "2aff1868": [
       "pages/about.4c7c91f.js"

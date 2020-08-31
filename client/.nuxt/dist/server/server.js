@@ -740,13 +740,13 @@ class ServerService {
 /* 19 */
 /***/ (function(module, exports) {
 
-module.exports = require("vue-client-only");
+// This file is intentionally left empty for noop aliases
 
 /***/ }),
 /* 20 */
 /***/ (function(module, exports) {
 
-// This file is intentionally left empty for noop aliases
+module.exports = require("vue-client-only");
 
 /***/ }),
 /* 21 */
@@ -1803,7 +1803,7 @@ var external_vue_meta_ = __webpack_require__(23);
 var external_vue_meta_default = /*#__PURE__*/__webpack_require__.n(external_vue_meta_);
 
 // EXTERNAL MODULE: external "vue-client-only"
-var external_vue_client_only_ = __webpack_require__(19);
+var external_vue_client_only_ = __webpack_require__(20);
 var external_vue_client_only_default = /*#__PURE__*/__webpack_require__.n(external_vue_client_only_);
 
 // EXTERNAL MODULE: external "vue-no-ssr"
@@ -3762,7 +3762,7 @@ const setupProgress = axios => {
   inject('axios', axios);
 });
 // EXTERNAL MODULE: ./.nuxt/empty.js
-var _nuxt_empty = __webpack_require__(20);
+var _nuxt_empty = __webpack_require__(19);
 
 // CONCATENATED MODULE: ./.nuxt/index.js
 
@@ -3784,6 +3784,8 @@ var _nuxt_empty = __webpack_require__(20);
  // Source: ..\\plugins\\particlePlugin (mode: 'client')
 
  // Source: ..\\plugins\\vueTouchPlugin (mode: 'client')
+
+ // Source: ..\\plugins\\ga.js (mode: 'client')
 // Component: <ClientOnly>
 
 external_vue_default.a.component(external_vue_client_only_default.a.name, external_vue_client_only_default.a); // TODO: Remove in Nuxt 3: <NoSsr>
@@ -3994,6 +3996,8 @@ async function createApp(ssrContext, config = {}) {
   if (typeof _nuxt_axios === 'function') {
     await _nuxt_axios(app.context, inject);
   }
+
+  if (false) {}
 
   if (false) {}
 
