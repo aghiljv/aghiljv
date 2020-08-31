@@ -9,14 +9,14 @@
     "pages/blog/_name.5a5f030.js",
     "pages/blog/index.25356f9.js",
     "pages/contact.851840e.js",
-    "pages/index.ecccdc1.js",
+    "pages/index.3430345.js",
     "pages/portfolio/_name.1aef714.js",
     "pages/portfolio/index.f35bb18.js",
-    "runtime.b09ac9e.js",
+    "runtime.9c32658.js",
     "vendors/commons.aec0f72.js"
   ],
   "initial": [
-    "runtime.b09ac9e.js",
+    "runtime.9c32658.js",
     "vendors/commons.aec0f72.js",
     "app.e5aa23c.js"
   ],
@@ -25,7 +25,7 @@
     "pages/blog/_name.5a5f030.js",
     "pages/blog/index.25356f9.js",
     "pages/contact.851840e.js",
-    "pages/index.ecccdc1.js",
+    "pages/index.3430345.js",
     "pages/portfolio/_name.1aef714.js",
     "pages/portfolio/index.f35bb18.js"
   ],
@@ -53,6 +53,9 @@
     ],
     "66568586": [
       9
+    ],
+    "83823324": [
+      8
     ],
     "90045734": [
       12
@@ -882,7 +885,7 @@
     "45fc6542": [
       5
     ],
-    "50fb3588": [
+    "3bf008f0": [
       8
     ],
     "6e9bd9bf": [
@@ -936,10 +939,10 @@
     "02450384": [
       9
     ],
-    "3b7659e6": [
+    "45fbf032": [
       8
     ],
-    "79e4dd7a": [
+    "64d9b0e2": [
       8
     ],
     "338873ca": [
@@ -1032,13 +1035,10 @@
     "7fcdc650": [
       8
     ],
-    "5f60f844": [
+    "1b156812": [
       8
     ],
     "2ea4e671": [
-      8
-    ],
-    "7379023a": [
       8
     ],
     "d7ad4830": [
@@ -1122,7 +1122,7 @@
       "pages/contact.851840e.js"
     ],
     "2a130dde": [
-      "pages/index.ecccdc1.js"
+      "pages/index.3430345.js"
     ],
     "3bf1953c": [
       "pages/portfolio/_name.1aef714.js"
@@ -1131,7 +1131,7 @@
       "pages/portfolio/index.f35bb18.js"
     ],
     "6fca0322": [
-      "runtime.b09ac9e.js"
+      "runtime.9c32658.js"
     ],
     "07a97964": [
       "vendors/commons.aec0f72.js"

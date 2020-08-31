@@ -1,29 +1,103 @@
 <template>
-	<div class="contentContainer">
-		<div class="homeTitle">
-			<p id="homeTitle1">FULL STACK</p>
-			<p id="homeTitle2">ENGINEER</p>
-		</div>
-		<div class="skillAndLogo">
-			<div class="skillHolder">
-				<div class="skillClass">Javascript</div>
-				<div class="skillClass">Java</div>
-				<div class="skillClass">MongoDB</div>
-				<div class="skillClass">NodeJS</div>
-				<div class="skillClass">Express</div>
-				<div class="skillClass">Unity 3D</div>
-				<div class="skillClass">Angular</div>
-				<div class="skillClass">React</div>
-				<div class="skillClass">VueJS</div>
-				<div class="skillClass">NuxtJS</div>
-				<div class="skillClass">HTML5</div>
-				<div class="skillClass">CSS3</div>
-			</div>
-			<div class="logoHolder">
-				<img id="homeLogoID" src="/img/common/homelogo.png" class="logoImg" alt="Aghil Jose Logo" />
-			</div>
-		</div>
-	</div>
+  <div class="contentContainer">
+    <div class="homeTitle">
+      <p id="homeTitle1">FULL STACK</p>
+      <p id="homeTitle2">ENGINEER</p>
+    </div>
+    <div class="skillAndLogo">
+      <div class="skillHolder">
+        <div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/nuxt-icon.png" class="skillLogo" alt="nuxt"/>
+          </div>
+        </div>
+        <div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/vue-icon.png" class="skillLogo" alt="vue"/>
+          </div>
+        </div>
+        <div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/angular-icon.png" class="skillLogo" alt="angular"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/node-icon.png" class="skillLogo" alt="node"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/mongo-icon.png" class="skillLogo" alt="mongo"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/spring-icon.png" class="skillLogo" alt="spring"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/flutter-icon.png" class="skillLogo" alt="flutter"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/csharp-icon.png" class="skillLogo" alt="csharp"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/cpp-icon.png" class="skillLogo" alt="cpp"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/mysql-icon.png" class="skillLogo" alt="mysql"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/postgres-icon.png" class="skillLogo" alt="postgres"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/unity-icon.png" class="skillLogo" alt="unity"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/unreal-icon.png" class="skillLogo" alt="unreal"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/git-icon.png" class="skillLogo" alt="git"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/jenkins-icon.png" class="skillLogo" alt="jenkins"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/photoshop-icon.png" class="skillLogo" alt="photoshop"/>
+          </div>
+        </div>
+		<div class="skillClass">
+          <div class="skillImageHolder">
+            <img src="/img/homepagelogos/xd-icon.png" class="skillLogo" alt="xd"/>
+          </div>
+        </div>
+		
+      </div>
+      <div class="logoHolder">
+        <img id="homeLogoID" src="/img/common/homelogo.png" class="logoImg" alt="Aghil Jose Logo" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -32,101 +106,71 @@ export default {};
 
 <style scoped>
 .contentContainer {
-	position: absolute;
-	overflow: auto;
-	height: 100%;
-	width: 100%;
-	display: grid;
-	grid-template-rows: 60vh 40vh;
+  position: absolute;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 60vh 40vh;
 }
 .homeTitle {
-	position: relative;
-	font-size: 10vw;
-	padding: 0% 0% 0% 5%;
+  position: relative;
+  font-size: 10vw;
+  padding: 0% 0% 0% 5%;
 }
 .skillAndLogo {
-	position: relative;
-	display: grid;
-	grid-template-columns: 6fr 4fr;
-	grid-template-rows: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: auto;
 }
 #homeLogoID {
-	object-fit: contain;
+  object-fit: contain;
 }
 .logoHolder {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .skillHolder {
-	font-size: 1vw;
+  font-size: 1vw;
 }
 .skillClass {
-	padding: 2%;
-	display: inline-block;
-	animation: jump 0.5s linear infinite;
+  padding: 2%;
+  display: inline-block;
+  transition: 0.5s;
 }
-.skillHolder :hover {
-	transform: scale(1.5);
+.skillImageHolder {
+  height: 2.5vw;
+  width: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.skillHolder :nth-child(2) {
-	animation-delay: 0.25s;
+.skillLogo {
+  object-fit: contain;
 }
-.skillHolder :nth-child(3) {
-	animation-delay: 0.5s;
-}
-.skillHolder :nth-child(4) {
-	animation-delay: 0.75s;
-}
-.skillHolder :nth-child(5) {
-	animation-delay: 1s;
-}
-.skillHolder :nth-child(6) {
-	animation-delay: 1.25s;
-}
-.skillHolder :nth-child(7) {
-	animation-delay: 1.5s;
-}
-.skillHolder :nth-child(8) {
-	animation-delay: 1.75s;
-}
-.skillHolder :nth-child(9) {
-	animation-delay: 2s;
-}
-.skillHolder :nth-child(10) {
-	animation-delay: 2.25s;
-}
-.skillHolder :nth-child(11) {
-	animation-delay: 2.5s;
-}
-.skillHolder :nth-child(12) {
-	animation-delay: 2.75s;
-}
-@keyframes jump {
-	0% {
-		transform: translateY(0%);
-	}
-	50% {
-		transform: translateY(1%);
-	}
-	100% {
-		transform: translateY(0%);
-	}
+.skillClass :hover {
+  transform: scale(1.05);
 }
 @media only screen and (max-width: 600px) {
-	.contentContainer {
-		grid-template-rows: 25vh 55vh;
-	}
-	.homeTitle {
-		font-size: 14vw;
-		padding: 0% 0% 0% 0%;
-		margin: 0%;
-	}
-	.skillAndLogo {
-		top: 0%;
-		grid-template-columns: auto;
-	}
-	.skillHolder {
-		font-size: 3.5vw;
-	}
+  .contentContainer {
+    grid-template-rows: 25vh 55vh;
+  }
+  .homeTitle {
+    font-size: 14vw;
+    padding: 0% 0% 0% 0%;
+    margin: 0%;
+  }
+  .skillAndLogo {
+    top: 0%;
+    grid-template-columns: auto;
+  }
+  .skillHolder {
+    font-size: 3.5vw;
+  }
+  .skillImageHolder{
+	  height: 7.5vw;
+	  width: 7.5vw;
+  }
 }
 </style>
