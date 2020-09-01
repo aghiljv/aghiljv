@@ -2,11 +2,11 @@
 	<div class="portfolioHolder" id="portfolioDisplay">
 		<div
 			class="portfolioItem"
-			:style="[index == activePortIndex ? { opacity: '1', 'z-index': '5' } : { opacity: '0' }]"
+			:style="[index == activePortIndex ? { opacity: '1', 'z-index': '10' } : { opacity: '0' }]"
 			:id="'portfolioItem' + index"
 		>
 			<div class="portImageHolder">
-				<img class="portImage" :src="`/img/portfolio/${portfolioImage}.jpg`" alt="portfolioImage" />
+				<img class="portImage" :src="`/img/portfolio/${portfolioImage}hover.jpg`" alt="portfolioImage" />
 			</div>
 			<!-- <div class="portfolioDesc">{{ portfolioBrief }}</div> -->
 		</div>
@@ -37,7 +37,10 @@ export default {
 	transition: 0.5s;
 }
 .portImage {
+	width: 100%;
+    height: 100%;
 	transition: 0.5s;
+	object-fit: contain;
 }
 .portfolioItem {
 	position: absolute;

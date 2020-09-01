@@ -9,14 +9,14 @@
     "pages/blog/_name.5a5f030.js",
     "pages/blog/index.25356f9.js",
     "pages/contact.851840e.js",
-    "pages/index.4c7870b.js",
+    "pages/index.5d356d5.js",
     "pages/portfolio/_name.1aef714.js",
-    "pages/portfolio/index.f35bb18.js",
-    "runtime.63c76f9.js",
+    "pages/portfolio/index.97366a9.js",
+    "runtime.5a96468.js",
     "vendors/commons.aec0f72.js"
   ],
   "initial": [
-    "runtime.63c76f9.js",
+    "runtime.5a96468.js",
     "vendors/commons.aec0f72.js",
     "app.8e4db97.js"
   ],
@@ -25,9 +25,9 @@
     "pages/blog/_name.5a5f030.js",
     "pages/blog/index.25356f9.js",
     "pages/contact.851840e.js",
-    "pages/index.4c7870b.js",
+    "pages/index.5d356d5.js",
     "pages/portfolio/_name.1aef714.js",
-    "pages/portfolio/index.f35bb18.js"
+    "pages/portfolio/index.97366a9.js"
   ],
   "modules": {
     "14101388": [
@@ -41,9 +41,6 @@
     ],
     "29143950": [
       12
-    ],
-    "33336679": [
-      10
     ],
     "42481593": [
       3
@@ -870,7 +867,7 @@
     "bee60640": [
       7
     ],
-    "6e01fd40": [
+    "8e167898": [
       10
     ],
     "6f18eae6": [
@@ -882,7 +879,7 @@
     "45fc6542": [
       5
     ],
-    "40c24951": [
+    "4a4fd5f9": [
       8
     ],
     "6e9bd9bf": [
@@ -909,7 +906,10 @@
     "a2610bb2": [
       7
     ],
-    "7301e376": [
+    "62f7a5ca": [
+      10
+    ],
+    "232928cd": [
       10
     ],
     "d7bde492": [
@@ -936,10 +936,10 @@
     "02450384": [
       9
     ],
-    "b693840a": [
+    "a3786aba": [
       8
     ],
-    "2c4d7558": [
+    "35db0200": [
       8
     ],
     "338873ca": [
@@ -963,7 +963,7 @@
     "18f92599": [
       10
     ],
-    "2aea6850": [
+    "89f61108": [
       10
     ],
     "2a2e80ee": [
@@ -975,7 +975,7 @@
     "77a71c60": [
       10
     ],
-    "e77e3318": [
+    "1c5b75a0": [
       10
     ],
     "115f8e97": [
@@ -1032,13 +1032,13 @@
     "7fcdc650": [
       8
     ],
-    "3b4877ae": [
+    "0105da81": [
       8
     ],
     "2ea4e671": [
       8
     ],
-    "f4f57af6": [
+    "b7a14e46": [
       8
     ],
     "d7ad4830": [
@@ -1122,16 +1122,16 @@
       "pages/contact.851840e.js"
     ],
     "2a130dde": [
-      "pages/index.4c7870b.js"
+      "pages/index.5d356d5.js"
     ],
     "3bf1953c": [
       "pages/portfolio/_name.1aef714.js"
     ],
     "3ad7aa6c": [
-      "pages/portfolio/index.f35bb18.js"
+      "pages/portfolio/index.97366a9.js"
     ],
     "6fca0322": [
-      "runtime.63c76f9.js"
+      "runtime.5a96468.js"
     ],
     "07a97964": [
       "vendors/commons.aec0f72.js"

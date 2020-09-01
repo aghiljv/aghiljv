@@ -108,7 +108,7 @@ export default {};
 .contentContainer {
   position: absolute;
   overflow: auto;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-rows: 6fr 4fr;
@@ -155,6 +155,7 @@ export default {};
 }
 @media only screen and (max-width: 600px) {
   .contentContainer {
+    height: 100%;
     grid-template-rows: 2.5fr 5.5fr;
   }
   .homeTitle {
