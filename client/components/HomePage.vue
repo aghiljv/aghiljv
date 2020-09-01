@@ -111,7 +111,7 @@ export default {};
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 60vh 40vh;
+  grid-template-rows: 6fr 4fr;
 }
 .homeTitle {
   position: relative;
@@ -132,7 +132,8 @@ export default {};
   justify-content: center;
 }
 .skillHolder {
-  font-size: 1vw;
+  display: unset;
+  padding: 2%;
 }
 .skillClass {
   padding: 2%;
@@ -154,7 +155,7 @@ export default {};
 }
 @media only screen and (max-width: 600px) {
   .contentContainer {
-    grid-template-rows: 25vh 55vh;
+    grid-template-rows: 2.5fr 5.5fr;
   }
   .homeTitle {
     font-size: 14vw;
@@ -166,11 +167,16 @@ export default {};
     grid-template-columns: auto;
   }
   .skillHolder {
-    font-size: 3.5vw;
+    display: grid;
+    grid-template-columns: repeat(7, auto);;
+    justify-content:space-around;
+    /* grid-template-rows: auto auto auto; */
+    padding: 0%;
   }
   .skillImageHolder{
-	  height: 7.5vw;
-	  width: 7.5vw;
+	  height: 8vw;
+	  width: 8vw;
+    align-self: center;
   }
 }
 </style>
