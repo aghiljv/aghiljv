@@ -40,7 +40,7 @@ export default {
 	},
 	data() {
 		return {
-			title: 'Aghil Jose | Full Stack Engineer',
+			title: 'Portfolio | Aghil Jose | Full Stack Engineer',
 			scrollState: null,
 			swipeState: null,
 			scrollDirecton: 0,

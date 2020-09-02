@@ -91,7 +91,7 @@ export default {
 	transition: 'fade',
 	data() {
 		return {
-			title: 'Aghil Jose | Full Stack Engineer',
+			title: 'Contact | Aghil Jose | Full Stack Engineer',
 		};
 	},
 	head() {

@@ -41,7 +41,7 @@ export default {
 	transition: 'fade',
 	data() {
 		return {
-			title: 'Aghil Jose | Full Stack Engineer',
+			title: 'About | Aghil Jose | Full Stack Engineer',
 		};
 	},
 	head() {

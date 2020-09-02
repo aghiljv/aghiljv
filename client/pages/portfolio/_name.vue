@@ -39,7 +39,7 @@ export default {
 	},
 	data() {
 		return {
-			title: 'Aghil Jose | Full Stack Engineer',
+			title: 'Portfolio | Aghil Jose | Full Stack Engineer',
 			portfolioItem: {},
 			currentRoute: '',
 		};
