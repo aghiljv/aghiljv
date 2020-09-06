@@ -3886,9 +3886,13 @@ async function createApp(ssrContext, config = {}) {
         "name": "viewport",
         "content": "width=device-width, initial-scale=1"
       }, {
+        "hid": "description",
+        "name": "description",
+        "content": "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+      }, {
         "hid": "og:image",
         "property": "og:image",
-        "content": "\u002Fimg\u002Fcommon\u002FAghil.jpg"
+        "content": "\u002Fimg\u002Fcommon\u002Faghiljvlogo.png"
       }],
       "link": [{
         "rel": "icon",
