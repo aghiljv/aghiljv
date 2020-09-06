@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import ogImage from "../static/img/common/aghiljvlogo.png";
-
 import ServerService from "../static/ServerService.js";
 
 import HomePageIntro from "../components/HomePageIntro.vue";
@@ -43,7 +41,7 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: this.BASE_URL + ogImage
+          content: "/img/common/aghiljvlogo.png"
         }
       ]
     };
