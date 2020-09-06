@@ -41,7 +41,18 @@ export default {
           hid: "blog",
           name: "Blog",
           content: "The blog of Full Stack Engineer Aghil Jose"
-        }
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "/img/common/ogBlog.png"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "The blog of Aghil Jose | Full Stack Engineer"
+        },
+        { hid: "og:type", name: "og:type", content: "article" }
       ]
     };
   },

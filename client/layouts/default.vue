@@ -43,6 +43,11 @@ export default {
           hid: "og:image",
           property: "og:image",
           content: "/img/common/ogMain.png"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
         }
       ]
     };
