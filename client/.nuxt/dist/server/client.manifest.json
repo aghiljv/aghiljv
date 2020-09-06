@@ -4,26 +4,26 @@
     "../server/index.spa.html",
     "../server/index.ssr.html",
     "LICENSES",
-    "app.2c07f2b.js",
+    "app.2439ab1.js",
     "pages/about.53caf12.js",
     "pages/blog/_name.bdf439e.js",
-    "pages/blog/index.a7c9fa0.js",
+    "pages/blog/index.579eea3.js",
     "pages/contact.51f9e0c.js",
     "pages/index.c51725a.js",
     "pages/portfolio/_name.1489532.js",
     "pages/portfolio/index.02de404.js",
-    "runtime.8f4a61e.js",
+    "runtime.3508c64.js",
     "vendors/commons.aec0f72.js"
   ],
   "initial": [
-    "runtime.8f4a61e.js",
+    "runtime.3508c64.js",
     "vendors/commons.aec0f72.js",
-    "app.2c07f2b.js"
+    "app.2439ab1.js"
   ],
   "async": [
     "pages/about.53caf12.js",
     "pages/blog/_name.bdf439e.js",
-    "pages/blog/index.a7c9fa0.js",
+    "pages/blog/index.579eea3.js",
     "pages/contact.51f9e0c.js",
     "pages/index.c51725a.js",
     "pages/portfolio/_name.1489532.js",
@@ -41,6 +41,9 @@
     ],
     "29143950": [
       12
+    ],
+    "50029731": [
+      6
     ],
     "65958628": [
       12
@@ -162,7 +165,7 @@
     "b93e9f10": [
       3
     ],
-    "e8c5ffc8": [
+    "6f451663": [
       3
     ],
     "c095e212": [
@@ -171,7 +174,7 @@
     "a03405a2": [
       3
     ],
-    "1fe6b678": [
+    "038eccbf": [
       3
     ],
     "14c4d7ee": [
@@ -858,7 +861,7 @@
     "0b46dd72": [
       6
     ],
-    "3bed9fb2": [
+    "4e935451": [
       6
     ],
     "7ff0b740": [
@@ -897,10 +900,10 @@
     "806dc46a": [
       6
     ],
-    "18f78bbd": [
+    "f4fca032": [
       6
     ],
-    "4d79d980": [
+    "8bf804ac": [
       6
     ],
     "147bf36a": [
@@ -999,13 +1002,10 @@
     "99e3a188": [
       6
     ],
-    "062d1912": [
+    "0ca0180d": [
       6
     ],
     "f15dddf6": [
-      6
-    ],
-    "404bf29b": [
       6
     ],
     "978b3224": [
@@ -1131,7 +1131,7 @@
   },
   "assetsMapping": {
     "1a3ae26b": [
-      "app.2c07f2b.js"
+      "app.2439ab1.js"
     ],
     "2aff1868": [
       "pages/about.53caf12.js"
@@ -1140,7 +1140,7 @@
       "pages/blog/_name.bdf439e.js"
     ],
     "acf14974": [
-      "pages/blog/index.a7c9fa0.js"
+      "pages/blog/index.579eea3.js"
     ],
     "67c13ec2": [
       "pages/contact.51f9e0c.js"
@@ -1155,7 +1155,7 @@
       "pages/portfolio/index.02de404.js"
     ],
     "6fca0322": [
-      "runtime.8f4a61e.js"
+      "runtime.3508c64.js"
     ],
     "07a97964": [
       "vendors/commons.aec0f72.js"

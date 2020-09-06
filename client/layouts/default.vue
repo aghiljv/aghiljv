@@ -32,11 +32,17 @@ import Lethargy from "lethargy";
 export default {
   head() {
     return {
+      title: "Aghil Jose | Full Stack Engineer",
       meta: [
         {
-          hid: "base",
-          name: "Base Layout",
-          content: "The portfolio and blog of Full Stack Engineer Aghil Jose"
+          hid: "description",
+          name: "desaription",
+          content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "/img/common/ogMain.png"
         }
       ]
     };

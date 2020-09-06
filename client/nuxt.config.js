@@ -13,16 +13,16 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content: "The blog and portfolio of Aghil Jose | Full Stack Engineer",
-      },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "/img/common/aghiljvlogo.png",
-      },
+      // {
+      //   hid: "description",
+      //   name: "description",
+      //   content: "The blog and portfolio of Aghil Jose | Full Stack Engineer",
+      // },
+      // {
+      //   hid: "og:image",
+      //   property: "og:image",
+      //   content: "/img/common/aghiljvlogo.png",
+      // },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/aghiljvlogo.png" }],
     script: [
