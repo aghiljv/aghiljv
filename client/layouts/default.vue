@@ -33,15 +33,10 @@ export default {
   head() {
     return {
       meta: [
-        // {
-        //   hid: "base",
-        //   name: "Base Layout",
-        //   content: "The portfolio and blog of Full Stack Engineer Aghil Jose"
-        // },
         {
-          hid: "og:image",
-          property: "og:image",
-          content: "/img/common/aghiljvlogo.png"
+          hid: "base",
+          name: "Base Layout",
+          content: "The portfolio and blog of Full Stack Engineer Aghil Jose"
         }
       ]
     };

@@ -2422,12 +2422,12 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var nuxt_loading = (nuxt_loading_component.exports);
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=4601f664&
-var defaultvue_type_template_id_4601f664_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{on:{"mousemove":function($event){return _vm.mouseMoveEvent($event)}}},[_c('HomePageIntro'),_vm._ssrNode(" "),_c('Particle',{staticClass:"particleClass",attrs:{"themeName":_vm.themeName}}),_vm._ssrNode(" "),_c('ProjectHeader',{staticClass:"headerClassMain",attrs:{"currentRoute":_vm.currentRoute},on:{"changeBG":function($event){return _vm.changeBG($event)}}}),_vm._ssrNode(" "),_c('PhoneNavigator',{on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('SocialLinks',{attrs:{"id":"socialLinks"},on:{"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('Routes',{attrs:{"id":"sideRoutes"},on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_vm._ssrNode("<main>","</main>",[_c('nuxt',{attrs:{"id":"mainContent"}})],1),_vm._ssrNode(" "),_c('PhoneNavButton',{staticClass:"navButton",attrs:{"navAction":_vm.navAction}})],2)}
-var defaultvue_type_template_id_4601f664_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=6e350ff4&
+var defaultvue_type_template_id_6e350ff4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{on:{"mousemove":function($event){return _vm.mouseMoveEvent($event)}}},[_c('HomePageIntro'),_vm._ssrNode(" "),_c('Particle',{staticClass:"particleClass",attrs:{"themeName":_vm.themeName}}),_vm._ssrNode(" "),_c('ProjectHeader',{staticClass:"headerClassMain",attrs:{"currentRoute":_vm.currentRoute},on:{"changeBG":function($event){return _vm.changeBG($event)}}}),_vm._ssrNode(" "),_c('PhoneNavigator',{on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('SocialLinks',{attrs:{"id":"socialLinks"},on:{"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('Routes',{attrs:{"id":"sideRoutes"},on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_vm._ssrNode("<main>","</main>",[_c('nuxt',{attrs:{"id":"mainContent"}})],1),_vm._ssrNode(" "),_c('PhoneNavButton',{staticClass:"navButton",attrs:{"navAction":_vm.navAction}})],2)}
+var defaultvue_type_template_id_6e350ff4_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=4601f664&
+// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=6e350ff4&
 
 // EXTERNAL MODULE: ./static/ServerService.js
 var ServerService = __webpack_require__(18);
@@ -3192,15 +3192,10 @@ var external_lethargy_ = __webpack_require__(44);
 /* harmony default export */ var defaultvue_type_script_lang_js_ = ({
   head() {
     return {
-      meta: [// {
-      //   hid: "base",
-      //   name: "Base Layout",
-      //   content: "The portfolio and blog of Full Stack Engineer Aghil Jose"
-      // },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content: "/img/common/aghiljvlogo.png"
+      meta: [{
+        hid: "base",
+        name: "Base Layout",
+        content: "The portfolio and blog of Full Stack Engineer Aghil Jose"
       }]
     };
   },
@@ -3289,8 +3284,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var default_component = Object(componentNormalizer["a" /* default */])(
   layouts_defaultvue_type_script_lang_js_,
-  defaultvue_type_template_id_4601f664_render,
-  defaultvue_type_template_id_4601f664_staticRenderFns,
+  defaultvue_type_template_id_6e350ff4_render,
+  defaultvue_type_template_id_6e350ff4_staticRenderFns,
   false,
   default_injectStyles,
   null,
@@ -3893,7 +3888,7 @@ async function createApp(ssrContext, config = {}) {
       }, {
         "hid": "og:image",
         "property": "og:image",
-        "content": "\u002Fimg\u002Fcommon\u002Faghiljvlogo.png"
+        "content": "\u002Fimg\u002Fcommon\u002FAghil.jpg"
       }],
       "link": [{
         "rel": "icon",

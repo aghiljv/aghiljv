@@ -21,7 +21,7 @@ export default {
       {
         hid: "og:image",
         property: "og:image",
-        content: "/img/common/aghiljvlogo.png",
+        content: "/img/common/Aghil.jpg",
       },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/aghiljvlogo.png" }],
