@@ -12,14 +12,17 @@
       <div class="blogContentHolder">
         <div class="blogContent" v-html="blogItem.content"></div>
       </div>
-      <!-- <div class="commentsMain">
+      <div class="commentsMain">
         <div class="commentsHeader">Comments</div>
         <br />
-        <div class="commentsInput">
-          <CommentsInput />
+        <div class="commentsHolder">
+          <CommentsDisplay :blogComments="blogItem.comments" />
         </div>
-        <div class="commentsHolder"></div>
-      </div>-->
+        <br />
+        <div class="commentsInput">
+          <CommentsInput :blogId="blogItem._id" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -27,11 +30,13 @@
 <script>
 import ServerService from "../../static/ServerService.js";
 import CommentsInput from "../../components/blog/CommentsInput.vue";
+import CommentsDisplay from "../../components/blog/CommentsDisplay.vue";
 
 export default {
   transition: "fade",
   components: {
-    CommentsInput
+    CommentsInput,
+    CommentsDisplay
   },
   head() {
     return {
@@ -71,6 +76,7 @@ export default {
         if (blogContent.name.includes(this.$route.params.name)) {
           this.blogItem = blogContent;
           this.title = this.blogItem.name;
+          console.log(this.blogItem);
         }
       });
     } else {
@@ -147,6 +153,10 @@ export default {
 .blogContent {
   width: 50%;
 }
+.commentsHeader {
+  font-weight: bold;
+  font-size: x-large;
+}
 .commentsMain {
   display: flex;
   flex-direction: column;
@@ -156,6 +166,9 @@ export default {
   font-size: 1vw;
 }
 .commentsInput {
+  width: 50%;
+}
+.commentsHolder {
   width: 50%;
 }
 @media only screen and (max-width: 600px) {
@@ -179,7 +192,13 @@ export default {
   .blogContentHolder {
     font-size: 3vw;
   }
+  .commentsHeader {
+    font-size: large;
+  }
   .commentsInput {
+    width: 100%;
+  }
+  .commentsHolder {
     width: 100%;
   }
   .commentsMain {

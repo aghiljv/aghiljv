@@ -1,35 +1,42 @@
 <template>
   <div>
+    <div class="commentsInputHeader">Leave a comment</div>
+    <br />All fields are mandatory. Your email id won't be published!
+    <br />
     <br />
     <form id="commentsIn">
       <input
-        v-if="getDetails"
-        type="text"
-        id="email"
-        class="textInputs"
-        ref="emailInputText"
-        name="email"
-        placeholder="E=mail"
-      />
-      <input
-        v-else
         type="text"
         id="comment"
-        class="textInputs"
-        ref="commentInputText"
-        @keyup="keyUpEvent('commentInputText')"
+        class="inputElements"
+        v-model="commentInputText"
         name="comment"
-        placeholder="Add a comment"
+        placeholder="Comment"
       />
       <br />
       <br />
-      <div v-if="this.commentInputText.length>0" class="postOption">
-        <button class="postButton" @click="getCredentials">Post</button>
-        <br />
-        <br />
-      </div>
-      <div v-else>
-        <br />
+      <input
+        type="text"
+        id="name"
+        class="inputElements"
+        v-model="nameInputText"
+        name="name"
+        placeholder="Name"
+      />
+      <br />
+      <br />
+      <input
+        type="text"
+        id="email"
+        class="inputElements"
+        v-model="emailInputText"
+        name="email"
+        placeholder="E-mail"
+      />
+      <br />
+      <br />
+      <div class="postOption">
+        <button class="postButton" type="button" @click="addComment">Post Comment</button>
         <br />
         <br />
       </div>
@@ -38,32 +45,48 @@
 </template>
 
 <script>
+import ServerService from "../../static/ServerService.js";
+
 export default {
-  props: [],
+  props: ["blogId"],
   data() {
     return {
       commentInputText: "",
+      nameInputText: "",
+      emailInputText: "",
       getDetails: false
     };
   },
-  mounted() {
-    console.log(this.commentInputText.length);
-  },
   methods: {
-    keyUpEvent(refCode) {
-      let entry = this.$refs[refCode];
-      this.commentInputText = entry.value;
-      console.log(this.commentInputText.length);
-    },
-    getCredentials() {
-      this.getDetails = true;
+    async addComment() {
+      console.log(new Date("<YYYY-mm-ddTHH:MM:ss>"));
+      if (
+        this.commentInputText.length > 0 &&
+        this.nameInputText.length > 0 &&
+        this.emailInputText.length > 0
+      ) {
+        await ServerService.insertComment(
+          this.blogId,
+          this.emailInputText,
+          this.nameInputText,
+          this.commentInputText,
+          new Date().toGMTString()
+        );
+        this.emailInputText = "";
+        this.nameInputText = "";
+        this.commentInputText = "";
+      }
     }
   }
 };
 </script>
 
 <style scoped>
-.textInputs {
+.commentsInputHeader {
+  font-size: x-large;
+  font-weight: bold;
+}
+.inputElements {
   width: 100%;
   height: 2.5vw;
   outline: none;
@@ -82,9 +105,13 @@ export default {
   border-radius: 5vw;
   color: var(--background-color-primary);
   padding-left: 2.5%;
+  font-weight: bold;
 }
 @media only screen and (max-width: 600px) {
-  .textInputs {
+  .commentsInputHeader {
+    font-size: large;
+  }
+  .inputElements {
     height: 10vw;
   }
   .postButton {

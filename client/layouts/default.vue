@@ -130,6 +130,7 @@ export default {
   --intro-card-button-holder-color: rgba(50, 50, 50, 0);
   --intro-card-shadow: rgba(0, 0, 0, 0.2);
   --invert-value: invert(0);
+  --start-opacity: 0;
 }
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -154,6 +155,12 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+hr {
+  border: none;
+  height: 1px;
+  opacity: 0.15;
+  background-color: var(--color-primary);
 }
 a:active,
 a:focus {
