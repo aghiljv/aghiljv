@@ -75,6 +75,7 @@ export default {
         this.emailInputText = "";
         this.nameInputText = "";
         this.commentInputText = "";
+        this.$toast.show("Comment Submitted! It will be updated soon!");
       }
     }
   }

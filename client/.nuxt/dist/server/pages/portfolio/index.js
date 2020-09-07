@@ -145,7 +145,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./pages/portfolio/index.vue?vue&type=template&id=2c91c3a2&scoped=true&
 
 // EXTERNAL MODULE: ./static/ServerService.js
-var ServerService = __webpack_require__(18);
+var ServerService = __webpack_require__(19);
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./components/portfolio/PortfolioMain.vue?vue&type=template&id=791461a2&scoped=true&
 var PortfolioMainvue_type_template_id_791461a2_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"portfolioHolder",attrs:{"id":"portfolioDisplay"}},[_vm._ssrNode("<div"+(_vm._ssrAttr("id",'portfolioItem' + _vm.index))+" class=\"portfolioItem\""+(_vm._ssrStyle(null,[_vm.index == _vm.activePortIndex ? { opacity: '1', 'z-index': '10' } : { opacity: '0' }], null))+" data-v-791461a2><div class=\"portImageHolder\" data-v-791461a2><img"+(_vm._ssrAttr("src",("/img/portfolio/" + _vm.portfolioImage + "hover.jpg")))+" alt=\"portfolioImage\" class=\"portImage\" data-v-791461a2></div></div>")])}

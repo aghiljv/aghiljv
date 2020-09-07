@@ -59,7 +59,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./pages/portfolio/_name.vue?vue&type=template&id=ca287b9c&scoped=true&
 
 // EXTERNAL MODULE: ./static/ServerService.js
-var ServerService = __webpack_require__(18);
+var ServerService = __webpack_require__(19);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/portfolio/_name.vue?vue&type=script&lang=js&
 //

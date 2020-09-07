@@ -55,12 +55,31 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+    "@nuxtjs/toast",
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  /*
+   ** Toast module configuration
+   */
+  toast: {
+    position: "top-center",
+    duration: 1000,
+    register: [
+      // Register custom toasts
+      {
+        name: "commentSuccess",
+        message: "Comment Submitted",
+        options: {
+          type: "default",
+        },
+      },
+    ],
+  },
+
   // buildDir: '../server/public',
   /*
    ** Build configuration
