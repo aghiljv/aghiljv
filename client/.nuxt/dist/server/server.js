@@ -2431,12 +2431,12 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var nuxt_loading = (nuxt_loading_component.exports);
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=b8897180&
-var defaultvue_type_template_id_b8897180_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{on:{"mousemove":function($event){return _vm.mouseMoveEvent($event)}}},[_c('HomePageIntro'),_vm._ssrNode(" "),_c('Particle',{staticClass:"particleClass",attrs:{"themeName":_vm.themeName}}),_vm._ssrNode(" "),_c('ProjectHeader',{staticClass:"headerClassMain",attrs:{"currentRoute":_vm.currentRoute},on:{"changeBG":function($event){return _vm.changeBG($event)}}}),_vm._ssrNode(" "),_c('PhoneNavigator',{on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('SocialLinks',{attrs:{"id":"socialLinks"},on:{"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('Routes',{attrs:{"id":"sideRoutes"},on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_vm._ssrNode("<main>","</main>",[_c('nuxt',{attrs:{"id":"mainContent"}})],1),_vm._ssrNode(" "),_c('PhoneNavButton',{staticClass:"navButton",attrs:{"navAction":_vm.navAction}})],2)}
-var defaultvue_type_template_id_b8897180_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./layouts/default.vue?vue&type=template&id=cf4fc64c&
+var defaultvue_type_template_id_cf4fc64c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{on:{"mousemove":function($event){return _vm.mouseMoveEvent($event)}}},[_c('HomePageIntro'),_vm._ssrNode(" "),_c('Particle',{staticClass:"particleClass",attrs:{"themeName":_vm.themeName}}),_vm._ssrNode(" "),_c('ProjectHeader',{staticClass:"headerClassMain",attrs:{"currentRoute":_vm.currentRoute},on:{"changeBG":function($event){return _vm.changeBG($event)}}}),_vm._ssrNode(" "),_c('PhoneNavigator',{on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('SocialLinks',{attrs:{"id":"socialLinks"},on:{"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_c('Routes',{attrs:{"id":"sideRoutes"},on:{"changeBG":function($event){return _vm.changeBG($event)},"currentRoute":function($event){return _vm.updateHeader($event)}}}),_vm._ssrNode(" "),_vm._ssrNode("<main>","</main>",[_c('nuxt',{attrs:{"id":"mainContent"}})],1),_vm._ssrNode(" "),_c('PhoneNavButton',{staticClass:"navButton",attrs:{"navAction":_vm.navAction}})],2)}
+var defaultvue_type_template_id_cf4fc64c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=b8897180&
+// CONCATENATED MODULE: ./layouts/default.vue?vue&type=template&id=cf4fc64c&
 
 // EXTERNAL MODULE: ./static/ServerService.js
 var ServerService = __webpack_require__(19);
@@ -3199,25 +3199,28 @@ var external_lethargy_ = __webpack_require__(45);
 
 
 /* harmony default export */ var defaultvue_type_script_lang_js_ = ({
-  head() {
-    return {
-      title: "Aghil Jose | Full Stack Engineer",
-      meta: [{
-        hid: "description",
-        name: "description",
-        content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
-      }, {
-        hid: "og:image",
-        property: "og:image",
-        content: "/img/common/ogMain.png"
-      }, {
-        hid: "og:description",
-        name: "og:description",
-        content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
-      }]
-    };
-  },
-
+  // head() {
+  //   return {
+  //     title: "Aghil Jose | Full Stack Engineer",
+  //     meta: [
+  //       {
+  //         hid: "description",
+  //         name: "description",
+  //         content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+  //       },
+  //       {
+  //         hid: "og:image",
+  //         property: "og:image",
+  //         content: "/img/common/ogMain.png"
+  //       },
+  //       {
+  //         hid: "og:description",
+  //         name: "og:description",
+  //         content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+  //       }
+  //     ]
+  //   };
+  // },
   components: {
     HomePageIntro: HomePageIntro,
     ProjectHeader: ProjectHeader,
@@ -3302,8 +3305,8 @@ if (style0.__inject__) style0.__inject__(context)
 
 var default_component = Object(componentNormalizer["a" /* default */])(
   layouts_defaultvue_type_script_lang_js_,
-  defaultvue_type_template_id_b8897180_render,
-  defaultvue_type_template_id_b8897180_staticRenderFns,
+  defaultvue_type_template_id_cf4fc64c_render,
+  defaultvue_type_template_id_cf4fc64c_staticRenderFns,
   false,
   default_injectStyles,
   null,

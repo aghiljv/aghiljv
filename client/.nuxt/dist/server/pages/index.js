@@ -51,12 +51,12 @@ module.exports = exports;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=3754ce78&scoped=true&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=0e4eed78&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('HomePage')],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=3754ce78&scoped=true&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=0e4eed78&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./components/HomePage.vue?vue&type=template&id=48892c14&scoped=true&
 var HomePagevue_type_template_id_48892c14_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"contentContainer"},[_vm._ssrNode("<div class=\"homeTitle\" data-v-48892c14><p id=\"homeTitle1\" data-v-48892c14>FULL STACK</p> <p id=\"homeTitle2\" data-v-48892c14>ENGINEER</p></div> <div class=\"skillAndLogo\" data-v-48892c14><div class=\"skillHolder\" data-v-48892c14><div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/nuxt-icon.png\" alt=\"Nuxt JS\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/vue-icon.png\" alt=\"Vue JS\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/angular-icon.png\" alt=\"Angular\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/node-icon.png\" alt=\"Node JS\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/mongo-icon.png\" alt=\"Mongo DB\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/jest-icon.png\" alt=\"Jest\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/spring-icon.png\" alt=\"Spring\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/flutter-icon.png\" alt=\"Flutter\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/csharp-icon.png\" alt=\"C#\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/cpp-icon.png\" alt=\"C++\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/mysql-icon.png\" alt=\"MySQL\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/postgres-icon.png\" alt=\"PostgreSQL\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/unity-icon.png\" alt=\"Unity 3D\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/unreal-icon.png\" alt=\"Unreal Engine\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/git-icon.png\" alt=\"Version Control\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/jenkins-icon.png\" alt=\"Jenkins\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/photoshop-icon.png\" alt=\"Adobe Photoshop\" class=\"skillLogo\" data-v-48892c14></div></div> <div class=\"skillClass\" data-v-48892c14><div class=\"skillImageHolder\" data-v-48892c14><img src=\"/img/homepagelogos/xd-icon.png\" alt=\"Adobe XD\" class=\"skillLogo\" data-v-48892c14></div></div></div> <div class=\"logoHolder\" data-v-48892c14><img id=\"homeLogoID\" src=\"/img/common/homelogo.png\" alt=\"Aghil Jose Logo\" class=\"logoImg\" data-v-48892c14></div></div>")])}
@@ -226,11 +226,19 @@ var component = Object(componentNormalizer["a" /* default */])(
 
   head() {
     return {
-      title: this.title,
+      title: "Aghil Jose | Full Stack Engineer",
       meta: [{
-        hid: "home",
-        name: "Home Portfolio",
-        content: "The portfolio and blog of Full Stack Engineer Aghil Jose"
+        hid: "description",
+        name: "description",
+        content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+      }, {
+        hid: "og:image",
+        property: "og:image",
+        content: "/img/common/ogMain.png"
+      }, {
+        hid: "og:description",
+        name: "og:description",
+        content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
       }]
     };
   },
@@ -271,7 +279,7 @@ var pages_component = Object(componentNormalizer["a" /* default */])(
   staticRenderFns,
   false,
   pages_injectStyles,
-  "3754ce78",
+  "0e4eed78",
   "3bef225e"
   
 )

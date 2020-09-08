@@ -16,12 +16,22 @@ export default {
   },
   head() {
     return {
-      title: this.title,
+      title: "Aghil Jose | Full Stack Engineer",
       meta: [
         {
-          hid: "home",
-          name: "Home Portfolio",
-          content: "The portfolio and blog of Full Stack Engineer Aghil Jose"
+          hid: "description",
+          name: "description",
+          content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "/img/common/ogMain.png"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
         }
       ]
     };

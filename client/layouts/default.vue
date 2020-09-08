@@ -30,28 +30,28 @@ import SocialLinks from "../components/SocialLinks.vue";
 import Particle from "../components/Particle.vue";
 import Lethargy from "lethargy";
 export default {
-  head() {
-    return {
-      title: "Aghil Jose | Full Stack Engineer",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
-        },
-        {
-          hid: "og:image",
-          property: "og:image",
-          content: "/img/common/ogMain.png"
-        },
-        {
-          hid: "og:description",
-          name: "og:description",
-          content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
-        }
-      ]
-    };
-  },
+  // head() {
+  //   return {
+  //     title: "Aghil Jose | Full Stack Engineer",
+  //     meta: [
+  //       {
+  //         hid: "description",
+  //         name: "description",
+  //         content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+  //       },
+  //       {
+  //         hid: "og:image",
+  //         property: "og:image",
+  //         content: "/img/common/ogMain.png"
+  //       },
+  //       {
+  //         hid: "og:description",
+  //         name: "og:description",
+  //         content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
+  //       }
+  //     ]
+  //   };
+  // },
   components: {
     HomePageIntro,
     ProjectHeader,
