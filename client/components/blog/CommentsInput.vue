@@ -59,7 +59,7 @@ export default {
       commentInputText: "",
       nameInputText: "",
       emailInputText: "",
-      getDetails: false
+      recaptchaSuccess: false
     };
   },
   methods: {
@@ -67,7 +67,8 @@ export default {
       if (
         this.commentInputText.length > 0 &&
         this.nameInputText.length > 0 &&
-        this.emailInputText.length > 0
+        this.emailInputText.length > 0 &&
+        this.recaptchaSuccess
       ) {
         await ServerService.insertComment(
           this.blogId,
@@ -79,6 +80,7 @@ export default {
         this.emailInputText = "";
         this.nameInputText = "";
         this.commentInputText = "";
+        this.resetCaptcha();
         this.$toast.show("Comment Submitted! It will be updated soon!");
       } else {
         if (this.commentInputText.length == 0)
@@ -87,7 +89,29 @@ export default {
           this.$toast.error("Provide Name!!!");
         if (this.emailInputText.length == 0)
           this.$toast.error("Provide Email!!! It will not be published.");
+        if (!this.recaptchaSuccess)
+          this.$toast.error("Check the 'I'm not a robot' box'");
       }
+    },
+    onError() {
+      console.log("minor error");
+    },
+    async resetCaptcha() {
+      try {
+        const token = await this.$recaptcha.getResponse();
+        console.log("ReCaptcha token:", token);
+        await this.$recaptcha.reset();
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log("Error:", error);
+      }
+    },
+    onSuccess(token) {
+      console.log("Succeeded:", token);
+      this.recaptchaSuccess = true;
+    },
+    onExpired() {
+      this.recaptchaSuccess = false;
     }
   }
 };
