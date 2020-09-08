@@ -3786,7 +3786,7 @@ class recaptcha_ReCaptcha {
   inject('recaptcha', new recaptcha_ReCaptcha({
     "hideBadge": false,
     "siteKey": "6Ldt8MgZAAAAANk0dUb13FAjV7oeDg8avqyhzMAs",
-    "version": 3,
+    "version": 2,
     "size": "normal"
   }));
 });
