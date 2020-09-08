@@ -49,7 +49,7 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: "/img/common/about.png"
+          content: "/img/common/about.jpg"
         },
         {
           hid: "og:description",

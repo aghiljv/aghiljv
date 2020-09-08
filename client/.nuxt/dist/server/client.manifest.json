@@ -6,24 +6,24 @@
     "10.ba10f2f.js",
     "LICENSES",
     "app.6f75889.js",
-    "pages/about.084ffe4.js",
+    "pages/about.1290d2d.js",
     "pages/blog/_name.8971487.js",
     "pages/blog/index.83447e2.js",
     "pages/contact.725301e.js",
     "pages/index.998eb47.js",
     "pages/portfolio/_name.e4db603.js",
     "pages/portfolio/index.9ea6b9b.js",
-    "runtime.94ae52a.js",
+    "runtime.9e4936f.js",
     "vendors/commons.797aadd.js"
   ],
   "initial": [
-    "runtime.94ae52a.js",
+    "runtime.9e4936f.js",
     "vendors/commons.797aadd.js",
     "app.6f75889.js"
   ],
   "async": [
     "10.ba10f2f.js",
-    "pages/about.084ffe4.js",
+    "pages/about.1290d2d.js",
     "pages/blog/_name.8971487.js",
     "pages/blog/index.83447e2.js",
     "pages/contact.725301e.js",
@@ -902,7 +902,7 @@
     "790e92b8": [
       13
     ],
-    "153da44e": [
+    "6065dcc6": [
       5
     ],
     "0b46dd72": [
@@ -941,10 +941,10 @@
     "7063a11d": [
       9
     ],
-    "10dde2f8": [
+    "69255f72": [
       5
     ],
-    "f2867156": [
+    "414c34a4": [
       5
     ],
     "b07979f0": [
@@ -1172,13 +1172,13 @@
     "1c374799": [
       5
     ],
-    "7fe2146a": [
+    "0316a23b": [
       5
     ],
     "7ea0ead0": [
       5
     ],
-    "aaa4a274": [
+    "2de23c97": [
       5
     ],
     "78f1c747": [
@@ -1235,7 +1235,7 @@
       "app.6f75889.js"
     ],
     "2aff1868": [
-      "pages/about.084ffe4.js"
+      "pages/about.1290d2d.js"
     ],
     "ae0b3444": [
       "pages/blog/_name.8971487.js"
@@ -1256,7 +1256,7 @@
       "pages/portfolio/index.9ea6b9b.js"
     ],
     "6fca0322": [
-      "runtime.94ae52a.js"
+      "runtime.9e4936f.js"
     ],
     "07a97964": [
       "vendors/commons.797aadd.js"
