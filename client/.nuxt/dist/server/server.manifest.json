@@ -1,6 +1,7 @@
 {
   "entry": "server.js",
   "files": {
+    "8.js": "8.js",
     "pages/about.js": "pages/about.js",
     "pages/blog/_name.js": "pages/blog/_name.js",
     "pages/blog/index.js": "pages/blog/index.js",
@@ -11,6 +12,7 @@
     "server.js": "server.js"
   },
   "maps": {
+    "8.js": "8.js.map",
     "pages/about.js": "pages/about.js.map",
     "pages/blog/_name.js": "pages/blog/_name.js.map",
     "pages/blog/index.js": "pages/blog/index.js.map",

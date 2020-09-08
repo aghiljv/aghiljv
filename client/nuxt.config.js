@@ -56,6 +56,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     "@nuxtjs/toast",
+    "@nuxtjs/recaptcha",
   ],
   /*
    ** Axios module configuration
@@ -78,6 +79,15 @@ export default {
         },
       },
     ],
+  },
+  /*
+   ** Recaptcha module configuration
+   */
+  recaptcha: {
+    hideBadge: false, // Hide badge element (v3 & v2 via size=invisible)
+    siteKey: "6Ldt8MgZAAAAAFfuFA4xGikCUCTaFnD69mSfKVoV", // Site key for requests
+    version: 3, // Version
+    size: "normal", // Size: 'compact', 'normal', 'invisible' (v2)
   },
 
   // buildDir: '../server/public',

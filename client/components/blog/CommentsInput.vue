@@ -35,6 +35,11 @@
       />
       <br />
       <br />
+      <div class="recaptchaHolder">
+        <recaptcha @error="onError" @success="onSuccess" @expired="onExpired" />
+      </div>
+      <br />
+      <br />
       <div class="postOption">
         <button class="postButton" type="button" @click="addComment">Post Comment</button>
         <br />
@@ -59,7 +64,6 @@ export default {
   },
   methods: {
     async addComment() {
-      console.log(new Date("<YYYY-mm-ddTHH:MM:ss>"));
       if (
         this.commentInputText.length > 0 &&
         this.nameInputText.length > 0 &&
@@ -76,6 +80,13 @@ export default {
         this.nameInputText = "";
         this.commentInputText = "";
         this.$toast.show("Comment Submitted! It will be updated soon!");
+      } else {
+        if (this.commentInputText.length == 0)
+          this.$toast.error("Enter a comment!!!");
+        if (this.nameInputText.length == 0)
+          this.$toast.error("Provide Name!!!");
+        if (this.emailInputText.length == 0)
+          this.$toast.error("Provide Email!!! It will not be published.");
       }
     }
   }
@@ -107,6 +118,10 @@ export default {
   color: var(--background-color-primary);
   padding-left: 2.5%;
   font-weight: bold;
+}
+.recaptchaHolder {
+  display: flex;
+  justify-content: center;
 }
 @media only screen and (max-width: 600px) {
   .commentsInputHeader {
