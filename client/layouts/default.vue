@@ -36,7 +36,7 @@ export default {
       meta: [
         {
           hid: "description",
-          name: "desaription",
+          name: "description",
           content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
         },
         {

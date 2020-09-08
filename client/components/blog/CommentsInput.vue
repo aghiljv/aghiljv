@@ -68,6 +68,9 @@ export default {
         this.commentInputText.length > 0 &&
         this.nameInputText.length > 0 &&
         this.emailInputText.length > 0 &&
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+          this.emailInputText
+        ) &&
         this.recaptchaSuccess
       ) {
         await ServerService.insertComment(
@@ -90,6 +93,12 @@ export default {
           this.$toast.error("Provide Name!!!");
         if (this.emailInputText.length == 0)
           this.$toast.error("Provide Email!!! It will not be published.");
+        if (
+          !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+            this.emailInputText
+          )
+        )
+          this.$toast.error("Invalid E-mail");
         if (!this.recaptchaSuccess)
           this.$toast.error("Check the 'I'm not a robot' box'");
       }
@@ -113,6 +122,17 @@ export default {
     },
     onExpired() {
       this.recaptchaSuccess = false;
+    },
+    validateEmail(mail) {
+      if (
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+          myForm.emailAddr.value
+        )
+      ) {
+        return true;
+      }
+      alert("You have entered an invalid email address!");
+      return false;
     }
   }
 };
