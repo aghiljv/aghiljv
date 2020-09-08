@@ -20,7 +20,7 @@
         </div>
         <br />
         <div class="commentsInput">
-          <CommentsInput :blogId="blogItem._id" />
+          <CommentsInput :blogId="blogItem._id" @newComment="loadAndRefreshBlog" />
         </div>
       </div>
     </div>
@@ -80,23 +80,14 @@ export default {
         }
       });
     } else {
+      this.loadAndRefreshBlog();
+    }
+  },
+  methods: {
+    async loadAndRefreshBlog() {
       let blogsContent = await ServerService.getBlog(this.$route.params.name);
       this.blogItem = blogsContent[0];
     }
-  },
-  async mounted() {
-    // if (this.$store.state.blogs.blogs.length > 1) {
-    // 	let blogsContent = this.$store.state.blogs.blogs;
-    // 	blogsContent.forEach((blogContent) => {
-    // 		if (blogContent.name.includes(this.$route.params.name)) {
-    // 			this.blogItem = blogContent;
-    // 			this.title = this.blogItem.name;
-    // 		}
-    // 	});
-    // } else {
-    // 	let blogsContent = await ServerService.getBlog(this.$route.params.name);
-    // 	this.blogItem = blogsContent[0];
-    // }
   },
   validate({ params }) {
     return isNaN(+params.name);

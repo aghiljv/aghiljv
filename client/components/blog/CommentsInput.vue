@@ -82,6 +82,7 @@ export default {
         this.commentInputText = "";
         this.resetCaptcha();
         this.$toast.show("Comment Submitted! It will be updated soon!");
+        this.$emit("newComment");
       } else {
         if (this.commentInputText.length == 0)
           this.$toast.error("Enter a comment!!!");

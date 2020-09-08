@@ -7,24 +7,24 @@
     "LICENSES",
     "app.2aa02fd.js",
     "pages/about.b419aed.js",
-    "pages/blog/_name.a1026fc.js",
+    "pages/blog/_name.cd15ec2.js",
     "pages/blog/index.4949bf2.js",
     "pages/contact.f037173.js",
     "pages/index.998eb47.js",
     "pages/portfolio/_name.e743218.js",
     "pages/portfolio/index.e66de57.js",
-    "runtime.23818e3.js",
+    "runtime.26cb432.js",
     "vendors/commons.797aadd.js"
   ],
   "initial": [
-    "runtime.23818e3.js",
+    "runtime.26cb432.js",
     "vendors/commons.797aadd.js",
     "app.2aa02fd.js"
   ],
   "async": [
     "10.ba10f2f.js",
     "pages/about.b419aed.js",
-    "pages/blog/_name.a1026fc.js",
+    "pages/blog/_name.cd15ec2.js",
     "pages/blog/index.4949bf2.js",
     "pages/contact.f037173.js",
     "pages/index.998eb47.js",
@@ -49,6 +49,9 @@
     ],
     "65958628": [
       13
+    ],
+    "70801300": [
+      6
     ],
     "90045734": [
       13
@@ -914,16 +917,13 @@
     "306cd97c": [
       11
     ],
-    "35b9dbdc": [
-      6
-    ],
     "44e7aaf0": [
       6
     ],
     "5fcd005a": [
       6
     ],
-    "178540f3": [
+    "330e5e5e": [
       6
     ],
     "880cf71a": [
@@ -974,10 +974,10 @@
     "65dd1fc3": [
       11
     ],
-    "602b8406": [
+    "ca1c89ac": [
       6
     ],
-    "5f0229ba": [
+    "0b452247": [
       6
     ],
     "1dec9a1e": [
@@ -992,10 +992,10 @@
     "64504d4c": [
       6
     ],
-    "4e739c89": [
+    "69fcb9f4": [
       6
     ],
-    "fa142b68": [
+    "c301f092": [
       6
     ],
     "1a7a12c6": [
@@ -1013,13 +1013,13 @@
     "564a2dd4": [
       6
     ],
-    "4fbd1e0a": [
+    "265c7f30": [
       6
     ],
     "25f82d6d": [
       6
     ],
-    "1b83f01f": [
+    "69befe54": [
       6
     ],
     "52e18356": [
@@ -1028,7 +1028,7 @@
     "42a17286": [
       6
     ],
-    "b30c06bc": [
+    "47166cfe": [
       6
     ],
     "b68188fa": [
@@ -1040,7 +1040,7 @@
     "1d0b34ea": [
       6
     ],
-    "3c8e37fe": [
+    "45aaaf4c": [
       6
     ],
     "9d76ef8c": [
@@ -1238,7 +1238,7 @@
       "pages/about.b419aed.js"
     ],
     "ae0b3444": [
-      "pages/blog/_name.a1026fc.js"
+      "pages/blog/_name.cd15ec2.js"
     ],
     "acf14974": [
       "pages/blog/index.4949bf2.js"
@@ -1256,7 +1256,7 @@
       "pages/portfolio/index.e66de57.js"
     ],
     "6fca0322": [
-      "runtime.23818e3.js"
+      "runtime.26cb432.js"
     ],
     "07a97964": [
       "vendors/commons.797aadd.js"
