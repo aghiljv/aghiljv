@@ -44,7 +44,6 @@ export default {
   },
   data() {
     return {
-      title: "Portfolio | Aghil Jose | Full Stack Engineer",
       scrollState: null,
       swipeState: null,
       scrollDirecton: 0,
@@ -58,13 +57,8 @@ export default {
   },
   head() {
     return {
-      title: this.title,
+      title: "Portfolio | Aghil Jose | Full Stack Engineer",
       meta: [
-        {
-          hid: "portfolio",
-          name: "Portfolio",
-          content: "The portfolio of Full Stack Engineer Aghil Jose"
-        },
         {
           hid: "og:image",
           property: "og:image",

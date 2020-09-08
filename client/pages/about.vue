@@ -42,20 +42,10 @@
 <script>
 export default {
   transition: "fade",
-  data() {
-    return {
-      title: "About | Aghil Jose | Full Stack Engineer"
-    };
-  },
   head() {
     return {
-      title: this.title,
+      title: "About | Aghil Jose | Full Stack Engineer",
       meta: [
-        {
-          hid: "about",
-          name: "About",
-          content: "About Full Stack Engineer Aghil Jose"
-        },
         {
           hid: "og:image",
           property: "og:image",
@@ -64,8 +54,9 @@ export default {
         {
           hid: "og:description",
           name: "og:description",
-          content: "About Full Stack Engineer Aghil Jose"
-        }
+          content: "About Aghil Jose | Full Stack Engineer"
+        },
+        { hid: "og:type", name: "og:type", content: "contact" }
       ]
     };
   }

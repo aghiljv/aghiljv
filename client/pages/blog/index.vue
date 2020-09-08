@@ -28,7 +28,6 @@ export default {
   },
   data() {
     return {
-      title: "Blog | Aghil Jose | Full Stack Engineer",
       scrollState: null,
       swipeState: null,
       scrollDirecton: 0,
@@ -41,13 +40,8 @@ export default {
   },
   head() {
     return {
-      title: this.title,
+      title: "Blog | Aghil Jose | Full Stack Engineer",
       meta: [
-        {
-          hid: "description",
-          name: "desaription",
-          content: "The blog and portfolio of Aghil Jose | Full Stack Engineer"
-        },
         {
           hid: "og:image",
           property: "og:image",

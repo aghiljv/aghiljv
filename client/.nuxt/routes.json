@@ -3,49 +3,42 @@
     "name": "about",
     "path": "/about",
     "component": "D:\\\\Works\\\\Personal\\\\MENN\\\\aghiljv\\\\client\\\\pages\\\\about.vue",
-    "chunkName": "pages/about",
-    "_name": "_2a5ae422"
+    "chunkName": "pages/about"
   },
   {
     "name": "blog",
     "path": "/blog",
     "component": "D:\\\\Works\\\\Personal\\\\MENN\\\\aghiljv\\\\client\\\\pages\\\\blog\\\\index.vue",
-    "chunkName": "pages/blog/index",
-    "_name": "_06f904d2"
+    "chunkName": "pages/blog/index"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "D:\\\\Works\\\\Personal\\\\MENN\\\\aghiljv\\\\client\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_fa38bafc"
+    "chunkName": "pages/contact"
   },
   {
     "name": "portfolio",
     "path": "/portfolio",
     "component": "D:\\\\Works\\\\Personal\\\\MENN\\\\aghiljv\\\\client\\\\pages\\\\portfolio\\\\index.vue",
-    "chunkName": "pages/portfolio/index",
-    "_name": "_694b2c18"
+    "chunkName": "pages/portfolio/index"
   },
   {
     "name": "blog-name",
     "path": "/blog/:name",
     "component": "D:\\\\Works\\\\Personal\\\\MENN\\\\aghiljv\\\\client\\\\pages\\\\blog\\\\_name.vue",
-    "chunkName": "pages/blog/_name",
-    "_name": "_ab95f92c"
+    "chunkName": "pages/blog/_name"
   },
   {
     "name": "portfolio-name",
     "path": "/portfolio/:name",
     "component": "D:\\\\Works\\\\Personal\\\\MENN\\\\aghiljv\\\\client\\\\pages\\\\portfolio\\\\_name.vue",
-    "chunkName": "pages/portfolio/_name",
-    "_name": "_0c872ab0"
+    "chunkName": "pages/portfolio/_name"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\Works\\\\Personal\\\\MENN\\\\aghiljv\\\\client\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_0a8a68b4"
+    "chunkName": "pages/index"
   }
 ]

@@ -38,15 +38,17 @@ export default {
     CommentsInput,
     CommentsDisplay
   },
+  data() {
+    return {
+      title: "Blog | Aghil Jose | Full Stack Engineer",
+      blogItem: {},
+      currentRoute: ""
+    };
+  },
   head() {
     return {
       title: this.title,
       meta: [
-        {
-          hid: "blog",
-          name: "Blog",
-          content: "The blog of Full Stack Engineer Aghil Jose"
-        },
         {
           hid: "og:image",
           property: "og:image",
@@ -61,13 +63,6 @@ export default {
       ]
     };
   },
-  data() {
-    return {
-      title: "Blog | Aghil Jose | Full Stack Engineer",
-      blogItem: {},
-      currentRoute: ""
-    };
-  },
   async created() {
     this.$store.commit("pageTitle/set", "BLOG");
     if (this.$store.state.blogs.blogs.length > 1) {
@@ -76,7 +71,6 @@ export default {
         if (blogContent.name.includes(this.$route.params.name)) {
           this.blogItem = blogContent;
           this.title = this.blogItem.name;
-          console.log(this.blogItem);
         }
       });
     } else {

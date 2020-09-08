@@ -109,20 +109,21 @@
 <script>
 export default {
   transition: "fade",
-  data() {
-    return {
-      title: "Contact | Aghil Jose | Full Stack Engineer"
-    };
-  },
   head() {
     return {
-      title: this.title,
+      title: "Contact | Aghil Jose | Full Stack Engineer",
       meta: [
         {
-          hid: "contact",
-          name: "Contact",
-          content: "Contact Full Stack Engineer Aghil Jose"
-        }
+          hid: "og:image",
+          property: "og:image",
+          content: "/img/common/ogMain.png"
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: "Contact of Aghil Jose | Full Stack Engineer"
+        },
+        { hid: "og:type", name: "og:type", content: "contact" }
       ]
     };
   }
