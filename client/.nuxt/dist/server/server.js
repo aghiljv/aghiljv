@@ -3785,7 +3785,7 @@ class recaptcha_ReCaptcha {
   external_vue_default.a.component('recaptcha', () => __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 98)));
   inject('recaptcha', new recaptcha_ReCaptcha({
     "hideBadge": false,
-    "siteKey": "6Ldt8MgZAAAAAFfuFA4xGikCUCTaFnD69mSfKVoV",
+    "siteKey": "6Ldt8MgZAAAAANk0dUb13FAjV7oeDg8avqyhzMAs",
     "version": 3,
     "size": "normal"
   }));

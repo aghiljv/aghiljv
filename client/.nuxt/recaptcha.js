@@ -158,5 +158,5 @@ class ReCaptcha {
 
 export default function (_, inject) {
   Vue.component('recaptcha', () => import('./recaptcha.vue'))
-  inject('recaptcha', new ReCaptcha({"hideBadge":false,"siteKey":"6Ldt8MgZAAAAAFfuFA4xGikCUCTaFnD69mSfKVoV","version":3,"size":"normal"}))
+  inject('recaptcha', new ReCaptcha({"hideBadge":false,"siteKey":"6Ldt8MgZAAAAANk0dUb13FAjV7oeDg8avqyhzMAs","version":3,"size":"normal"}))
 }

@@ -5,7 +5,7 @@
     "../server/index.ssr.html",
     "10.ba10f2f.js",
     "LICENSES",
-    "app.7ab4c99.js",
+    "app.bafce3c.js",
     "pages/about.b419aed.js",
     "pages/blog/_name.2e89b62.js",
     "pages/blog/index.4949bf2.js",
@@ -19,7 +19,7 @@
   "initial": [
     "runtime.7dce548.js",
     "vendors/commons.797aadd.js",
-    "app.7ab4c99.js"
+    "app.bafce3c.js"
   ],
   "async": [
     "10.ba10f2f.js",
@@ -1232,7 +1232,7 @@
       "10.ba10f2f.js"
     ],
     "1a3ae26b": [
-      "app.7ab4c99.js"
+      "app.bafce3c.js"
     ],
     "2aff1868": [
       "pages/about.b419aed.js"
