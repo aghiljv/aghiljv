@@ -14,9 +14,12 @@ router.get("/", async (req, res) => {
 
 router.get("/:name", async (req, res) => {
   const blogs = await loadBlogCollection();
-  res.send(
-    await blogs.find({ name: { $regex: `.*${req.params.name}.*` } }).toArray()
-  );
+  const comments = await blogs
+    .find({ name: { $regex: `.*${req.params.name}.*` } })
+    .project({ "comments.name": 1, "comments.comment": 1, "comments.date": 1 })
+    .toArray();
+  console.log(comments);
+  res.send(comments);
 });
 
 router.post("/:id", async (req, res) => {
