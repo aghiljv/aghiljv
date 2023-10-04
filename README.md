@@ -1,4 +1,4 @@
-### Hi dear visitor!
+### Hi I am Aghil!
 
 👨‍💻 Experienced Engineer | 🚀 End-to-End App Developer | 🧪 Research Enthusiast | 🌟 Innovator | 🚗 Automotive Visualization Expert | 🤖 Autonomous Vehicles Fanatic
 
@@ -14,6 +14,6 @@
 🖌️ 3D Tools: Blender  
 🔌 Hardware: Microsoft HoloLens 2, HTC Vive Pro, Vuzix M400
 
-[E-mail](career@aghiljose.com) || [LinkedIn](https://www.linkedin.com/in/aghil-jose/) || [Website](https://aghiljose.com/)
+[E-mail](career@aghiljose.com) [LinkedIn](https://www.linkedin.com/in/aghil-jose/) [Website](https://aghiljose.com/)
 
 [![Github Stats](https://github-readme-stats.vercel.app/api?username=aghiljv&show_icons=true&theme=transparent&hide_border=true)]()
