@@ -1,6 +1,6 @@
 # Hi I am Aghil!
 
-## A little about me:
+### A little about me:
 
 👨‍💻 Software Engineer  
 🚀 End-to-End App Developer  
@@ -9,7 +9,7 @@
 🚗 Automotive Visualization Expert  
 🤖 Autonomous Vehicles Fanatic
 
-## 🛠️ Technologies & Tools:
+### 🛠️ Technologies & Tools:
 
 🌐 Front-end: HTML5, CSS3, JavaScript ES6, Vue.js, Nuxt.js, Electron  
 ⚙️ Back-end: C#, Node.js, C++  
