@@ -1,6 +1,8 @@
 ### Hi I am Aghil!
 
-👨‍💻 Experienced Engineer | 🚀 End-to-End App Developer | 🧪 Research Enthusiast | 🌟 Innovator | 🚗 Automotive Visualization Expert | 🤖 Autonomous Vehicles Fanatic
+A little about me:
+
+👨‍💻 Software Engineer | 🚀 End-to-End App Developer | 🧪 Research Enthusiast | 🌟 Innovator | 🚗 Automotive Visualization Expert | 🤖 Autonomous Vehicles Fanatic
 
 🛠️ Technologies & Tools:
 
