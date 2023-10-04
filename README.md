@@ -1,6 +1,4 @@
-### Hi I am Aghil!
-
-========================
+# Hi I am Aghil!
 
 # A little about me:
 
